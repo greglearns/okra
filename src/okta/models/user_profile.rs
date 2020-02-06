@@ -19,6 +19,8 @@ pub struct r#UserProfile {
     r#login: Option<String>,
     #[serde(rename = "mobilePhone", skip_serializing_if = "Option::is_none")]
     r#mobile_phone: Option<String>,
+    #[serde(rename = "preferredLanguage", skip_serializing_if = "Option::is_none")]
+    r#preferred_language: Option<String>,
     #[serde(rename = "secondEmail", skip_serializing_if = "Option::is_none")]
     r#second_email: Option<String>,
 }
@@ -32,6 +34,7 @@ impl r#UserProfile {
           r#last_name: None,
           r#login: None,
           r#mobile_phone: None,
+          r#preferred_language: None,
           r#second_email: None,
         }
     }
@@ -119,6 +122,23 @@ impl r#UserProfile {
 
     pub fn reset_mobile_phone(&mut self) {
         self.r#mobile_phone = None;
+    }
+
+    pub fn set_preferred_language(&mut self, r#preferred_language: String) {
+        self.r#preferred_language = Some(r#preferred_language);
+    }
+
+    pub fn with_preferred_language(mut self, r#preferred_language: String) -> Self {
+        self.r#preferred_language = Some(r#preferred_language);
+        self
+    }
+
+    pub fn r#preferred_language(&self) -> Option<&str> {
+        self.r#preferred_language.as_ref().map(|x| x.borrow())
+    }
+
+    pub fn reset_preferred_language(&mut self) {
+        self.r#preferred_language = None;
     }
 
     pub fn set_second_email(&mut self, r#second_email: String) {

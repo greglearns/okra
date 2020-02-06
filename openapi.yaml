@@ -5893,6 +5893,8 @@ components:
           type: string
         secondEmail:
           type: string
+        preferredLanguage:
+          type: string
       type: object
       x-okta-extensible: true
       x-okta-tags:
