@@ -83,7 +83,7 @@ impl UserApiClient {
         r#body: User,
     ) -> Result<User, failure::Error> {
         _internal_request::Request::new(
-            hyper::Method::PUT,
+            hyper::Method::POST,
             "/api/v1/users/{userId}".to_string(),
         )
         .with_path_param("userId".to_string(), r#user_id.to_string())

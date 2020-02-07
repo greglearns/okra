@@ -1625,8 +1625,8 @@ paths:
       summary: Get User
       tags:
         - User
-    put:
-      description: Update a user's profile and/or credentials using strict-update semantics.
+    post:
+      description: Update a user's profile and/or credentials using partial-update semantics.
       operationId: updateUser
       parameters:
         - in: path
