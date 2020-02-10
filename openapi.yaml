@@ -5881,6 +5881,10 @@ components:
         - User
     UserProfile:
       properties:
+        accept_marketing:
+          type: boolean
+        accept_privacy:
+          type: boolean
         email:
           type: string
         firstName:

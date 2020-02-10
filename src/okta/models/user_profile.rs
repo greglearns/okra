@@ -9,6 +9,10 @@ use super::*;
 
 #[derive(Debug, Default, Serialize, Deserialize, PartialEq)]
 pub struct r#UserProfile {
+    #[serde(rename = "accept_marketing", skip_serializing_if = "Option::is_none")]
+    r#accept_marketing: Option<bool>,
+    #[serde(rename = "accept_privacy", skip_serializing_if = "Option::is_none")]
+    r#accept_privacy: Option<bool>,
     #[serde(rename = "email", skip_serializing_if = "Option::is_none")]
     r#email: Option<String>,
     #[serde(rename = "firstName", skip_serializing_if = "Option::is_none")]
@@ -29,6 +33,8 @@ impl r#UserProfile {
     pub fn new(
     ) -> Self {
         Self {
+          r#accept_marketing: None,
+          r#accept_privacy: None,
           r#email: None,
           r#first_name: None,
           r#last_name: None,
@@ -37,6 +43,40 @@ impl r#UserProfile {
           r#preferred_language: None,
           r#second_email: None,
         }
+    }
+
+    pub fn set_accept_marketing(&mut self, r#accept_marketing: bool) {
+        self.r#accept_marketing = Some(r#accept_marketing);
+    }
+
+    pub fn with_accept_marketing(mut self, r#accept_marketing: bool) -> Self {
+        self.r#accept_marketing = Some(r#accept_marketing);
+        self
+    }
+
+    pub fn r#accept_marketing(&self) -> Option<&bool> {
+        self.r#accept_marketing.as_ref().map(|x| x.borrow())
+    }
+
+    pub fn reset_accept_marketing(&mut self) {
+        self.r#accept_marketing = None;
+    }
+
+    pub fn set_accept_privacy(&mut self, r#accept_privacy: bool) {
+        self.r#accept_privacy = Some(r#accept_privacy);
+    }
+
+    pub fn with_accept_privacy(mut self, r#accept_privacy: bool) -> Self {
+        self.r#accept_privacy = Some(r#accept_privacy);
+        self
+    }
+
+    pub fn r#accept_privacy(&self) -> Option<&bool> {
+        self.r#accept_privacy.as_ref().map(|x| x.borrow())
+    }
+
+    pub fn reset_accept_privacy(&mut self) {
+        self.r#accept_privacy = None;
     }
 
     pub fn set_email(&mut self, r#email: String) {
