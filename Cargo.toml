@@ -21,7 +21,7 @@ reqwest = "0.9"
 failure = "0.1"
 
 [build-dependencies]
-openapi-codegen = "0.1"
+openapi-codegen = { git = "https://github.com/greglearns/openapi-codegen-rs" }
 
 [dev-dependencies]
 testcontainers = "0.6"
