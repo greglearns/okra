@@ -732,7 +732,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 [[package]]
 name = "openapi-codegen"
 version = "0.1.1"
-source = "git+https://github.com/greglearns/openapi-codegen-rs#495a7b43a992e5a86a619383b6e4982f187363ee"
+source = "git+https://github.com/greglearns/openapi-codegen-rs#0823ed35db82353369aba383a3c30eaef399e1b2"
 dependencies = [
  "failure 0.1.6 (registry+https://github.com/rust-lang/crates.io-index)",
  "handlebars 1.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
