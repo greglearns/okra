@@ -13,6 +13,8 @@ pub struct r#UserProfile {
     r#accept_marketing: Option<bool>,
     #[serde(rename = "accept_privacy", skip_serializing_if = "Option::is_none")]
     r#accept_privacy: Option<bool>,
+    #[serde(rename = "company", skip_serializing_if = "Option::is_none")]
+    r#company: Option<String>,
     #[serde(rename = "email", skip_serializing_if = "Option::is_none")]
     r#email: Option<String>,
     #[serde(rename = "firstName", skip_serializing_if = "Option::is_none")]
@@ -25,6 +27,8 @@ pub struct r#UserProfile {
     r#mobile_phone: Option<String>,
     #[serde(rename = "preferredLanguage", skip_serializing_if = "Option::is_none")]
     r#preferred_language: Option<String>,
+    #[serde(rename = "role", skip_serializing_if = "Option::is_none")]
+    r#role: Option<String>,
     #[serde(rename = "secondEmail", skip_serializing_if = "Option::is_none")]
     r#second_email: Option<String>,
 }
@@ -35,12 +39,14 @@ impl r#UserProfile {
         Self {
           r#accept_marketing: None,
           r#accept_privacy: None,
+          r#company: None,
           r#email: None,
           r#first_name: None,
           r#last_name: None,
           r#login: None,
           r#mobile_phone: None,
           r#preferred_language: None,
+          r#role: None,
           r#second_email: None,
         }
     }
@@ -77,6 +83,23 @@ impl r#UserProfile {
 
     pub fn reset_accept_privacy(&mut self) {
         self.r#accept_privacy = None;
+    }
+
+    pub fn set_company(&mut self, r#company: String) {
+        self.r#company = Some(r#company);
+    }
+
+    pub fn with_company(mut self, r#company: String) -> Self {
+        self.r#company = Some(r#company);
+        self
+    }
+
+    pub fn r#company(&self) -> Option<&str> {
+        self.r#company.as_ref().map(|x| x.borrow())
+    }
+
+    pub fn reset_company(&mut self) {
+        self.r#company = None;
     }
 
     pub fn set_email(&mut self, r#email: String) {
@@ -179,6 +202,23 @@ impl r#UserProfile {
 
     pub fn reset_preferred_language(&mut self) {
         self.r#preferred_language = None;
+    }
+
+    pub fn set_role(&mut self, r#role: String) {
+        self.r#role = Some(r#role);
+    }
+
+    pub fn with_role(mut self, r#role: String) -> Self {
+        self.r#role = Some(r#role);
+        self
+    }
+
+    pub fn r#role(&self) -> Option<&str> {
+        self.r#role.as_ref().map(|x| x.borrow())
+    }
+
+    pub fn reset_role(&mut self) {
+        self.r#role = None;
     }
 
     pub fn set_second_email(&mut self, r#second_email: String) {
