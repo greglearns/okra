@@ -30,6 +30,11 @@ impl r#PasswordDictionaryCommon {
         self
     }
 
+    pub fn with_option_exclude(mut self, r#exclude: Option<bool>) -> Self {
+        self.r#exclude = r#exclude;
+        self
+    }
+
     pub fn r#exclude(&self) -> Option<&bool> {
         self.r#exclude.as_ref().map(|x| x.borrow())
     }

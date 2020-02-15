@@ -60,6 +60,11 @@ impl r#Session {
         self
     }
 
+    pub fn with_option_links(mut self, r#links: Option<Value>) -> Self {
+        self.r#links = r#links;
+        self
+    }
+
     pub fn r#links(&self) -> Option<&Value> {
         self.r#links.as_ref().map(|x| x.borrow())
     }
@@ -74,6 +79,11 @@ impl r#Session {
 
     pub fn with_amr(mut self, r#amr: Vec<SessionAuthenticationMethod>) -> Self {
         self.r#amr = Some(r#amr);
+        self
+    }
+
+    pub fn with_option_amr(mut self, r#amr: Option<Vec<SessionAuthenticationMethod>>) -> Self {
+        self.r#amr = r#amr;
         self
     }
 
@@ -94,6 +104,11 @@ impl r#Session {
         self
     }
 
+    pub fn with_option_created_at(mut self, r#created_at: Option<String>) -> Self {
+        self.r#created_at = r#created_at;
+        self
+    }
+
     pub fn r#created_at(&self) -> Option<&str> {
         self.r#created_at.as_ref().map(|x| x.borrow())
     }
@@ -108,6 +123,11 @@ impl r#Session {
 
     pub fn with_expires_at(mut self, r#expires_at: String) -> Self {
         self.r#expires_at = Some(r#expires_at);
+        self
+    }
+
+    pub fn with_option_expires_at(mut self, r#expires_at: Option<String>) -> Self {
+        self.r#expires_at = r#expires_at;
         self
     }
 
@@ -128,6 +148,11 @@ impl r#Session {
         self
     }
 
+    pub fn with_option_id(mut self, r#id: Option<String>) -> Self {
+        self.r#id = r#id;
+        self
+    }
+
     pub fn r#id(&self) -> Option<&str> {
         self.r#id.as_ref().map(|x| x.borrow())
     }
@@ -142,6 +167,11 @@ impl r#Session {
 
     pub fn with_idp(mut self, r#idp: SessionIdentityProvider) -> Self {
         self.r#idp = Some(r#idp);
+        self
+    }
+
+    pub fn with_option_idp(mut self, r#idp: Option<SessionIdentityProvider>) -> Self {
+        self.r#idp = r#idp;
         self
     }
 
@@ -162,6 +192,11 @@ impl r#Session {
         self
     }
 
+    pub fn with_option_last_factor_verification(mut self, r#last_factor_verification: Option<String>) -> Self {
+        self.r#last_factor_verification = r#last_factor_verification;
+        self
+    }
+
     pub fn r#last_factor_verification(&self) -> Option<&str> {
         self.r#last_factor_verification.as_ref().map(|x| x.borrow())
     }
@@ -176,6 +211,11 @@ impl r#Session {
 
     pub fn with_last_password_verification(mut self, r#last_password_verification: String) -> Self {
         self.r#last_password_verification = Some(r#last_password_verification);
+        self
+    }
+
+    pub fn with_option_last_password_verification(mut self, r#last_password_verification: Option<String>) -> Self {
+        self.r#last_password_verification = r#last_password_verification;
         self
     }
 
@@ -196,6 +236,11 @@ impl r#Session {
         self
     }
 
+    pub fn with_option_login(mut self, r#login: Option<String>) -> Self {
+        self.r#login = r#login;
+        self
+    }
+
     pub fn r#login(&self) -> Option<&str> {
         self.r#login.as_ref().map(|x| x.borrow())
     }
@@ -213,6 +258,11 @@ impl r#Session {
         self
     }
 
+    pub fn with_option_status(mut self, r#status: Option<SessionStatus>) -> Self {
+        self.r#status = r#status;
+        self
+    }
+
     pub fn r#status(&self) -> Option<&SessionStatus> {
         self.r#status.as_ref().map(|x| x.borrow())
     }
@@ -227,6 +277,11 @@ impl r#Session {
 
     pub fn with_user_id(mut self, r#user_id: String) -> Self {
         self.r#user_id = Some(r#user_id);
+        self
+    }
+
+    pub fn with_option_user_id(mut self, r#user_id: Option<String>) -> Self {
+        self.r#user_id = r#user_id;
         self
     }
 

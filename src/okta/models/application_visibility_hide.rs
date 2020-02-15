@@ -33,6 +33,11 @@ impl r#ApplicationVisibilityHide {
         self
     }
 
+    pub fn with_option_i_os(mut self, r#i_os: Option<bool>) -> Self {
+        self.r#i_os = r#i_os;
+        self
+    }
+
     pub fn r#i_os(&self) -> Option<&bool> {
         self.r#i_os.as_ref().map(|x| x.borrow())
     }
@@ -47,6 +52,11 @@ impl r#ApplicationVisibilityHide {
 
     pub fn with_web(mut self, r#web: bool) -> Self {
         self.r#web = Some(r#web);
+        self
+    }
+
+    pub fn with_option_web(mut self, r#web: Option<bool>) -> Self {
+        self.r#web = r#web;
         self
     }
 

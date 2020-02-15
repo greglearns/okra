@@ -39,6 +39,11 @@ impl r#ActivateFactorRequest {
         self
     }
 
+    pub fn with_option_client_data(mut self, r#client_data: Option<String>) -> Self {
+        self.r#client_data = r#client_data;
+        self
+    }
+
     pub fn r#client_data(&self) -> Option<&str> {
         self.r#client_data.as_ref().map(|x| x.borrow())
     }
@@ -53,6 +58,11 @@ impl r#ActivateFactorRequest {
 
     pub fn with_pass_code(mut self, r#pass_code: String) -> Self {
         self.r#pass_code = Some(r#pass_code);
+        self
+    }
+
+    pub fn with_option_pass_code(mut self, r#pass_code: Option<String>) -> Self {
+        self.r#pass_code = r#pass_code;
         self
     }
 
@@ -73,6 +83,11 @@ impl r#ActivateFactorRequest {
         self
     }
 
+    pub fn with_option_registration_data(mut self, r#registration_data: Option<String>) -> Self {
+        self.r#registration_data = r#registration_data;
+        self
+    }
+
     pub fn r#registration_data(&self) -> Option<&str> {
         self.r#registration_data.as_ref().map(|x| x.borrow())
     }
@@ -87,6 +102,11 @@ impl r#ActivateFactorRequest {
 
     pub fn with_state_token(mut self, r#state_token: String) -> Self {
         self.r#state_token = Some(r#state_token);
+        self
+    }
+
+    pub fn with_option_state_token(mut self, r#state_token: Option<String>) -> Self {
+        self.r#state_token = r#state_token;
         self
     }
 

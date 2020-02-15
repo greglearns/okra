@@ -30,6 +30,11 @@ impl r#PasswordPolicyRuleAction {
         self
     }
 
+    pub fn with_option_access(mut self, r#access: Option<String>) -> Self {
+        self.r#access = r#access;
+        self
+    }
+
     pub fn r#access(&self) -> Option<&str> {
         self.r#access.as_ref().map(|x| x.borrow())
     }

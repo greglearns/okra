@@ -48,6 +48,11 @@ impl r#LogAuthenticationContext {
         self
     }
 
+    pub fn with_option_authentication_provider(mut self, r#authentication_provider: Option<LogAuthenticationProvider>) -> Self {
+        self.r#authentication_provider = r#authentication_provider;
+        self
+    }
+
     pub fn r#authentication_provider(&self) -> Option<&LogAuthenticationProvider> {
         self.r#authentication_provider.as_ref().map(|x| x.borrow())
     }
@@ -62,6 +67,11 @@ impl r#LogAuthenticationContext {
 
     pub fn with_authentication_step(mut self, r#authentication_step: i32) -> Self {
         self.r#authentication_step = Some(r#authentication_step);
+        self
+    }
+
+    pub fn with_option_authentication_step(mut self, r#authentication_step: Option<i32>) -> Self {
+        self.r#authentication_step = r#authentication_step;
         self
     }
 
@@ -82,6 +92,11 @@ impl r#LogAuthenticationContext {
         self
     }
 
+    pub fn with_option_credential_provider(mut self, r#credential_provider: Option<Vec<LogCredentialProvider>>) -> Self {
+        self.r#credential_provider = r#credential_provider;
+        self
+    }
+
     pub fn r#credential_provider(&self) -> Option<&Vec<LogCredentialProvider>> {
         self.r#credential_provider.as_ref().map(|x| x.borrow())
     }
@@ -96,6 +111,11 @@ impl r#LogAuthenticationContext {
 
     pub fn with_credential_type(mut self, r#credential_type: Vec<LogCredentialType>) -> Self {
         self.r#credential_type = Some(r#credential_type);
+        self
+    }
+
+    pub fn with_option_credential_type(mut self, r#credential_type: Option<Vec<LogCredentialType>>) -> Self {
+        self.r#credential_type = r#credential_type;
         self
     }
 
@@ -116,6 +136,11 @@ impl r#LogAuthenticationContext {
         self
     }
 
+    pub fn with_option_external_session_id(mut self, r#external_session_id: Option<String>) -> Self {
+        self.r#external_session_id = r#external_session_id;
+        self
+    }
+
     pub fn r#external_session_id(&self) -> Option<&str> {
         self.r#external_session_id.as_ref().map(|x| x.borrow())
     }
@@ -133,6 +158,11 @@ impl r#LogAuthenticationContext {
         self
     }
 
+    pub fn with_option_interface(mut self, r#interface: Option<String>) -> Self {
+        self.r#interface = r#interface;
+        self
+    }
+
     pub fn r#interface(&self) -> Option<&str> {
         self.r#interface.as_ref().map(|x| x.borrow())
     }
@@ -147,6 +177,11 @@ impl r#LogAuthenticationContext {
 
     pub fn with_issuer(mut self, r#issuer: LogIssuer) -> Self {
         self.r#issuer = Some(r#issuer);
+        self
+    }
+
+    pub fn with_option_issuer(mut self, r#issuer: Option<LogIssuer>) -> Self {
+        self.r#issuer = r#issuer;
         self
     }
 

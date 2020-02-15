@@ -69,6 +69,11 @@ impl r#AppUser {
         self
     }
 
+    pub fn with_option_embedded(mut self, r#embedded: Option<Value>) -> Self {
+        self.r#embedded = r#embedded;
+        self
+    }
+
     pub fn r#embedded(&self) -> Option<&Value> {
         self.r#embedded.as_ref().map(|x| x.borrow())
     }
@@ -83,6 +88,11 @@ impl r#AppUser {
 
     pub fn with_links(mut self, r#links: Value) -> Self {
         self.r#links = Some(r#links);
+        self
+    }
+
+    pub fn with_option_links(mut self, r#links: Option<Value>) -> Self {
+        self.r#links = r#links;
         self
     }
 
@@ -103,6 +113,11 @@ impl r#AppUser {
         self
     }
 
+    pub fn with_option_created(mut self, r#created: Option<String>) -> Self {
+        self.r#created = r#created;
+        self
+    }
+
     pub fn r#created(&self) -> Option<&str> {
         self.r#created.as_ref().map(|x| x.borrow())
     }
@@ -117,6 +132,11 @@ impl r#AppUser {
 
     pub fn with_credentials(mut self, r#credentials: AppUserCredentials) -> Self {
         self.r#credentials = Some(r#credentials);
+        self
+    }
+
+    pub fn with_option_credentials(mut self, r#credentials: Option<AppUserCredentials>) -> Self {
+        self.r#credentials = r#credentials;
         self
     }
 
@@ -137,6 +157,11 @@ impl r#AppUser {
         self
     }
 
+    pub fn with_option_external_id(mut self, r#external_id: Option<String>) -> Self {
+        self.r#external_id = r#external_id;
+        self
+    }
+
     pub fn r#external_id(&self) -> Option<&str> {
         self.r#external_id.as_ref().map(|x| x.borrow())
     }
@@ -151,6 +176,11 @@ impl r#AppUser {
 
     pub fn with_id(mut self, r#id: String) -> Self {
         self.r#id = Some(r#id);
+        self
+    }
+
+    pub fn with_option_id(mut self, r#id: Option<String>) -> Self {
+        self.r#id = r#id;
         self
     }
 
@@ -171,6 +201,11 @@ impl r#AppUser {
         self
     }
 
+    pub fn with_option_last_sync(mut self, r#last_sync: Option<String>) -> Self {
+        self.r#last_sync = r#last_sync;
+        self
+    }
+
     pub fn r#last_sync(&self) -> Option<&str> {
         self.r#last_sync.as_ref().map(|x| x.borrow())
     }
@@ -185,6 +220,11 @@ impl r#AppUser {
 
     pub fn with_last_updated(mut self, r#last_updated: String) -> Self {
         self.r#last_updated = Some(r#last_updated);
+        self
+    }
+
+    pub fn with_option_last_updated(mut self, r#last_updated: Option<String>) -> Self {
+        self.r#last_updated = r#last_updated;
         self
     }
 
@@ -205,6 +245,11 @@ impl r#AppUser {
         self
     }
 
+    pub fn with_option_password_changed(mut self, r#password_changed: Option<String>) -> Self {
+        self.r#password_changed = r#password_changed;
+        self
+    }
+
     pub fn r#password_changed(&self) -> Option<&str> {
         self.r#password_changed.as_ref().map(|x| x.borrow())
     }
@@ -219,6 +264,11 @@ impl r#AppUser {
 
     pub fn with_profile(mut self, r#profile: Value) -> Self {
         self.r#profile = Some(r#profile);
+        self
+    }
+
+    pub fn with_option_profile(mut self, r#profile: Option<Value>) -> Self {
+        self.r#profile = r#profile;
         self
     }
 
@@ -239,6 +289,11 @@ impl r#AppUser {
         self
     }
 
+    pub fn with_option_scope(mut self, r#scope: Option<String>) -> Self {
+        self.r#scope = r#scope;
+        self
+    }
+
     pub fn r#scope(&self) -> Option<&str> {
         self.r#scope.as_ref().map(|x| x.borrow())
     }
@@ -253,6 +308,11 @@ impl r#AppUser {
 
     pub fn with_status(mut self, r#status: String) -> Self {
         self.r#status = Some(r#status);
+        self
+    }
+
+    pub fn with_option_status(mut self, r#status: Option<String>) -> Self {
+        self.r#status = r#status;
         self
     }
 
@@ -273,6 +333,11 @@ impl r#AppUser {
         self
     }
 
+    pub fn with_option_status_changed(mut self, r#status_changed: Option<String>) -> Self {
+        self.r#status_changed = r#status_changed;
+        self
+    }
+
     pub fn r#status_changed(&self) -> Option<&str> {
         self.r#status_changed.as_ref().map(|x| x.borrow())
     }
@@ -287,6 +352,11 @@ impl r#AppUser {
 
     pub fn with_sync_state(mut self, r#sync_state: String) -> Self {
         self.r#sync_state = Some(r#sync_state);
+        self
+    }
+
+    pub fn with_option_sync_state(mut self, r#sync_state: Option<String>) -> Self {
+        self.r#sync_state = r#sync_state;
         self
     }
 

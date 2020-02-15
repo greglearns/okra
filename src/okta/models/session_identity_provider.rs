@@ -33,6 +33,11 @@ impl r#SessionIdentityProvider {
         self
     }
 
+    pub fn with_option_id(mut self, r#id: Option<String>) -> Self {
+        self.r#id = r#id;
+        self
+    }
+
     pub fn r#id(&self) -> Option<&str> {
         self.r#id.as_ref().map(|x| x.borrow())
     }
@@ -47,6 +52,11 @@ impl r#SessionIdentityProvider {
 
     pub fn with_type(mut self, r#type: SessionIdentityProviderType) -> Self {
         self.r#type = Some(r#type);
+        self
+    }
+
+    pub fn with_option_type(mut self, r#type: Option<SessionIdentityProviderType>) -> Self {
+        self.r#type = r#type;
         self
     }
 

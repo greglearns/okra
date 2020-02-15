@@ -30,6 +30,11 @@ impl r#AutoLoginApplicationSettings {
         self
     }
 
+    pub fn with_option_sign_on(mut self, r#sign_on: Option<AutoLoginApplicationSettingsSignOn>) -> Self {
+        self.r#sign_on = r#sign_on;
+        self
+    }
+
     pub fn r#sign_on(&self) -> Option<&AutoLoginApplicationSettingsSignOn> {
         self.r#sign_on.as_ref().map(|x| x.borrow())
     }

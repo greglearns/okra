@@ -39,6 +39,11 @@ impl r#ApplicationCredentialsSigning {
         self
     }
 
+    pub fn with_option_kid(mut self, r#kid: Option<String>) -> Self {
+        self.r#kid = r#kid;
+        self
+    }
+
     pub fn r#kid(&self) -> Option<&str> {
         self.r#kid.as_ref().map(|x| x.borrow())
     }
@@ -53,6 +58,11 @@ impl r#ApplicationCredentialsSigning {
 
     pub fn with_last_rotated(mut self, r#last_rotated: String) -> Self {
         self.r#last_rotated = Some(r#last_rotated);
+        self
+    }
+
+    pub fn with_option_last_rotated(mut self, r#last_rotated: Option<String>) -> Self {
+        self.r#last_rotated = r#last_rotated;
         self
     }
 
@@ -73,6 +83,11 @@ impl r#ApplicationCredentialsSigning {
         self
     }
 
+    pub fn with_option_next_rotation(mut self, r#next_rotation: Option<String>) -> Self {
+        self.r#next_rotation = r#next_rotation;
+        self
+    }
+
     pub fn r#next_rotation(&self) -> Option<&str> {
         self.r#next_rotation.as_ref().map(|x| x.borrow())
     }
@@ -87,6 +102,11 @@ impl r#ApplicationCredentialsSigning {
 
     pub fn with_rotation_mode(mut self, r#rotation_mode: String) -> Self {
         self.r#rotation_mode = Some(r#rotation_mode);
+        self
+    }
+
+    pub fn with_option_rotation_mode(mut self, r#rotation_mode: Option<String>) -> Self {
+        self.r#rotation_mode = r#rotation_mode;
         self
     }
 

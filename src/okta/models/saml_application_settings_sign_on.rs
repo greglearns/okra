@@ -90,6 +90,11 @@ impl r#SamlApplicationSettingsSignOn {
         self
     }
 
+    pub fn with_option_assertion_signed(mut self, r#assertion_signed: Option<bool>) -> Self {
+        self.r#assertion_signed = r#assertion_signed;
+        self
+    }
+
     pub fn r#assertion_signed(&self) -> Option<&bool> {
         self.r#assertion_signed.as_ref().map(|x| x.borrow())
     }
@@ -104,6 +109,11 @@ impl r#SamlApplicationSettingsSignOn {
 
     pub fn with_attribute_statements(mut self, r#attribute_statements: Vec<SamlAttributeStatement>) -> Self {
         self.r#attribute_statements = Some(r#attribute_statements);
+        self
+    }
+
+    pub fn with_option_attribute_statements(mut self, r#attribute_statements: Option<Vec<SamlAttributeStatement>>) -> Self {
+        self.r#attribute_statements = r#attribute_statements;
         self
     }
 
@@ -124,6 +134,11 @@ impl r#SamlApplicationSettingsSignOn {
         self
     }
 
+    pub fn with_option_audience(mut self, r#audience: Option<String>) -> Self {
+        self.r#audience = r#audience;
+        self
+    }
+
     pub fn r#audience(&self) -> Option<&str> {
         self.r#audience.as_ref().map(|x| x.borrow())
     }
@@ -138,6 +153,11 @@ impl r#SamlApplicationSettingsSignOn {
 
     pub fn with_audience_override(mut self, r#audience_override: String) -> Self {
         self.r#audience_override = Some(r#audience_override);
+        self
+    }
+
+    pub fn with_option_audience_override(mut self, r#audience_override: Option<String>) -> Self {
+        self.r#audience_override = r#audience_override;
         self
     }
 
@@ -158,6 +178,11 @@ impl r#SamlApplicationSettingsSignOn {
         self
     }
 
+    pub fn with_option_authn_context_class_ref(mut self, r#authn_context_class_ref: Option<String>) -> Self {
+        self.r#authn_context_class_ref = r#authn_context_class_ref;
+        self
+    }
+
     pub fn r#authn_context_class_ref(&self) -> Option<&str> {
         self.r#authn_context_class_ref.as_ref().map(|x| x.borrow())
     }
@@ -172,6 +197,11 @@ impl r#SamlApplicationSettingsSignOn {
 
     pub fn with_default_relay_state(mut self, r#default_relay_state: String) -> Self {
         self.r#default_relay_state = Some(r#default_relay_state);
+        self
+    }
+
+    pub fn with_option_default_relay_state(mut self, r#default_relay_state: Option<String>) -> Self {
+        self.r#default_relay_state = r#default_relay_state;
         self
     }
 
@@ -192,6 +222,11 @@ impl r#SamlApplicationSettingsSignOn {
         self
     }
 
+    pub fn with_option_destination(mut self, r#destination: Option<String>) -> Self {
+        self.r#destination = r#destination;
+        self
+    }
+
     pub fn r#destination(&self) -> Option<&str> {
         self.r#destination.as_ref().map(|x| x.borrow())
     }
@@ -206,6 +241,11 @@ impl r#SamlApplicationSettingsSignOn {
 
     pub fn with_destination_override(mut self, r#destination_override: String) -> Self {
         self.r#destination_override = Some(r#destination_override);
+        self
+    }
+
+    pub fn with_option_destination_override(mut self, r#destination_override: Option<String>) -> Self {
+        self.r#destination_override = r#destination_override;
         self
     }
 
@@ -226,6 +266,11 @@ impl r#SamlApplicationSettingsSignOn {
         self
     }
 
+    pub fn with_option_digest_algorithm(mut self, r#digest_algorithm: Option<String>) -> Self {
+        self.r#digest_algorithm = r#digest_algorithm;
+        self
+    }
+
     pub fn r#digest_algorithm(&self) -> Option<&str> {
         self.r#digest_algorithm.as_ref().map(|x| x.borrow())
     }
@@ -240,6 +285,11 @@ impl r#SamlApplicationSettingsSignOn {
 
     pub fn with_honor_force_authn(mut self, r#honor_force_authn: bool) -> Self {
         self.r#honor_force_authn = Some(r#honor_force_authn);
+        self
+    }
+
+    pub fn with_option_honor_force_authn(mut self, r#honor_force_authn: Option<bool>) -> Self {
+        self.r#honor_force_authn = r#honor_force_authn;
         self
     }
 
@@ -260,6 +310,11 @@ impl r#SamlApplicationSettingsSignOn {
         self
     }
 
+    pub fn with_option_idp_issuer(mut self, r#idp_issuer: Option<String>) -> Self {
+        self.r#idp_issuer = r#idp_issuer;
+        self
+    }
+
     pub fn r#idp_issuer(&self) -> Option<&str> {
         self.r#idp_issuer.as_ref().map(|x| x.borrow())
     }
@@ -274,6 +329,11 @@ impl r#SamlApplicationSettingsSignOn {
 
     pub fn with_recipient(mut self, r#recipient: String) -> Self {
         self.r#recipient = Some(r#recipient);
+        self
+    }
+
+    pub fn with_option_recipient(mut self, r#recipient: Option<String>) -> Self {
+        self.r#recipient = r#recipient;
         self
     }
 
@@ -294,6 +354,11 @@ impl r#SamlApplicationSettingsSignOn {
         self
     }
 
+    pub fn with_option_recipient_override(mut self, r#recipient_override: Option<String>) -> Self {
+        self.r#recipient_override = r#recipient_override;
+        self
+    }
+
     pub fn r#recipient_override(&self) -> Option<&str> {
         self.r#recipient_override.as_ref().map(|x| x.borrow())
     }
@@ -308,6 +373,11 @@ impl r#SamlApplicationSettingsSignOn {
 
     pub fn with_request_compressed(mut self, r#request_compressed: bool) -> Self {
         self.r#request_compressed = Some(r#request_compressed);
+        self
+    }
+
+    pub fn with_option_request_compressed(mut self, r#request_compressed: Option<bool>) -> Self {
+        self.r#request_compressed = r#request_compressed;
         self
     }
 
@@ -328,6 +398,11 @@ impl r#SamlApplicationSettingsSignOn {
         self
     }
 
+    pub fn with_option_response_signed(mut self, r#response_signed: Option<bool>) -> Self {
+        self.r#response_signed = r#response_signed;
+        self
+    }
+
     pub fn r#response_signed(&self) -> Option<&bool> {
         self.r#response_signed.as_ref().map(|x| x.borrow())
     }
@@ -342,6 +417,11 @@ impl r#SamlApplicationSettingsSignOn {
 
     pub fn with_signature_algorithm(mut self, r#signature_algorithm: String) -> Self {
         self.r#signature_algorithm = Some(r#signature_algorithm);
+        self
+    }
+
+    pub fn with_option_signature_algorithm(mut self, r#signature_algorithm: Option<String>) -> Self {
+        self.r#signature_algorithm = r#signature_algorithm;
         self
     }
 
@@ -362,6 +442,11 @@ impl r#SamlApplicationSettingsSignOn {
         self
     }
 
+    pub fn with_option_sp_issuer(mut self, r#sp_issuer: Option<String>) -> Self {
+        self.r#sp_issuer = r#sp_issuer;
+        self
+    }
+
     pub fn r#sp_issuer(&self) -> Option<&str> {
         self.r#sp_issuer.as_ref().map(|x| x.borrow())
     }
@@ -376,6 +461,11 @@ impl r#SamlApplicationSettingsSignOn {
 
     pub fn with_sso_acs_url(mut self, r#sso_acs_url: String) -> Self {
         self.r#sso_acs_url = Some(r#sso_acs_url);
+        self
+    }
+
+    pub fn with_option_sso_acs_url(mut self, r#sso_acs_url: Option<String>) -> Self {
+        self.r#sso_acs_url = r#sso_acs_url;
         self
     }
 
@@ -396,6 +486,11 @@ impl r#SamlApplicationSettingsSignOn {
         self
     }
 
+    pub fn with_option_sso_acs_url_override(mut self, r#sso_acs_url_override: Option<String>) -> Self {
+        self.r#sso_acs_url_override = r#sso_acs_url_override;
+        self
+    }
+
     pub fn r#sso_acs_url_override(&self) -> Option<&str> {
         self.r#sso_acs_url_override.as_ref().map(|x| x.borrow())
     }
@@ -413,6 +508,11 @@ impl r#SamlApplicationSettingsSignOn {
         self
     }
 
+    pub fn with_option_subject_name_id_format(mut self, r#subject_name_id_format: Option<String>) -> Self {
+        self.r#subject_name_id_format = r#subject_name_id_format;
+        self
+    }
+
     pub fn r#subject_name_id_format(&self) -> Option<&str> {
         self.r#subject_name_id_format.as_ref().map(|x| x.borrow())
     }
@@ -427,6 +527,11 @@ impl r#SamlApplicationSettingsSignOn {
 
     pub fn with_subject_name_id_template(mut self, r#subject_name_id_template: String) -> Self {
         self.r#subject_name_id_template = Some(r#subject_name_id_template);
+        self
+    }
+
+    pub fn with_option_subject_name_id_template(mut self, r#subject_name_id_template: Option<String>) -> Self {
+        self.r#subject_name_id_template = r#subject_name_id_template;
         self
     }
 

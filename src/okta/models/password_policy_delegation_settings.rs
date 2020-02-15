@@ -30,6 +30,11 @@ impl r#PasswordPolicyDelegationSettings {
         self
     }
 
+    pub fn with_option_options(mut self, r#options: Option<PasswordPolicyDelegationSettingsOptions>) -> Self {
+        self.r#options = r#options;
+        self
+    }
+
     pub fn r#options(&self) -> Option<&PasswordPolicyDelegationSettingsOptions> {
         self.r#options.as_ref().map(|x| x.borrow())
     }

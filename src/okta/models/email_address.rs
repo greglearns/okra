@@ -36,6 +36,11 @@ impl r#EmailAddress {
         self
     }
 
+    pub fn with_option_status(mut self, r#status: Option<EmailStatus>) -> Self {
+        self.r#status = r#status;
+        self
+    }
+
     pub fn r#status(&self) -> Option<&EmailStatus> {
         self.r#status.as_ref().map(|x| x.borrow())
     }
@@ -53,6 +58,11 @@ impl r#EmailAddress {
         self
     }
 
+    pub fn with_option_type(mut self, r#type: Option<EmailType>) -> Self {
+        self.r#type = r#type;
+        self
+    }
+
     pub fn r#type(&self) -> Option<&EmailType> {
         self.r#type.as_ref().map(|x| x.borrow())
     }
@@ -67,6 +77,11 @@ impl r#EmailAddress {
 
     pub fn with_value(mut self, r#value: String) -> Self {
         self.r#value = Some(r#value);
+        self
+    }
+
+    pub fn with_option_value(mut self, r#value: Option<String>) -> Self {
+        self.r#value = r#value;
         self
     }
 

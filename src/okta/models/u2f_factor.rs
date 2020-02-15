@@ -30,6 +30,11 @@ impl r#U2fFactor {
         self
     }
 
+    pub fn with_option_profile(mut self, r#profile: Option<U2fFactorProfile>) -> Self {
+        self.r#profile = r#profile;
+        self
+    }
+
     pub fn r#profile(&self) -> Option<&U2fFactorProfile> {
         self.r#profile.as_ref().map(|x| x.borrow())
     }

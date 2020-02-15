@@ -33,6 +33,11 @@ impl r#BookmarkApplicationSettingsApplication {
         self
     }
 
+    pub fn with_option_request_integration(mut self, r#request_integration: Option<bool>) -> Self {
+        self.r#request_integration = r#request_integration;
+        self
+    }
+
     pub fn r#request_integration(&self) -> Option<&bool> {
         self.r#request_integration.as_ref().map(|x| x.borrow())
     }
@@ -47,6 +52,11 @@ impl r#BookmarkApplicationSettingsApplication {
 
     pub fn with_url(mut self, r#url: String) -> Self {
         self.r#url = Some(r#url);
+        self
+    }
+
+    pub fn with_option_url(mut self, r#url: Option<String>) -> Self {
+        self.r#url = r#url;
         self
     }
 

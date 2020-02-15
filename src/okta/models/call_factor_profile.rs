@@ -33,6 +33,11 @@ impl r#CallFactorProfile {
         self
     }
 
+    pub fn with_option_phone_extension(mut self, r#phone_extension: Option<String>) -> Self {
+        self.r#phone_extension = r#phone_extension;
+        self
+    }
+
     pub fn r#phone_extension(&self) -> Option<&str> {
         self.r#phone_extension.as_ref().map(|x| x.borrow())
     }
@@ -47,6 +52,11 @@ impl r#CallFactorProfile {
 
     pub fn with_phone_number(mut self, r#phone_number: String) -> Self {
         self.r#phone_number = Some(r#phone_number);
+        self
+    }
+
+    pub fn with_option_phone_number(mut self, r#phone_number: Option<String>) -> Self {
+        self.r#phone_number = r#phone_number;
         self
     }
 

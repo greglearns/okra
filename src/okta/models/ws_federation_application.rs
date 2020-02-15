@@ -30,6 +30,11 @@ impl r#WsFederationApplication {
         self
     }
 
+    pub fn with_option_settings(mut self, r#settings: Option<WsFederationApplicationSettings>) -> Self {
+        self.r#settings = r#settings;
+        self
+    }
+
     pub fn r#settings(&self) -> Option<&WsFederationApplicationSettings> {
         self.r#settings.as_ref().map(|x| x.borrow())
     }

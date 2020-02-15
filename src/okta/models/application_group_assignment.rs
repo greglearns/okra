@@ -45,6 +45,11 @@ impl r#ApplicationGroupAssignment {
         self
     }
 
+    pub fn with_option_embedded(mut self, r#embedded: Option<Value>) -> Self {
+        self.r#embedded = r#embedded;
+        self
+    }
+
     pub fn r#embedded(&self) -> Option<&Value> {
         self.r#embedded.as_ref().map(|x| x.borrow())
     }
@@ -59,6 +64,11 @@ impl r#ApplicationGroupAssignment {
 
     pub fn with_links(mut self, r#links: Value) -> Self {
         self.r#links = Some(r#links);
+        self
+    }
+
+    pub fn with_option_links(mut self, r#links: Option<Value>) -> Self {
+        self.r#links = r#links;
         self
     }
 
@@ -79,6 +89,11 @@ impl r#ApplicationGroupAssignment {
         self
     }
 
+    pub fn with_option_id(mut self, r#id: Option<String>) -> Self {
+        self.r#id = r#id;
+        self
+    }
+
     pub fn r#id(&self) -> Option<&str> {
         self.r#id.as_ref().map(|x| x.borrow())
     }
@@ -93,6 +108,11 @@ impl r#ApplicationGroupAssignment {
 
     pub fn with_last_updated(mut self, r#last_updated: String) -> Self {
         self.r#last_updated = Some(r#last_updated);
+        self
+    }
+
+    pub fn with_option_last_updated(mut self, r#last_updated: Option<String>) -> Self {
+        self.r#last_updated = r#last_updated;
         self
     }
 
@@ -113,6 +133,11 @@ impl r#ApplicationGroupAssignment {
         self
     }
 
+    pub fn with_option_priority(mut self, r#priority: Option<i32>) -> Self {
+        self.r#priority = r#priority;
+        self
+    }
+
     pub fn r#priority(&self) -> Option<&i32> {
         self.r#priority.as_ref().map(|x| x.borrow())
     }
@@ -127,6 +152,11 @@ impl r#ApplicationGroupAssignment {
 
     pub fn with_profile(mut self, r#profile: Value) -> Self {
         self.r#profile = Some(r#profile);
+        self
+    }
+
+    pub fn with_option_profile(mut self, r#profile: Option<Value>) -> Self {
+        self.r#profile = r#profile;
         self
     }
 

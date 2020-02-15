@@ -45,6 +45,11 @@ impl r#OktaSignOnPolicyRuleSignonActions {
         self
     }
 
+    pub fn with_option_access(mut self, r#access: Option<String>) -> Self {
+        self.r#access = r#access;
+        self
+    }
+
     pub fn r#access(&self) -> Option<&str> {
         self.r#access.as_ref().map(|x| x.borrow())
     }
@@ -59,6 +64,11 @@ impl r#OktaSignOnPolicyRuleSignonActions {
 
     pub fn with_factor_lifetime(mut self, r#factor_lifetime: i32) -> Self {
         self.r#factor_lifetime = Some(r#factor_lifetime);
+        self
+    }
+
+    pub fn with_option_factor_lifetime(mut self, r#factor_lifetime: Option<i32>) -> Self {
+        self.r#factor_lifetime = r#factor_lifetime;
         self
     }
 
@@ -79,6 +89,11 @@ impl r#OktaSignOnPolicyRuleSignonActions {
         self
     }
 
+    pub fn with_option_factor_prompt_mode(mut self, r#factor_prompt_mode: Option<String>) -> Self {
+        self.r#factor_prompt_mode = r#factor_prompt_mode;
+        self
+    }
+
     pub fn r#factor_prompt_mode(&self) -> Option<&str> {
         self.r#factor_prompt_mode.as_ref().map(|x| x.borrow())
     }
@@ -93,6 +108,11 @@ impl r#OktaSignOnPolicyRuleSignonActions {
 
     pub fn with_remember_device_by_default(mut self, r#remember_device_by_default: bool) -> Self {
         self.r#remember_device_by_default = Some(r#remember_device_by_default);
+        self
+    }
+
+    pub fn with_option_remember_device_by_default(mut self, r#remember_device_by_default: Option<bool>) -> Self {
+        self.r#remember_device_by_default = r#remember_device_by_default;
         self
     }
 
@@ -113,6 +133,11 @@ impl r#OktaSignOnPolicyRuleSignonActions {
         self
     }
 
+    pub fn with_option_require_factor(mut self, r#require_factor: Option<bool>) -> Self {
+        self.r#require_factor = r#require_factor;
+        self
+    }
+
     pub fn r#require_factor(&self) -> Option<&bool> {
         self.r#require_factor.as_ref().map(|x| x.borrow())
     }
@@ -127,6 +152,11 @@ impl r#OktaSignOnPolicyRuleSignonActions {
 
     pub fn with_session(mut self, r#session: OktaSignOnPolicyRuleSignonSessionActions) -> Self {
         self.r#session = Some(r#session);
+        self
+    }
+
+    pub fn with_option_session(mut self, r#session: Option<OktaSignOnPolicyRuleSignonSessionActions>) -> Self {
+        self.r#session = r#session;
         self
     }
 

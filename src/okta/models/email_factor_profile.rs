@@ -30,6 +30,11 @@ impl r#EmailFactorProfile {
         self
     }
 
+    pub fn with_option_email(mut self, r#email: Option<String>) -> Self {
+        self.r#email = r#email;
+        self
+    }
+
     pub fn r#email(&self) -> Option<&str> {
         self.r#email.as_ref().map(|x| x.borrow())
     }

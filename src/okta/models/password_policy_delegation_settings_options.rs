@@ -30,6 +30,11 @@ impl r#PasswordPolicyDelegationSettingsOptions {
         self
     }
 
+    pub fn with_option_skip_unlock(mut self, r#skip_unlock: Option<bool>) -> Self {
+        self.r#skip_unlock = r#skip_unlock;
+        self
+    }
+
     pub fn r#skip_unlock(&self) -> Option<&bool> {
         self.r#skip_unlock.as_ref().map(|x| x.borrow())
     }

@@ -42,6 +42,11 @@ impl r#SchemeApplicationCredentials {
         self
     }
 
+    pub fn with_option_password(mut self, r#password: Option<PasswordCredential>) -> Self {
+        self.r#password = r#password;
+        self
+    }
+
     pub fn r#password(&self) -> Option<&PasswordCredential> {
         self.r#password.as_ref().map(|x| x.borrow())
     }
@@ -56,6 +61,11 @@ impl r#SchemeApplicationCredentials {
 
     pub fn with_reveal_password(mut self, r#reveal_password: bool) -> Self {
         self.r#reveal_password = Some(r#reveal_password);
+        self
+    }
+
+    pub fn with_option_reveal_password(mut self, r#reveal_password: Option<bool>) -> Self {
+        self.r#reveal_password = r#reveal_password;
         self
     }
 
@@ -76,6 +86,11 @@ impl r#SchemeApplicationCredentials {
         self
     }
 
+    pub fn with_option_scheme(mut self, r#scheme: Option<ApplicationCredentialsScheme>) -> Self {
+        self.r#scheme = r#scheme;
+        self
+    }
+
     pub fn r#scheme(&self) -> Option<&ApplicationCredentialsScheme> {
         self.r#scheme.as_ref().map(|x| x.borrow())
     }
@@ -93,6 +108,11 @@ impl r#SchemeApplicationCredentials {
         self
     }
 
+    pub fn with_option_signing(mut self, r#signing: Option<ApplicationCredentialsSigning>) -> Self {
+        self.r#signing = r#signing;
+        self
+    }
+
     pub fn r#signing(&self) -> Option<&ApplicationCredentialsSigning> {
         self.r#signing.as_ref().map(|x| x.borrow())
     }
@@ -107,6 +127,11 @@ impl r#SchemeApplicationCredentials {
 
     pub fn with_user_name(mut self, r#user_name: String) -> Self {
         self.r#user_name = Some(r#user_name);
+        self
+    }
+
+    pub fn with_option_user_name(mut self, r#user_name: Option<String>) -> Self {
+        self.r#user_name = r#user_name;
         self
     }
 

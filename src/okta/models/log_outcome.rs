@@ -33,6 +33,11 @@ impl r#LogOutcome {
         self
     }
 
+    pub fn with_option_reason(mut self, r#reason: Option<String>) -> Self {
+        self.r#reason = r#reason;
+        self
+    }
+
     pub fn r#reason(&self) -> Option<&str> {
         self.r#reason.as_ref().map(|x| x.borrow())
     }
@@ -47,6 +52,11 @@ impl r#LogOutcome {
 
     pub fn with_result(mut self, r#result: String) -> Self {
         self.r#result = Some(r#result);
+        self
+    }
+
+    pub fn with_option_result(mut self, r#result: Option<String>) -> Self {
+        self.r#result = r#result;
         self
     }
 

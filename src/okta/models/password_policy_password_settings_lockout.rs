@@ -39,6 +39,11 @@ impl r#PasswordPolicyPasswordSettingsLockout {
         self
     }
 
+    pub fn with_option_auto_unlock_minutes(mut self, r#auto_unlock_minutes: Option<i32>) -> Self {
+        self.r#auto_unlock_minutes = r#auto_unlock_minutes;
+        self
+    }
+
     pub fn r#auto_unlock_minutes(&self) -> Option<&i32> {
         self.r#auto_unlock_minutes.as_ref().map(|x| x.borrow())
     }
@@ -53,6 +58,11 @@ impl r#PasswordPolicyPasswordSettingsLockout {
 
     pub fn with_max_attempts(mut self, r#max_attempts: i32) -> Self {
         self.r#max_attempts = Some(r#max_attempts);
+        self
+    }
+
+    pub fn with_option_max_attempts(mut self, r#max_attempts: Option<i32>) -> Self {
+        self.r#max_attempts = r#max_attempts;
         self
     }
 
@@ -73,6 +83,11 @@ impl r#PasswordPolicyPasswordSettingsLockout {
         self
     }
 
+    pub fn with_option_show_lockout_failures(mut self, r#show_lockout_failures: Option<bool>) -> Self {
+        self.r#show_lockout_failures = r#show_lockout_failures;
+        self
+    }
+
     pub fn r#show_lockout_failures(&self) -> Option<&bool> {
         self.r#show_lockout_failures.as_ref().map(|x| x.borrow())
     }
@@ -87,6 +102,11 @@ impl r#PasswordPolicyPasswordSettingsLockout {
 
     pub fn with_user_lockout_notification_channels(mut self, r#user_lockout_notification_channels: Vec<String>) -> Self {
         self.r#user_lockout_notification_channels = Some(r#user_lockout_notification_channels);
+        self
+    }
+
+    pub fn with_option_user_lockout_notification_channels(mut self, r#user_lockout_notification_channels: Option<Vec<String>>) -> Self {
+        self.r#user_lockout_notification_channels = r#user_lockout_notification_channels;
         self
     }
 

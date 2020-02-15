@@ -30,6 +30,11 @@ impl r#OktaSignOnPolicyConditions {
         self
     }
 
+    pub fn with_option_people(mut self, r#people: Option<PolicyPeopleCondition>) -> Self {
+        self.r#people = r#people;
+        self
+    }
+
     pub fn r#people(&self) -> Option<&PolicyPeopleCondition> {
         self.r#people.as_ref().map(|x| x.borrow())
     }

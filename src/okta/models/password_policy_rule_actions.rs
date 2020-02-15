@@ -36,6 +36,11 @@ impl r#PasswordPolicyRuleActions {
         self
     }
 
+    pub fn with_option_password_change(mut self, r#password_change: Option<PasswordPolicyRuleAction>) -> Self {
+        self.r#password_change = r#password_change;
+        self
+    }
+
     pub fn r#password_change(&self) -> Option<&PasswordPolicyRuleAction> {
         self.r#password_change.as_ref().map(|x| x.borrow())
     }
@@ -53,6 +58,11 @@ impl r#PasswordPolicyRuleActions {
         self
     }
 
+    pub fn with_option_self_service_password_reset(mut self, r#self_service_password_reset: Option<PasswordPolicyRuleAction>) -> Self {
+        self.r#self_service_password_reset = r#self_service_password_reset;
+        self
+    }
+
     pub fn r#self_service_password_reset(&self) -> Option<&PasswordPolicyRuleAction> {
         self.r#self_service_password_reset.as_ref().map(|x| x.borrow())
     }
@@ -67,6 +77,11 @@ impl r#PasswordPolicyRuleActions {
 
     pub fn with_self_service_unlock(mut self, r#self_service_unlock: PasswordPolicyRuleAction) -> Self {
         self.r#self_service_unlock = Some(r#self_service_unlock);
+        self
+    }
+
+    pub fn with_option_self_service_unlock(mut self, r#self_service_unlock: Option<PasswordPolicyRuleAction>) -> Self {
+        self.r#self_service_unlock = r#self_service_unlock;
         self
     }
 

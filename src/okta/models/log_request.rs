@@ -30,6 +30,11 @@ impl r#LogRequest {
         self
     }
 
+    pub fn with_option_ip_chain(mut self, r#ip_chain: Option<Vec<LogIpAddress>>) -> Self {
+        self.r#ip_chain = r#ip_chain;
+        self
+    }
+
     pub fn r#ip_chain(&self) -> Option<&Vec<LogIpAddress>> {
         self.r#ip_chain.as_ref().map(|x| x.borrow())
     }

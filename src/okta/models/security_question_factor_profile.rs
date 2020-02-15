@@ -36,6 +36,11 @@ impl r#SecurityQuestionFactorProfile {
         self
     }
 
+    pub fn with_option_answer(mut self, r#answer: Option<String>) -> Self {
+        self.r#answer = r#answer;
+        self
+    }
+
     pub fn r#answer(&self) -> Option<&str> {
         self.r#answer.as_ref().map(|x| x.borrow())
     }
@@ -53,6 +58,11 @@ impl r#SecurityQuestionFactorProfile {
         self
     }
 
+    pub fn with_option_question(mut self, r#question: Option<String>) -> Self {
+        self.r#question = r#question;
+        self
+    }
+
     pub fn r#question(&self) -> Option<&str> {
         self.r#question.as_ref().map(|x| x.borrow())
     }
@@ -67,6 +77,11 @@ impl r#SecurityQuestionFactorProfile {
 
     pub fn with_question_text(mut self, r#question_text: String) -> Self {
         self.r#question_text = Some(r#question_text);
+        self
+    }
+
+    pub fn with_option_question_text(mut self, r#question_text: Option<String>) -> Self {
+        self.r#question_text = r#question_text;
         self
     }
 

@@ -33,6 +33,11 @@ impl r#PasswordPolicyRecoveryQuestion {
         self
     }
 
+    pub fn with_option_properties(mut self, r#properties: Option<PasswordPolicyRecoveryQuestionProperties>) -> Self {
+        self.r#properties = r#properties;
+        self
+    }
+
     pub fn r#properties(&self) -> Option<&PasswordPolicyRecoveryQuestionProperties> {
         self.r#properties.as_ref().map(|x| x.borrow())
     }
@@ -47,6 +52,11 @@ impl r#PasswordPolicyRecoveryQuestion {
 
     pub fn with_status(mut self, r#status: String) -> Self {
         self.r#status = Some(r#status);
+        self
+    }
+
+    pub fn with_option_status(mut self, r#status: Option<String>) -> Self {
+        self.r#status = r#status;
         self
     }
 

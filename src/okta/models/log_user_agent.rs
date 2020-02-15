@@ -36,6 +36,11 @@ impl r#LogUserAgent {
         self
     }
 
+    pub fn with_option_browser(mut self, r#browser: Option<String>) -> Self {
+        self.r#browser = r#browser;
+        self
+    }
+
     pub fn r#browser(&self) -> Option<&str> {
         self.r#browser.as_ref().map(|x| x.borrow())
     }
@@ -53,6 +58,11 @@ impl r#LogUserAgent {
         self
     }
 
+    pub fn with_option_os(mut self, r#os: Option<String>) -> Self {
+        self.r#os = r#os;
+        self
+    }
+
     pub fn r#os(&self) -> Option<&str> {
         self.r#os.as_ref().map(|x| x.borrow())
     }
@@ -67,6 +77,11 @@ impl r#LogUserAgent {
 
     pub fn with_raw_user_agent(mut self, r#raw_user_agent: String) -> Self {
         self.r#raw_user_agent = Some(r#raw_user_agent);
+        self
+    }
+
+    pub fn with_option_raw_user_agent(mut self, r#raw_user_agent: Option<String>) -> Self {
+        self.r#raw_user_agent = r#raw_user_agent;
         self
     }
 

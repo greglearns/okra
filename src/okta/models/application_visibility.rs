@@ -36,6 +36,11 @@ impl r#ApplicationVisibility {
         self
     }
 
+    pub fn with_option_app_links(mut self, r#app_links: Option<Value>) -> Self {
+        self.r#app_links = r#app_links;
+        self
+    }
+
     pub fn r#app_links(&self) -> Option<&Value> {
         self.r#app_links.as_ref().map(|x| x.borrow())
     }
@@ -53,6 +58,11 @@ impl r#ApplicationVisibility {
         self
     }
 
+    pub fn with_option_auto_submit_toolbar(mut self, r#auto_submit_toolbar: Option<bool>) -> Self {
+        self.r#auto_submit_toolbar = r#auto_submit_toolbar;
+        self
+    }
+
     pub fn r#auto_submit_toolbar(&self) -> Option<&bool> {
         self.r#auto_submit_toolbar.as_ref().map(|x| x.borrow())
     }
@@ -67,6 +77,11 @@ impl r#ApplicationVisibility {
 
     pub fn with_hide(mut self, r#hide: ApplicationVisibilityHide) -> Self {
         self.r#hide = Some(r#hide);
+        self
+    }
+
+    pub fn with_option_hide(mut self, r#hide: Option<ApplicationVisibilityHide>) -> Self {
+        self.r#hide = r#hide;
         self
     }
 

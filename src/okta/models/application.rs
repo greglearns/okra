@@ -75,6 +75,11 @@ impl r#Application {
         self
     }
 
+    pub fn with_option_embedded(mut self, r#embedded: Option<Value>) -> Self {
+        self.r#embedded = r#embedded;
+        self
+    }
+
     pub fn r#embedded(&self) -> Option<&Value> {
         self.r#embedded.as_ref().map(|x| x.borrow())
     }
@@ -89,6 +94,11 @@ impl r#Application {
 
     pub fn with_links(mut self, r#links: Value) -> Self {
         self.r#links = Some(r#links);
+        self
+    }
+
+    pub fn with_option_links(mut self, r#links: Option<Value>) -> Self {
+        self.r#links = r#links;
         self
     }
 
@@ -109,6 +119,11 @@ impl r#Application {
         self
     }
 
+    pub fn with_option_accessibility(mut self, r#accessibility: Option<ApplicationAccessibility>) -> Self {
+        self.r#accessibility = r#accessibility;
+        self
+    }
+
     pub fn r#accessibility(&self) -> Option<&ApplicationAccessibility> {
         self.r#accessibility.as_ref().map(|x| x.borrow())
     }
@@ -123,6 +138,11 @@ impl r#Application {
 
     pub fn with_created(mut self, r#created: String) -> Self {
         self.r#created = Some(r#created);
+        self
+    }
+
+    pub fn with_option_created(mut self, r#created: Option<String>) -> Self {
+        self.r#created = r#created;
         self
     }
 
@@ -143,6 +163,11 @@ impl r#Application {
         self
     }
 
+    pub fn with_option_credentials(mut self, r#credentials: Option<ApplicationCredentials>) -> Self {
+        self.r#credentials = r#credentials;
+        self
+    }
+
     pub fn r#credentials(&self) -> Option<&ApplicationCredentials> {
         self.r#credentials.as_ref().map(|x| x.borrow())
     }
@@ -157,6 +182,11 @@ impl r#Application {
 
     pub fn with_features(mut self, r#features: Vec<String>) -> Self {
         self.r#features = Some(r#features);
+        self
+    }
+
+    pub fn with_option_features(mut self, r#features: Option<Vec<String>>) -> Self {
+        self.r#features = r#features;
         self
     }
 
@@ -177,6 +207,11 @@ impl r#Application {
         self
     }
 
+    pub fn with_option_id(mut self, r#id: Option<String>) -> Self {
+        self.r#id = r#id;
+        self
+    }
+
     pub fn r#id(&self) -> Option<&str> {
         self.r#id.as_ref().map(|x| x.borrow())
     }
@@ -191,6 +226,11 @@ impl r#Application {
 
     pub fn with_label(mut self, r#label: String) -> Self {
         self.r#label = Some(r#label);
+        self
+    }
+
+    pub fn with_option_label(mut self, r#label: Option<String>) -> Self {
+        self.r#label = r#label;
         self
     }
 
@@ -211,6 +251,11 @@ impl r#Application {
         self
     }
 
+    pub fn with_option_last_updated(mut self, r#last_updated: Option<String>) -> Self {
+        self.r#last_updated = r#last_updated;
+        self
+    }
+
     pub fn r#last_updated(&self) -> Option<&str> {
         self.r#last_updated.as_ref().map(|x| x.borrow())
     }
@@ -225,6 +270,11 @@ impl r#Application {
 
     pub fn with_licensing(mut self, r#licensing: ApplicationLicensing) -> Self {
         self.r#licensing = Some(r#licensing);
+        self
+    }
+
+    pub fn with_option_licensing(mut self, r#licensing: Option<ApplicationLicensing>) -> Self {
+        self.r#licensing = r#licensing;
         self
     }
 
@@ -245,6 +295,11 @@ impl r#Application {
         self
     }
 
+    pub fn with_option_name(mut self, r#name: Option<String>) -> Self {
+        self.r#name = r#name;
+        self
+    }
+
     pub fn r#name(&self) -> Option<&str> {
         self.r#name.as_ref().map(|x| x.borrow())
     }
@@ -259,6 +314,11 @@ impl r#Application {
 
     pub fn with_profile(mut self, r#profile: Value) -> Self {
         self.r#profile = Some(r#profile);
+        self
+    }
+
+    pub fn with_option_profile(mut self, r#profile: Option<Value>) -> Self {
+        self.r#profile = r#profile;
         self
     }
 
@@ -279,6 +339,11 @@ impl r#Application {
         self
     }
 
+    pub fn with_option_settings(mut self, r#settings: Option<ApplicationSettings>) -> Self {
+        self.r#settings = r#settings;
+        self
+    }
+
     pub fn r#settings(&self) -> Option<&ApplicationSettings> {
         self.r#settings.as_ref().map(|x| x.borrow())
     }
@@ -293,6 +358,11 @@ impl r#Application {
 
     pub fn with_sign_on_mode(mut self, r#sign_on_mode: ApplicationSignOnMode) -> Self {
         self.r#sign_on_mode = Some(r#sign_on_mode);
+        self
+    }
+
+    pub fn with_option_sign_on_mode(mut self, r#sign_on_mode: Option<ApplicationSignOnMode>) -> Self {
+        self.r#sign_on_mode = r#sign_on_mode;
         self
     }
 
@@ -313,6 +383,11 @@ impl r#Application {
         self
     }
 
+    pub fn with_option_status(mut self, r#status: Option<String>) -> Self {
+        self.r#status = r#status;
+        self
+    }
+
     pub fn r#status(&self) -> Option<&str> {
         self.r#status.as_ref().map(|x| x.borrow())
     }
@@ -327,6 +402,11 @@ impl r#Application {
 
     pub fn with_visibility(mut self, r#visibility: ApplicationVisibility) -> Self {
         self.r#visibility = Some(r#visibility);
+        self
+    }
+
+    pub fn with_option_visibility(mut self, r#visibility: Option<ApplicationVisibility>) -> Self {
+        self.r#visibility = r#visibility;
         self
     }
 

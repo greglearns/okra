@@ -33,6 +33,11 @@ impl r#AppUserCredentials {
         self
     }
 
+    pub fn with_option_password(mut self, r#password: Option<AppUserPasswordCredential>) -> Self {
+        self.r#password = r#password;
+        self
+    }
+
     pub fn r#password(&self) -> Option<&AppUserPasswordCredential> {
         self.r#password.as_ref().map(|x| x.borrow())
     }
@@ -47,6 +52,11 @@ impl r#AppUserCredentials {
 
     pub fn with_user_name(mut self, r#user_name: String) -> Self {
         self.r#user_name = Some(r#user_name);
+        self
+    }
+
+    pub fn with_option_user_name(mut self, r#user_name: Option<String>) -> Self {
+        self.r#user_name = r#user_name;
         self
     }
 

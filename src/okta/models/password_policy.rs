@@ -33,6 +33,11 @@ impl r#PasswordPolicy {
         self
     }
 
+    pub fn with_option_conditions(mut self, r#conditions: Option<PasswordPolicyConditions>) -> Self {
+        self.r#conditions = r#conditions;
+        self
+    }
+
     pub fn r#conditions(&self) -> Option<&PasswordPolicyConditions> {
         self.r#conditions.as_ref().map(|x| x.borrow())
     }
@@ -47,6 +52,11 @@ impl r#PasswordPolicy {
 
     pub fn with_settings(mut self, r#settings: PasswordPolicySettings) -> Self {
         self.r#settings = Some(r#settings);
+        self
+    }
+
+    pub fn with_option_settings(mut self, r#settings: Option<PasswordPolicySettings>) -> Self {
+        self.r#settings = r#settings;
         self
     }
 

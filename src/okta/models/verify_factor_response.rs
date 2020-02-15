@@ -42,6 +42,11 @@ impl r#VerifyFactorResponse {
         self
     }
 
+    pub fn with_option_embedded(mut self, r#embedded: Option<Value>) -> Self {
+        self.r#embedded = r#embedded;
+        self
+    }
+
     pub fn r#embedded(&self) -> Option<&Value> {
         self.r#embedded.as_ref().map(|x| x.borrow())
     }
@@ -56,6 +61,11 @@ impl r#VerifyFactorResponse {
 
     pub fn with_links(mut self, r#links: Value) -> Self {
         self.r#links = Some(r#links);
+        self
+    }
+
+    pub fn with_option_links(mut self, r#links: Option<Value>) -> Self {
+        self.r#links = r#links;
         self
     }
 
@@ -76,6 +86,11 @@ impl r#VerifyFactorResponse {
         self
     }
 
+    pub fn with_option_expires_at(mut self, r#expires_at: Option<String>) -> Self {
+        self.r#expires_at = r#expires_at;
+        self
+    }
+
     pub fn r#expires_at(&self) -> Option<&str> {
         self.r#expires_at.as_ref().map(|x| x.borrow())
     }
@@ -93,6 +108,11 @@ impl r#VerifyFactorResponse {
         self
     }
 
+    pub fn with_option_factor_result(mut self, r#factor_result: Option<FactorResultType>) -> Self {
+        self.r#factor_result = r#factor_result;
+        self
+    }
+
     pub fn r#factor_result(&self) -> Option<&FactorResultType> {
         self.r#factor_result.as_ref().map(|x| x.borrow())
     }
@@ -107,6 +127,11 @@ impl r#VerifyFactorResponse {
 
     pub fn with_factor_result_message(mut self, r#factor_result_message: String) -> Self {
         self.r#factor_result_message = Some(r#factor_result_message);
+        self
+    }
+
+    pub fn with_option_factor_result_message(mut self, r#factor_result_message: Option<String>) -> Self {
+        self.r#factor_result_message = r#factor_result_message;
         self
     }
 

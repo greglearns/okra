@@ -39,6 +39,11 @@ impl r#PasswordPolicyRecoveryFactors {
         self
     }
 
+    pub fn with_option_okta_call(mut self, r#okta_call: Option<PasswordPolicyRecoveryFactorSettings>) -> Self {
+        self.r#okta_call = r#okta_call;
+        self
+    }
+
     pub fn r#okta_call(&self) -> Option<&PasswordPolicyRecoveryFactorSettings> {
         self.r#okta_call.as_ref().map(|x| x.borrow())
     }
@@ -53,6 +58,11 @@ impl r#PasswordPolicyRecoveryFactors {
 
     pub fn with_okta_email(mut self, r#okta_email: PasswordPolicyRecoveryEmail) -> Self {
         self.r#okta_email = Some(r#okta_email);
+        self
+    }
+
+    pub fn with_option_okta_email(mut self, r#okta_email: Option<PasswordPolicyRecoveryEmail>) -> Self {
+        self.r#okta_email = r#okta_email;
         self
     }
 
@@ -73,6 +83,11 @@ impl r#PasswordPolicyRecoveryFactors {
         self
     }
 
+    pub fn with_option_okta_sms(mut self, r#okta_sms: Option<PasswordPolicyRecoveryFactorSettings>) -> Self {
+        self.r#okta_sms = r#okta_sms;
+        self
+    }
+
     pub fn r#okta_sms(&self) -> Option<&PasswordPolicyRecoveryFactorSettings> {
         self.r#okta_sms.as_ref().map(|x| x.borrow())
     }
@@ -87,6 +102,11 @@ impl r#PasswordPolicyRecoveryFactors {
 
     pub fn with_recovery_question(mut self, r#recovery_question: PasswordPolicyRecoveryQuestion) -> Self {
         self.r#recovery_question = Some(r#recovery_question);
+        self
+    }
+
+    pub fn with_option_recovery_question(mut self, r#recovery_question: Option<PasswordPolicyRecoveryQuestion>) -> Self {
+        self.r#recovery_question = r#recovery_question;
         self
     }
 

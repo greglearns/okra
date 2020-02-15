@@ -30,6 +30,11 @@ impl r#TempPassword {
         self
     }
 
+    pub fn with_option_temp_password(mut self, r#temp_password: Option<String>) -> Self {
+        self.r#temp_password = r#temp_password;
+        self
+    }
+
     pub fn r#temp_password(&self) -> Option<&str> {
         self.r#temp_password.as_ref().map(|x| x.borrow())
     }

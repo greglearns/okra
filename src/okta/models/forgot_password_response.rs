@@ -30,6 +30,11 @@ impl r#ForgotPasswordResponse {
         self
     }
 
+    pub fn with_option_reset_password_url(mut self, r#reset_password_url: Option<String>) -> Self {
+        self.r#reset_password_url = r#reset_password_url;
+        self
+    }
+
     pub fn r#reset_password_url(&self) -> Option<&str> {
         self.r#reset_password_url.as_ref().map(|x| x.borrow())
     }

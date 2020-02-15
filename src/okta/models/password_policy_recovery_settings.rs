@@ -30,6 +30,11 @@ impl r#PasswordPolicyRecoverySettings {
         self
     }
 
+    pub fn with_option_factors(mut self, r#factors: Option<PasswordPolicyRecoveryFactors>) -> Self {
+        self.r#factors = r#factors;
+        self
+    }
+
     pub fn r#factors(&self) -> Option<&PasswordPolicyRecoveryFactors> {
         self.r#factors.as_ref().map(|x| x.borrow())
     }

@@ -30,6 +30,11 @@ impl r#WebFactor {
         self
     }
 
+    pub fn with_option_profile(mut self, r#profile: Option<WebFactorProfile>) -> Self {
+        self.r#profile = r#profile;
+        self
+    }
+
     pub fn r#profile(&self) -> Option<&WebFactorProfile> {
         self.r#profile.as_ref().map(|x| x.borrow())
     }

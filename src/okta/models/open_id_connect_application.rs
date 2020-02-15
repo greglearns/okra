@@ -33,6 +33,11 @@ impl r#OpenIdConnectApplication {
         self
     }
 
+    pub fn with_option_credentials(mut self, r#credentials: Option<OAuthApplicationCredentials>) -> Self {
+        self.r#credentials = r#credentials;
+        self
+    }
+
     pub fn r#credentials(&self) -> Option<&OAuthApplicationCredentials> {
         self.r#credentials.as_ref().map(|x| x.borrow())
     }
@@ -47,6 +52,11 @@ impl r#OpenIdConnectApplication {
 
     pub fn with_settings(mut self, r#settings: OpenIdConnectApplicationSettings) -> Self {
         self.r#settings = Some(r#settings);
+        self
+    }
+
+    pub fn with_option_settings(mut self, r#settings: Option<OpenIdConnectApplicationSettings>) -> Self {
+        self.r#settings = r#settings;
         self
     }
 

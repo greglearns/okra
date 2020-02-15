@@ -30,6 +30,11 @@ impl r#PasswordPolicyRecoveryQuestionProperties {
         self
     }
 
+    pub fn with_option_complexity(mut self, r#complexity: Option<PasswordPolicyRecoveryQuestionComplexity>) -> Self {
+        self.r#complexity = r#complexity;
+        self
+    }
+
     pub fn r#complexity(&self) -> Option<&PasswordPolicyRecoveryQuestionComplexity> {
         self.r#complexity.as_ref().map(|x| x.borrow())
     }

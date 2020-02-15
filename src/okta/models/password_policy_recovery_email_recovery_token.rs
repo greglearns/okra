@@ -30,6 +30,11 @@ impl r#PasswordPolicyRecoveryEmailRecoveryToken {
         self
     }
 
+    pub fn with_option_token_lifetime_minutes(mut self, r#token_lifetime_minutes: Option<i32>) -> Self {
+        self.r#token_lifetime_minutes = r#token_lifetime_minutes;
+        self
+    }
+
     pub fn r#token_lifetime_minutes(&self) -> Option<&i32> {
         self.r#token_lifetime_minutes.as_ref().map(|x| x.borrow())
     }

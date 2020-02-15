@@ -30,6 +30,11 @@ impl r#PasswordCredential {
         self
     }
 
+    pub fn with_option_value(mut self, r#value: Option<String>) -> Self {
+        self.r#value = r#value;
+        self
+    }
+
     pub fn r#value(&self) -> Option<&str> {
         self.r#value.as_ref().map(|x| x.borrow())
     }

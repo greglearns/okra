@@ -30,6 +30,11 @@ impl r#ApplicationLicensing {
         self
     }
 
+    pub fn with_option_seat_count(mut self, r#seat_count: Option<i32>) -> Self {
+        self.r#seat_count = r#seat_count;
+        self
+    }
+
     pub fn r#seat_count(&self) -> Option<&i32> {
         self.r#seat_count.as_ref().map(|x| x.borrow())
     }

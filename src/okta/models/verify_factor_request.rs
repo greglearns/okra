@@ -42,6 +42,11 @@ impl r#VerifyFactorRequest {
         self
     }
 
+    pub fn with_option_activation_token(mut self, r#activation_token: Option<String>) -> Self {
+        self.r#activation_token = r#activation_token;
+        self
+    }
+
     pub fn r#activation_token(&self) -> Option<&str> {
         self.r#activation_token.as_ref().map(|x| x.borrow())
     }
@@ -56,6 +61,11 @@ impl r#VerifyFactorRequest {
 
     pub fn with_answer(mut self, r#answer: String) -> Self {
         self.r#answer = Some(r#answer);
+        self
+    }
+
+    pub fn with_option_answer(mut self, r#answer: Option<String>) -> Self {
+        self.r#answer = r#answer;
         self
     }
 
@@ -76,6 +86,11 @@ impl r#VerifyFactorRequest {
         self
     }
 
+    pub fn with_option_next_pass_code(mut self, r#next_pass_code: Option<String>) -> Self {
+        self.r#next_pass_code = r#next_pass_code;
+        self
+    }
+
     pub fn r#next_pass_code(&self) -> Option<&str> {
         self.r#next_pass_code.as_ref().map(|x| x.borrow())
     }
@@ -93,6 +108,11 @@ impl r#VerifyFactorRequest {
         self
     }
 
+    pub fn with_option_pass_code(mut self, r#pass_code: Option<String>) -> Self {
+        self.r#pass_code = r#pass_code;
+        self
+    }
+
     pub fn r#pass_code(&self) -> Option<&str> {
         self.r#pass_code.as_ref().map(|x| x.borrow())
     }
@@ -107,6 +127,11 @@ impl r#VerifyFactorRequest {
 
     pub fn with_token_lifetime_seconds(mut self, r#token_lifetime_seconds: i32) -> Self {
         self.r#token_lifetime_seconds = Some(r#token_lifetime_seconds);
+        self
+    }
+
+    pub fn with_option_token_lifetime_seconds(mut self, r#token_lifetime_seconds: Option<i32>) -> Self {
+        self.r#token_lifetime_seconds = r#token_lifetime_seconds;
         self
     }
 

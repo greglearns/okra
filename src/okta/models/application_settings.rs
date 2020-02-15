@@ -36,6 +36,11 @@ impl r#ApplicationSettings {
         self
     }
 
+    pub fn with_option_app(mut self, r#app: Option<ApplicationSettingsApplication>) -> Self {
+        self.r#app = r#app;
+        self
+    }
+
     pub fn r#app(&self) -> Option<&ApplicationSettingsApplication> {
         self.r#app.as_ref().map(|x| x.borrow())
     }
@@ -53,6 +58,11 @@ impl r#ApplicationSettings {
         self
     }
 
+    pub fn with_option_implicit_assignment(mut self, r#implicit_assignment: Option<bool>) -> Self {
+        self.r#implicit_assignment = r#implicit_assignment;
+        self
+    }
+
     pub fn r#implicit_assignment(&self) -> Option<&bool> {
         self.r#implicit_assignment.as_ref().map(|x| x.borrow())
     }
@@ -67,6 +77,11 @@ impl r#ApplicationSettings {
 
     pub fn with_notifications(mut self, r#notifications: ApplicationSettingsNotifications) -> Self {
         self.r#notifications = Some(r#notifications);
+        self
+    }
+
+    pub fn with_option_notifications(mut self, r#notifications: Option<ApplicationSettingsNotifications>) -> Self {
+        self.r#notifications = r#notifications;
         self
     }
 

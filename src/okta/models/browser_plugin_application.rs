@@ -30,6 +30,11 @@ impl r#BrowserPluginApplication {
         self
     }
 
+    pub fn with_option_credentials(mut self, r#credentials: Option<SchemeApplicationCredentials>) -> Self {
+        self.r#credentials = r#credentials;
+        self
+    }
+
     pub fn r#credentials(&self) -> Option<&SchemeApplicationCredentials> {
         self.r#credentials.as_ref().map(|x| x.borrow())
     }

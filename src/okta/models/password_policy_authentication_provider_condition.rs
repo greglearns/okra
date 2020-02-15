@@ -33,6 +33,11 @@ impl r#PasswordPolicyAuthenticationProviderCondition {
         self
     }
 
+    pub fn with_option_include(mut self, r#include: Option<Vec<String>>) -> Self {
+        self.r#include = r#include;
+        self
+    }
+
     pub fn r#include(&self) -> Option<&Vec<String>> {
         self.r#include.as_ref().map(|x| x.borrow())
     }
@@ -47,6 +52,11 @@ impl r#PasswordPolicyAuthenticationProviderCondition {
 
     pub fn with_provider(mut self, r#provider: String) -> Self {
         self.r#provider = Some(r#provider);
+        self
+    }
+
+    pub fn with_option_provider(mut self, r#provider: Option<String>) -> Self {
+        self.r#provider = r#provider;
         self
     }
 

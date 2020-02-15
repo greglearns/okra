@@ -42,6 +42,11 @@ impl r#PushFactorProfile {
         self
     }
 
+    pub fn with_option_credential_id(mut self, r#credential_id: Option<String>) -> Self {
+        self.r#credential_id = r#credential_id;
+        self
+    }
+
     pub fn r#credential_id(&self) -> Option<&str> {
         self.r#credential_id.as_ref().map(|x| x.borrow())
     }
@@ -56,6 +61,11 @@ impl r#PushFactorProfile {
 
     pub fn with_device_type(mut self, r#device_type: String) -> Self {
         self.r#device_type = Some(r#device_type);
+        self
+    }
+
+    pub fn with_option_device_type(mut self, r#device_type: Option<String>) -> Self {
+        self.r#device_type = r#device_type;
         self
     }
 
@@ -76,6 +86,11 @@ impl r#PushFactorProfile {
         self
     }
 
+    pub fn with_option_name(mut self, r#name: Option<String>) -> Self {
+        self.r#name = r#name;
+        self
+    }
+
     pub fn r#name(&self) -> Option<&str> {
         self.r#name.as_ref().map(|x| x.borrow())
     }
@@ -93,6 +108,11 @@ impl r#PushFactorProfile {
         self
     }
 
+    pub fn with_option_platform(mut self, r#platform: Option<String>) -> Self {
+        self.r#platform = r#platform;
+        self
+    }
+
     pub fn r#platform(&self) -> Option<&str> {
         self.r#platform.as_ref().map(|x| x.borrow())
     }
@@ -107,6 +127,11 @@ impl r#PushFactorProfile {
 
     pub fn with_version(mut self, r#version: String) -> Self {
         self.r#version = Some(r#version);
+        self
+    }
+
+    pub fn with_option_version(mut self, r#version: Option<String>) -> Self {
+        self.r#version = r#version;
         self
     }
 

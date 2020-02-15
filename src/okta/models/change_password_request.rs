@@ -33,6 +33,11 @@ impl r#ChangePasswordRequest {
         self
     }
 
+    pub fn with_option_new_password(mut self, r#new_password: Option<PasswordCredential>) -> Self {
+        self.r#new_password = r#new_password;
+        self
+    }
+
     pub fn r#new_password(&self) -> Option<&PasswordCredential> {
         self.r#new_password.as_ref().map(|x| x.borrow())
     }
@@ -47,6 +52,11 @@ impl r#ChangePasswordRequest {
 
     pub fn with_old_password(mut self, r#old_password: PasswordCredential) -> Self {
         self.r#old_password = Some(r#old_password);
+        self
+    }
+
+    pub fn with_option_old_password(mut self, r#old_password: Option<PasswordCredential>) -> Self {
+        self.r#old_password = r#old_password;
         self
     }
 

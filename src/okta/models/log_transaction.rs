@@ -36,6 +36,11 @@ impl r#LogTransaction {
         self
     }
 
+    pub fn with_option_detail(mut self, r#detail: Option<Value>) -> Self {
+        self.r#detail = r#detail;
+        self
+    }
+
     pub fn r#detail(&self) -> Option<&Value> {
         self.r#detail.as_ref().map(|x| x.borrow())
     }
@@ -53,6 +58,11 @@ impl r#LogTransaction {
         self
     }
 
+    pub fn with_option_id(mut self, r#id: Option<String>) -> Self {
+        self.r#id = r#id;
+        self
+    }
+
     pub fn r#id(&self) -> Option<&str> {
         self.r#id.as_ref().map(|x| x.borrow())
     }
@@ -67,6 +77,11 @@ impl r#LogTransaction {
 
     pub fn with_type(mut self, r#type: String) -> Self {
         self.r#type = Some(r#type);
+        self
+    }
+
+    pub fn with_option_type(mut self, r#type: Option<String>) -> Self {
+        self.r#type = r#type;
         self
     }
 

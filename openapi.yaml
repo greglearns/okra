@@ -5893,6 +5893,8 @@ components:
           type: string
         lastName:
           type: string
+        linkid:
+          type: string
         login:
           type: string
         mobilePhone:

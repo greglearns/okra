@@ -30,6 +30,11 @@ impl r#PasswordDictionary {
         self
     }
 
+    pub fn with_option_common(mut self, r#common: Option<PasswordDictionaryCommon>) -> Self {
+        self.r#common = r#common;
+        self
+    }
+
     pub fn r#common(&self) -> Option<&PasswordDictionaryCommon> {
         self.r#common.as_ref().map(|x| x.borrow())
     }

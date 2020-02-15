@@ -36,6 +36,11 @@ impl r#PolicyNetworkCondition {
         self
     }
 
+    pub fn with_option_connection(mut self, r#connection: Option<String>) -> Self {
+        self.r#connection = r#connection;
+        self
+    }
+
     pub fn r#connection(&self) -> Option<&str> {
         self.r#connection.as_ref().map(|x| x.borrow())
     }
@@ -53,6 +58,11 @@ impl r#PolicyNetworkCondition {
         self
     }
 
+    pub fn with_option_exclude(mut self, r#exclude: Option<Vec<String>>) -> Self {
+        self.r#exclude = r#exclude;
+        self
+    }
+
     pub fn r#exclude(&self) -> Option<&Vec<String>> {
         self.r#exclude.as_ref().map(|x| x.borrow())
     }
@@ -67,6 +77,11 @@ impl r#PolicyNetworkCondition {
 
     pub fn with_include(mut self, r#include: Vec<String>) -> Self {
         self.r#include = Some(r#include);
+        self
+    }
+
+    pub fn with_option_include(mut self, r#include: Option<Vec<String>>) -> Self {
+        self.r#include = r#include;
         self
     }
 

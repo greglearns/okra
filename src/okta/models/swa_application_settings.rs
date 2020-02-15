@@ -30,6 +30,11 @@ impl r#SwaApplicationSettings {
         self
     }
 
+    pub fn with_option_app(mut self, r#app: Option<SwaApplicationSettingsApplication>) -> Self {
+        self.r#app = r#app;
+        self
+    }
+
     pub fn r#app(&self) -> Option<&SwaApplicationSettingsApplication> {
         self.r#app.as_ref().map(|x| x.borrow())
     }

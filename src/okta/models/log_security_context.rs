@@ -42,6 +42,11 @@ impl r#LogSecurityContext {
         self
     }
 
+    pub fn with_option_as_number(mut self, r#as_number: Option<i32>) -> Self {
+        self.r#as_number = r#as_number;
+        self
+    }
+
     pub fn r#as_number(&self) -> Option<&i32> {
         self.r#as_number.as_ref().map(|x| x.borrow())
     }
@@ -56,6 +61,11 @@ impl r#LogSecurityContext {
 
     pub fn with_as_org(mut self, r#as_org: String) -> Self {
         self.r#as_org = Some(r#as_org);
+        self
+    }
+
+    pub fn with_option_as_org(mut self, r#as_org: Option<String>) -> Self {
+        self.r#as_org = r#as_org;
         self
     }
 
@@ -76,6 +86,11 @@ impl r#LogSecurityContext {
         self
     }
 
+    pub fn with_option_domain(mut self, r#domain: Option<String>) -> Self {
+        self.r#domain = r#domain;
+        self
+    }
+
     pub fn r#domain(&self) -> Option<&str> {
         self.r#domain.as_ref().map(|x| x.borrow())
     }
@@ -93,6 +108,11 @@ impl r#LogSecurityContext {
         self
     }
 
+    pub fn with_option_is_proxy(mut self, r#is_proxy: Option<bool>) -> Self {
+        self.r#is_proxy = r#is_proxy;
+        self
+    }
+
     pub fn r#is_proxy(&self) -> Option<&bool> {
         self.r#is_proxy.as_ref().map(|x| x.borrow())
     }
@@ -107,6 +127,11 @@ impl r#LogSecurityContext {
 
     pub fn with_isp(mut self, r#isp: String) -> Self {
         self.r#isp = Some(r#isp);
+        self
+    }
+
+    pub fn with_option_isp(mut self, r#isp: Option<String>) -> Self {
+        self.r#isp = r#isp;
         self
     }
 

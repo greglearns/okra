@@ -30,6 +30,11 @@ impl r#BookmarkApplication {
         self
     }
 
+    pub fn with_option_settings(mut self, r#settings: Option<BookmarkApplicationSettings>) -> Self {
+        self.r#settings = r#settings;
+        self
+    }
+
     pub fn r#settings(&self) -> Option<&BookmarkApplicationSettings> {
         self.r#settings.as_ref().map(|x| x.borrow())
     }

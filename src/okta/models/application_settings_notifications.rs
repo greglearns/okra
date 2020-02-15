@@ -30,6 +30,11 @@ impl r#ApplicationSettingsNotifications {
         self
     }
 
+    pub fn with_option_vpn(mut self, r#vpn: Option<ApplicationSettingsNotificationsVpn>) -> Self {
+        self.r#vpn = r#vpn;
+        self
+    }
+
     pub fn r#vpn(&self) -> Option<&ApplicationSettingsNotificationsVpn> {
         self.r#vpn.as_ref().map(|x| x.borrow())
     }

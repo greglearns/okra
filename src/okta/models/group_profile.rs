@@ -33,6 +33,11 @@ impl r#GroupProfile {
         self
     }
 
+    pub fn with_option_description(mut self, r#description: Option<String>) -> Self {
+        self.r#description = r#description;
+        self
+    }
+
     pub fn r#description(&self) -> Option<&str> {
         self.r#description.as_ref().map(|x| x.borrow())
     }
@@ -47,6 +52,11 @@ impl r#GroupProfile {
 
     pub fn with_name(mut self, r#name: String) -> Self {
         self.r#name = Some(r#name);
+        self
+    }
+
+    pub fn with_option_name(mut self, r#name: Option<String>) -> Self {
+        self.r#name = r#name;
         self
     }
 

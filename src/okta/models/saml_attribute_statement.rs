@@ -39,6 +39,11 @@ impl r#SamlAttributeStatement {
         self
     }
 
+    pub fn with_option_name(mut self, r#name: Option<String>) -> Self {
+        self.r#name = r#name;
+        self
+    }
+
     pub fn r#name(&self) -> Option<&str> {
         self.r#name.as_ref().map(|x| x.borrow())
     }
@@ -53,6 +58,11 @@ impl r#SamlAttributeStatement {
 
     pub fn with_namespace(mut self, r#namespace: String) -> Self {
         self.r#namespace = Some(r#namespace);
+        self
+    }
+
+    pub fn with_option_namespace(mut self, r#namespace: Option<String>) -> Self {
+        self.r#namespace = r#namespace;
         self
     }
 
@@ -73,6 +83,11 @@ impl r#SamlAttributeStatement {
         self
     }
 
+    pub fn with_option_type(mut self, r#type: Option<String>) -> Self {
+        self.r#type = r#type;
+        self
+    }
+
     pub fn r#type(&self) -> Option<&str> {
         self.r#type.as_ref().map(|x| x.borrow())
     }
@@ -87,6 +102,11 @@ impl r#SamlAttributeStatement {
 
     pub fn with_values(mut self, r#values: Vec<String>) -> Self {
         self.r#values = Some(r#values);
+        self
+    }
+
+    pub fn with_option_values(mut self, r#values: Option<Vec<String>>) -> Self {
+        self.r#values = r#values;
         self
     }
 

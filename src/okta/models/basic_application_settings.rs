@@ -30,6 +30,11 @@ impl r#BasicApplicationSettings {
         self
     }
 
+    pub fn with_option_app(mut self, r#app: Option<BasicApplicationSettingsApplication>) -> Self {
+        self.r#app = r#app;
+        self
+    }
+
     pub fn r#app(&self) -> Option<&BasicApplicationSettingsApplication> {
         self.r#app.as_ref().map(|x| x.borrow())
     }

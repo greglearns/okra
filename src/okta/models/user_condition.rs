@@ -33,6 +33,11 @@ impl r#UserCondition {
         self
     }
 
+    pub fn with_option_exclude(mut self, r#exclude: Option<Vec<String>>) -> Self {
+        self.r#exclude = r#exclude;
+        self
+    }
+
     pub fn r#exclude(&self) -> Option<&Vec<String>> {
         self.r#exclude.as_ref().map(|x| x.borrow())
     }
@@ -47,6 +52,11 @@ impl r#UserCondition {
 
     pub fn with_include(mut self, r#include: Vec<String>) -> Self {
         self.r#include = Some(r#include);
+        self
+    }
+
+    pub fn with_option_include(mut self, r#include: Option<Vec<String>>) -> Self {
+        self.r#include = r#include;
         self
     }
 

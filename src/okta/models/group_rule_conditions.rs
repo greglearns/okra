@@ -33,6 +33,11 @@ impl r#GroupRuleConditions {
         self
     }
 
+    pub fn with_option_expression(mut self, r#expression: Option<GroupRuleExpression>) -> Self {
+        self.r#expression = r#expression;
+        self
+    }
+
     pub fn r#expression(&self) -> Option<&GroupRuleExpression> {
         self.r#expression.as_ref().map(|x| x.borrow())
     }
@@ -47,6 +52,11 @@ impl r#GroupRuleConditions {
 
     pub fn with_people(mut self, r#people: GroupRulePeopleCondition) -> Self {
         self.r#people = Some(r#people);
+        self
+    }
+
+    pub fn with_option_people(mut self, r#people: Option<GroupRulePeopleCondition>) -> Self {
+        self.r#people = r#people;
         self
     }
 

@@ -36,6 +36,11 @@ impl r#OktaSignOnPolicyRule {
         self
     }
 
+    pub fn with_option_actions(mut self, r#actions: Option<OktaSignOnPolicyRuleActions>) -> Self {
+        self.r#actions = r#actions;
+        self
+    }
+
     pub fn r#actions(&self) -> Option<&OktaSignOnPolicyRuleActions> {
         self.r#actions.as_ref().map(|x| x.borrow())
     }
@@ -53,6 +58,11 @@ impl r#OktaSignOnPolicyRule {
         self
     }
 
+    pub fn with_option_conditions(mut self, r#conditions: Option<OktaSignOnPolicyRuleConditions>) -> Self {
+        self.r#conditions = r#conditions;
+        self
+    }
+
     pub fn r#conditions(&self) -> Option<&OktaSignOnPolicyRuleConditions> {
         self.r#conditions.as_ref().map(|x| x.borrow())
     }
@@ -67,6 +77,11 @@ impl r#OktaSignOnPolicyRule {
 
     pub fn with_name(mut self, r#name: String) -> Self {
         self.r#name = Some(r#name);
+        self
+    }
+
+    pub fn with_option_name(mut self, r#name: Option<String>) -> Self {
+        self.r#name = r#name;
         self
     }
 

@@ -51,6 +51,11 @@ impl r#Role {
         self
     }
 
+    pub fn with_option_embedded(mut self, r#embedded: Option<Value>) -> Self {
+        self.r#embedded = r#embedded;
+        self
+    }
+
     pub fn r#embedded(&self) -> Option<&Value> {
         self.r#embedded.as_ref().map(|x| x.borrow())
     }
@@ -65,6 +70,11 @@ impl r#Role {
 
     pub fn with_created(mut self, r#created: String) -> Self {
         self.r#created = Some(r#created);
+        self
+    }
+
+    pub fn with_option_created(mut self, r#created: Option<String>) -> Self {
+        self.r#created = r#created;
         self
     }
 
@@ -85,6 +95,11 @@ impl r#Role {
         self
     }
 
+    pub fn with_option_description(mut self, r#description: Option<String>) -> Self {
+        self.r#description = r#description;
+        self
+    }
+
     pub fn r#description(&self) -> Option<&str> {
         self.r#description.as_ref().map(|x| x.borrow())
     }
@@ -99,6 +114,11 @@ impl r#Role {
 
     pub fn with_id(mut self, r#id: String) -> Self {
         self.r#id = Some(r#id);
+        self
+    }
+
+    pub fn with_option_id(mut self, r#id: Option<String>) -> Self {
+        self.r#id = r#id;
         self
     }
 
@@ -119,6 +139,11 @@ impl r#Role {
         self
     }
 
+    pub fn with_option_label(mut self, r#label: Option<String>) -> Self {
+        self.r#label = r#label;
+        self
+    }
+
     pub fn r#label(&self) -> Option<&str> {
         self.r#label.as_ref().map(|x| x.borrow())
     }
@@ -133,6 +158,11 @@ impl r#Role {
 
     pub fn with_last_updated(mut self, r#last_updated: String) -> Self {
         self.r#last_updated = Some(r#last_updated);
+        self
+    }
+
+    pub fn with_option_last_updated(mut self, r#last_updated: Option<String>) -> Self {
+        self.r#last_updated = r#last_updated;
         self
     }
 
@@ -153,6 +183,11 @@ impl r#Role {
         self
     }
 
+    pub fn with_option_status(mut self, r#status: Option<RoleStatus>) -> Self {
+        self.r#status = r#status;
+        self
+    }
+
     pub fn r#status(&self) -> Option<&RoleStatus> {
         self.r#status.as_ref().map(|x| x.borrow())
     }
@@ -167,6 +202,11 @@ impl r#Role {
 
     pub fn with_type(mut self, r#type: String) -> Self {
         self.r#type = Some(r#type);
+        self
+    }
+
+    pub fn with_option_type(mut self, r#type: Option<String>) -> Self {
+        self.r#type = r#type;
         self
     }
 

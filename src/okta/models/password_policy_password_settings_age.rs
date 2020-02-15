@@ -39,6 +39,11 @@ impl r#PasswordPolicyPasswordSettingsAge {
         self
     }
 
+    pub fn with_option_expire_warn_days(mut self, r#expire_warn_days: Option<i32>) -> Self {
+        self.r#expire_warn_days = r#expire_warn_days;
+        self
+    }
+
     pub fn r#expire_warn_days(&self) -> Option<&i32> {
         self.r#expire_warn_days.as_ref().map(|x| x.borrow())
     }
@@ -53,6 +58,11 @@ impl r#PasswordPolicyPasswordSettingsAge {
 
     pub fn with_history_count(mut self, r#history_count: i32) -> Self {
         self.r#history_count = Some(r#history_count);
+        self
+    }
+
+    pub fn with_option_history_count(mut self, r#history_count: Option<i32>) -> Self {
+        self.r#history_count = r#history_count;
         self
     }
 
@@ -73,6 +83,11 @@ impl r#PasswordPolicyPasswordSettingsAge {
         self
     }
 
+    pub fn with_option_max_age_days(mut self, r#max_age_days: Option<i32>) -> Self {
+        self.r#max_age_days = r#max_age_days;
+        self
+    }
+
     pub fn r#max_age_days(&self) -> Option<&i32> {
         self.r#max_age_days.as_ref().map(|x| x.borrow())
     }
@@ -87,6 +102,11 @@ impl r#PasswordPolicyPasswordSettingsAge {
 
     pub fn with_min_age_minutes(mut self, r#min_age_minutes: i32) -> Self {
         self.r#min_age_minutes = Some(r#min_age_minutes);
+        self
+    }
+
+    pub fn with_option_min_age_minutes(mut self, r#min_age_minutes: Option<i32>) -> Self {
+        self.r#min_age_minutes = r#min_age_minutes;
         self
     }
 

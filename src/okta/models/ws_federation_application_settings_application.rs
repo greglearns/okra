@@ -63,6 +63,11 @@ impl r#WsFederationApplicationSettingsApplication {
         self
     }
 
+    pub fn with_option_attribute_statements(mut self, r#attribute_statements: Option<String>) -> Self {
+        self.r#attribute_statements = r#attribute_statements;
+        self
+    }
+
     pub fn r#attribute_statements(&self) -> Option<&str> {
         self.r#attribute_statements.as_ref().map(|x| x.borrow())
     }
@@ -77,6 +82,11 @@ impl r#WsFederationApplicationSettingsApplication {
 
     pub fn with_audience_restriction(mut self, r#audience_restriction: String) -> Self {
         self.r#audience_restriction = Some(r#audience_restriction);
+        self
+    }
+
+    pub fn with_option_audience_restriction(mut self, r#audience_restriction: Option<String>) -> Self {
+        self.r#audience_restriction = r#audience_restriction;
         self
     }
 
@@ -97,6 +107,11 @@ impl r#WsFederationApplicationSettingsApplication {
         self
     }
 
+    pub fn with_option_authn_context_class_ref(mut self, r#authn_context_class_ref: Option<String>) -> Self {
+        self.r#authn_context_class_ref = r#authn_context_class_ref;
+        self
+    }
+
     pub fn r#authn_context_class_ref(&self) -> Option<&str> {
         self.r#authn_context_class_ref.as_ref().map(|x| x.borrow())
     }
@@ -111,6 +126,11 @@ impl r#WsFederationApplicationSettingsApplication {
 
     pub fn with_group_filter(mut self, r#group_filter: String) -> Self {
         self.r#group_filter = Some(r#group_filter);
+        self
+    }
+
+    pub fn with_option_group_filter(mut self, r#group_filter: Option<String>) -> Self {
+        self.r#group_filter = r#group_filter;
         self
     }
 
@@ -131,6 +151,11 @@ impl r#WsFederationApplicationSettingsApplication {
         self
     }
 
+    pub fn with_option_group_name(mut self, r#group_name: Option<String>) -> Self {
+        self.r#group_name = r#group_name;
+        self
+    }
+
     pub fn r#group_name(&self) -> Option<&str> {
         self.r#group_name.as_ref().map(|x| x.borrow())
     }
@@ -145,6 +170,11 @@ impl r#WsFederationApplicationSettingsApplication {
 
     pub fn with_group_value_format(mut self, r#group_value_format: String) -> Self {
         self.r#group_value_format = Some(r#group_value_format);
+        self
+    }
+
+    pub fn with_option_group_value_format(mut self, r#group_value_format: Option<String>) -> Self {
+        self.r#group_value_format = r#group_value_format;
         self
     }
 
@@ -165,6 +195,11 @@ impl r#WsFederationApplicationSettingsApplication {
         self
     }
 
+    pub fn with_option_name_id_format(mut self, r#name_id_format: Option<String>) -> Self {
+        self.r#name_id_format = r#name_id_format;
+        self
+    }
+
     pub fn r#name_id_format(&self) -> Option<&str> {
         self.r#name_id_format.as_ref().map(|x| x.borrow())
     }
@@ -179,6 +214,11 @@ impl r#WsFederationApplicationSettingsApplication {
 
     pub fn with_realm(mut self, r#realm: String) -> Self {
         self.r#realm = Some(r#realm);
+        self
+    }
+
+    pub fn with_option_realm(mut self, r#realm: Option<String>) -> Self {
+        self.r#realm = r#realm;
         self
     }
 
@@ -199,6 +239,11 @@ impl r#WsFederationApplicationSettingsApplication {
         self
     }
 
+    pub fn with_option_site_url(mut self, r#site_url: Option<String>) -> Self {
+        self.r#site_url = r#site_url;
+        self
+    }
+
     pub fn r#site_url(&self) -> Option<&str> {
         self.r#site_url.as_ref().map(|x| x.borrow())
     }
@@ -213,6 +258,11 @@ impl r#WsFederationApplicationSettingsApplication {
 
     pub fn with_username_attribute(mut self, r#username_attribute: String) -> Self {
         self.r#username_attribute = Some(r#username_attribute);
+        self
+    }
+
+    pub fn with_option_username_attribute(mut self, r#username_attribute: Option<String>) -> Self {
+        self.r#username_attribute = r#username_attribute;
         self
     }
 
@@ -233,6 +283,11 @@ impl r#WsFederationApplicationSettingsApplication {
         self
     }
 
+    pub fn with_option_w_reply_override(mut self, r#w_reply_override: Option<bool>) -> Self {
+        self.r#w_reply_override = r#w_reply_override;
+        self
+    }
+
     pub fn r#w_reply_override(&self) -> Option<&bool> {
         self.r#w_reply_override.as_ref().map(|x| x.borrow())
     }
@@ -247,6 +302,11 @@ impl r#WsFederationApplicationSettingsApplication {
 
     pub fn with_w_reply_url(mut self, r#w_reply_url: String) -> Self {
         self.r#w_reply_url = Some(r#w_reply_url);
+        self
+    }
+
+    pub fn with_option_w_reply_url(mut self, r#w_reply_url: Option<String>) -> Self {
+        self.r#w_reply_url = r#w_reply_url;
         self
     }
 

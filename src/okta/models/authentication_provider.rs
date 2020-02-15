@@ -33,6 +33,11 @@ impl r#AuthenticationProvider {
         self
     }
 
+    pub fn with_option_name(mut self, r#name: Option<String>) -> Self {
+        self.r#name = r#name;
+        self
+    }
+
     pub fn r#name(&self) -> Option<&str> {
         self.r#name.as_ref().map(|x| x.borrow())
     }
@@ -47,6 +52,11 @@ impl r#AuthenticationProvider {
 
     pub fn with_type(mut self, r#type: AuthenticationProviderType) -> Self {
         self.r#type = Some(r#type);
+        self
+    }
+
+    pub fn with_option_type(mut self, r#type: Option<AuthenticationProviderType>) -> Self {
+        self.r#type = r#type;
         self
     }
 

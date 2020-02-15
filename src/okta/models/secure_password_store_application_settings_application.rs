@@ -54,6 +54,11 @@ impl r#SecurePasswordStoreApplicationSettingsApplication {
         self
     }
 
+    pub fn with_option_optional_field1(mut self, r#optional_field1: Option<String>) -> Self {
+        self.r#optional_field1 = r#optional_field1;
+        self
+    }
+
     pub fn r#optional_field1(&self) -> Option<&str> {
         self.r#optional_field1.as_ref().map(|x| x.borrow())
     }
@@ -68,6 +73,11 @@ impl r#SecurePasswordStoreApplicationSettingsApplication {
 
     pub fn with_optional_field1_value(mut self, r#optional_field1_value: String) -> Self {
         self.r#optional_field1_value = Some(r#optional_field1_value);
+        self
+    }
+
+    pub fn with_option_optional_field1_value(mut self, r#optional_field1_value: Option<String>) -> Self {
+        self.r#optional_field1_value = r#optional_field1_value;
         self
     }
 
@@ -88,6 +98,11 @@ impl r#SecurePasswordStoreApplicationSettingsApplication {
         self
     }
 
+    pub fn with_option_optional_field2(mut self, r#optional_field2: Option<String>) -> Self {
+        self.r#optional_field2 = r#optional_field2;
+        self
+    }
+
     pub fn r#optional_field2(&self) -> Option<&str> {
         self.r#optional_field2.as_ref().map(|x| x.borrow())
     }
@@ -102,6 +117,11 @@ impl r#SecurePasswordStoreApplicationSettingsApplication {
 
     pub fn with_optional_field2_value(mut self, r#optional_field2_value: String) -> Self {
         self.r#optional_field2_value = Some(r#optional_field2_value);
+        self
+    }
+
+    pub fn with_option_optional_field2_value(mut self, r#optional_field2_value: Option<String>) -> Self {
+        self.r#optional_field2_value = r#optional_field2_value;
         self
     }
 
@@ -122,6 +142,11 @@ impl r#SecurePasswordStoreApplicationSettingsApplication {
         self
     }
 
+    pub fn with_option_optional_field3(mut self, r#optional_field3: Option<String>) -> Self {
+        self.r#optional_field3 = r#optional_field3;
+        self
+    }
+
     pub fn r#optional_field3(&self) -> Option<&str> {
         self.r#optional_field3.as_ref().map(|x| x.borrow())
     }
@@ -136,6 +161,11 @@ impl r#SecurePasswordStoreApplicationSettingsApplication {
 
     pub fn with_optional_field3_value(mut self, r#optional_field3_value: String) -> Self {
         self.r#optional_field3_value = Some(r#optional_field3_value);
+        self
+    }
+
+    pub fn with_option_optional_field3_value(mut self, r#optional_field3_value: Option<String>) -> Self {
+        self.r#optional_field3_value = r#optional_field3_value;
         self
     }
 
@@ -156,6 +186,11 @@ impl r#SecurePasswordStoreApplicationSettingsApplication {
         self
     }
 
+    pub fn with_option_password_field(mut self, r#password_field: Option<String>) -> Self {
+        self.r#password_field = r#password_field;
+        self
+    }
+
     pub fn r#password_field(&self) -> Option<&str> {
         self.r#password_field.as_ref().map(|x| x.borrow())
     }
@@ -173,6 +208,11 @@ impl r#SecurePasswordStoreApplicationSettingsApplication {
         self
     }
 
+    pub fn with_option_url(mut self, r#url: Option<String>) -> Self {
+        self.r#url = r#url;
+        self
+    }
+
     pub fn r#url(&self) -> Option<&str> {
         self.r#url.as_ref().map(|x| x.borrow())
     }
@@ -187,6 +227,11 @@ impl r#SecurePasswordStoreApplicationSettingsApplication {
 
     pub fn with_username_field(mut self, r#username_field: String) -> Self {
         self.r#username_field = Some(r#username_field);
+        self
+    }
+
+    pub fn with_option_username_field(mut self, r#username_field: Option<String>) -> Self {
+        self.r#username_field = r#username_field;
         self
     }
 

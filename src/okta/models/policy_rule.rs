@@ -48,6 +48,11 @@ impl r#PolicyRule {
         self
     }
 
+    pub fn with_option_created(mut self, r#created: Option<String>) -> Self {
+        self.r#created = r#created;
+        self
+    }
+
     pub fn r#created(&self) -> Option<&str> {
         self.r#created.as_ref().map(|x| x.borrow())
     }
@@ -62,6 +67,11 @@ impl r#PolicyRule {
 
     pub fn with_id(mut self, r#id: String) -> Self {
         self.r#id = Some(r#id);
+        self
+    }
+
+    pub fn with_option_id(mut self, r#id: Option<String>) -> Self {
+        self.r#id = r#id;
         self
     }
 
@@ -82,6 +92,11 @@ impl r#PolicyRule {
         self
     }
 
+    pub fn with_option_last_updated(mut self, r#last_updated: Option<String>) -> Self {
+        self.r#last_updated = r#last_updated;
+        self
+    }
+
     pub fn r#last_updated(&self) -> Option<&str> {
         self.r#last_updated.as_ref().map(|x| x.borrow())
     }
@@ -96,6 +111,11 @@ impl r#PolicyRule {
 
     pub fn with_priority(mut self, r#priority: i32) -> Self {
         self.r#priority = Some(r#priority);
+        self
+    }
+
+    pub fn with_option_priority(mut self, r#priority: Option<i32>) -> Self {
+        self.r#priority = r#priority;
         self
     }
 
@@ -116,6 +136,11 @@ impl r#PolicyRule {
         self
     }
 
+    pub fn with_option_status(mut self, r#status: Option<String>) -> Self {
+        self.r#status = r#status;
+        self
+    }
+
     pub fn r#status(&self) -> Option<&str> {
         self.r#status.as_ref().map(|x| x.borrow())
     }
@@ -133,6 +158,11 @@ impl r#PolicyRule {
         self
     }
 
+    pub fn with_option_system(mut self, r#system: Option<bool>) -> Self {
+        self.r#system = r#system;
+        self
+    }
+
     pub fn r#system(&self) -> Option<&bool> {
         self.r#system.as_ref().map(|x| x.borrow())
     }
@@ -147,6 +177,11 @@ impl r#PolicyRule {
 
     pub fn with_type(mut self, r#type: String) -> Self {
         self.r#type = Some(r#type);
+        self
+    }
+
+    pub fn with_option_type(mut self, r#type: Option<String>) -> Self {
+        self.r#type = r#type;
         self
     }
 

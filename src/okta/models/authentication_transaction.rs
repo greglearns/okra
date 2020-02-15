@@ -54,6 +54,11 @@ impl r#AuthenticationTransaction {
         self
     }
 
+    pub fn with_option_embedded(mut self, r#embedded: Option<Value>) -> Self {
+        self.r#embedded = r#embedded;
+        self
+    }
+
     pub fn r#embedded(&self) -> Option<&Value> {
         self.r#embedded.as_ref().map(|x| x.borrow())
     }
@@ -68,6 +73,11 @@ impl r#AuthenticationTransaction {
 
     pub fn with_links(mut self, r#links: Value) -> Self {
         self.r#links = Some(r#links);
+        self
+    }
+
+    pub fn with_option_links(mut self, r#links: Option<Value>) -> Self {
+        self.r#links = r#links;
         self
     }
 
@@ -88,6 +98,11 @@ impl r#AuthenticationTransaction {
         self
     }
 
+    pub fn with_option_expires_at(mut self, r#expires_at: Option<String>) -> Self {
+        self.r#expires_at = r#expires_at;
+        self
+    }
+
     pub fn r#expires_at(&self) -> Option<&str> {
         self.r#expires_at.as_ref().map(|x| x.borrow())
     }
@@ -102,6 +117,11 @@ impl r#AuthenticationTransaction {
 
     pub fn with_factor_result(mut self, r#factor_result: FactorResultType) -> Self {
         self.r#factor_result = Some(r#factor_result);
+        self
+    }
+
+    pub fn with_option_factor_result(mut self, r#factor_result: Option<FactorResultType>) -> Self {
+        self.r#factor_result = r#factor_result;
         self
     }
 
@@ -122,6 +142,11 @@ impl r#AuthenticationTransaction {
         self
     }
 
+    pub fn with_option_relay_state(mut self, r#relay_state: Option<String>) -> Self {
+        self.r#relay_state = r#relay_state;
+        self
+    }
+
     pub fn r#relay_state(&self) -> Option<&str> {
         self.r#relay_state.as_ref().map(|x| x.borrow())
     }
@@ -136,6 +161,11 @@ impl r#AuthenticationTransaction {
 
     pub fn with_session_token(mut self, r#session_token: String) -> Self {
         self.r#session_token = Some(r#session_token);
+        self
+    }
+
+    pub fn with_option_session_token(mut self, r#session_token: Option<String>) -> Self {
+        self.r#session_token = r#session_token;
         self
     }
 
@@ -156,6 +186,11 @@ impl r#AuthenticationTransaction {
         self
     }
 
+    pub fn with_option_state_token(mut self, r#state_token: Option<String>) -> Self {
+        self.r#state_token = r#state_token;
+        self
+    }
+
     pub fn r#state_token(&self) -> Option<&str> {
         self.r#state_token.as_ref().map(|x| x.borrow())
     }
@@ -173,6 +208,11 @@ impl r#AuthenticationTransaction {
         self
     }
 
+    pub fn with_option_status(mut self, r#status: Option<TransactionState>) -> Self {
+        self.r#status = r#status;
+        self
+    }
+
     pub fn r#status(&self) -> Option<&TransactionState> {
         self.r#status.as_ref().map(|x| x.borrow())
     }
@@ -187,6 +227,11 @@ impl r#AuthenticationTransaction {
 
     pub fn with_type(mut self, r#type: String) -> Self {
         self.r#type = Some(r#type);
+        self
+    }
+
+    pub fn with_option_type(mut self, r#type: Option<String>) -> Self {
+        self.r#type = r#type;
         self
     }
 

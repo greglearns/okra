@@ -66,6 +66,11 @@ impl r#User {
         self
     }
 
+    pub fn with_option_embedded(mut self, r#embedded: Option<Value>) -> Self {
+        self.r#embedded = r#embedded;
+        self
+    }
+
     pub fn r#embedded(&self) -> Option<&Value> {
         self.r#embedded.as_ref().map(|x| x.borrow())
     }
@@ -80,6 +85,11 @@ impl r#User {
 
     pub fn with_links(mut self, r#links: Value) -> Self {
         self.r#links = Some(r#links);
+        self
+    }
+
+    pub fn with_option_links(mut self, r#links: Option<Value>) -> Self {
+        self.r#links = r#links;
         self
     }
 
@@ -100,6 +110,11 @@ impl r#User {
         self
     }
 
+    pub fn with_option_activated(mut self, r#activated: Option<String>) -> Self {
+        self.r#activated = r#activated;
+        self
+    }
+
     pub fn r#activated(&self) -> Option<&str> {
         self.r#activated.as_ref().map(|x| x.borrow())
     }
@@ -114,6 +129,11 @@ impl r#User {
 
     pub fn with_created(mut self, r#created: String) -> Self {
         self.r#created = Some(r#created);
+        self
+    }
+
+    pub fn with_option_created(mut self, r#created: Option<String>) -> Self {
+        self.r#created = r#created;
         self
     }
 
@@ -134,6 +154,11 @@ impl r#User {
         self
     }
 
+    pub fn with_option_credentials(mut self, r#credentials: Option<UserCredentials>) -> Self {
+        self.r#credentials = r#credentials;
+        self
+    }
+
     pub fn r#credentials(&self) -> Option<&UserCredentials> {
         self.r#credentials.as_ref().map(|x| x.borrow())
     }
@@ -148,6 +173,11 @@ impl r#User {
 
     pub fn with_id(mut self, r#id: String) -> Self {
         self.r#id = Some(r#id);
+        self
+    }
+
+    pub fn with_option_id(mut self, r#id: Option<String>) -> Self {
+        self.r#id = r#id;
         self
     }
 
@@ -168,6 +198,11 @@ impl r#User {
         self
     }
 
+    pub fn with_option_last_login(mut self, r#last_login: Option<String>) -> Self {
+        self.r#last_login = r#last_login;
+        self
+    }
+
     pub fn r#last_login(&self) -> Option<&str> {
         self.r#last_login.as_ref().map(|x| x.borrow())
     }
@@ -182,6 +217,11 @@ impl r#User {
 
     pub fn with_last_updated(mut self, r#last_updated: String) -> Self {
         self.r#last_updated = Some(r#last_updated);
+        self
+    }
+
+    pub fn with_option_last_updated(mut self, r#last_updated: Option<String>) -> Self {
+        self.r#last_updated = r#last_updated;
         self
     }
 
@@ -202,6 +242,11 @@ impl r#User {
         self
     }
 
+    pub fn with_option_password_changed(mut self, r#password_changed: Option<String>) -> Self {
+        self.r#password_changed = r#password_changed;
+        self
+    }
+
     pub fn r#password_changed(&self) -> Option<&str> {
         self.r#password_changed.as_ref().map(|x| x.borrow())
     }
@@ -216,6 +261,11 @@ impl r#User {
 
     pub fn with_profile(mut self, r#profile: UserProfile) -> Self {
         self.r#profile = Some(r#profile);
+        self
+    }
+
+    pub fn with_option_profile(mut self, r#profile: Option<UserProfile>) -> Self {
+        self.r#profile = r#profile;
         self
     }
 
@@ -236,6 +286,11 @@ impl r#User {
         self
     }
 
+    pub fn with_option_status(mut self, r#status: Option<UserStatus>) -> Self {
+        self.r#status = r#status;
+        self
+    }
+
     pub fn r#status(&self) -> Option<&UserStatus> {
         self.r#status.as_ref().map(|x| x.borrow())
     }
@@ -253,6 +308,11 @@ impl r#User {
         self
     }
 
+    pub fn with_option_status_changed(mut self, r#status_changed: Option<String>) -> Self {
+        self.r#status_changed = r#status_changed;
+        self
+    }
+
     pub fn r#status_changed(&self) -> Option<&str> {
         self.r#status_changed.as_ref().map(|x| x.borrow())
     }
@@ -267,6 +327,11 @@ impl r#User {
 
     pub fn with_transitioning_to_status(mut self, r#transitioning_to_status: UserStatus) -> Self {
         self.r#transitioning_to_status = Some(r#transitioning_to_status);
+        self
+    }
+
+    pub fn with_option_transitioning_to_status(mut self, r#transitioning_to_status: Option<UserStatus>) -> Self {
+        self.r#transitioning_to_status = r#transitioning_to_status;
         self
     }
 

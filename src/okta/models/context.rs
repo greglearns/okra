@@ -30,6 +30,11 @@ impl r#Context {
         self
     }
 
+    pub fn with_option_device_token(mut self, r#device_token: Option<String>) -> Self {
+        self.r#device_token = r#device_token;
+        self
+    }
+
     pub fn r#device_token(&self) -> Option<&str> {
         self.r#device_token.as_ref().map(|x| x.borrow())
     }

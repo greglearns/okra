@@ -30,6 +30,11 @@ impl r#OktaSignOnPolicyRuleActions {
         self
     }
 
+    pub fn with_option_signon(mut self, r#signon: Option<OktaSignOnPolicyRuleSignonActions>) -> Self {
+        self.r#signon = r#signon;
+        self
+    }
+
     pub fn r#signon(&self) -> Option<&OktaSignOnPolicyRuleSignonActions> {
         self.r#signon.as_ref().map(|x| x.borrow())
     }

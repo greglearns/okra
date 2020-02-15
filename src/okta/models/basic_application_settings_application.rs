@@ -33,6 +33,11 @@ impl r#BasicApplicationSettingsApplication {
         self
     }
 
+    pub fn with_option_auth_url(mut self, r#auth_url: Option<String>) -> Self {
+        self.r#auth_url = r#auth_url;
+        self
+    }
+
     pub fn r#auth_url(&self) -> Option<&str> {
         self.r#auth_url.as_ref().map(|x| x.borrow())
     }
@@ -47,6 +52,11 @@ impl r#BasicApplicationSettingsApplication {
 
     pub fn with_url(mut self, r#url: String) -> Self {
         self.r#url = Some(r#url);
+        self
+    }
+
+    pub fn with_option_url(mut self, r#url: Option<String>) -> Self {
+        self.r#url = r#url;
         self
     }
 

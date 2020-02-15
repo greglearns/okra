@@ -72,6 +72,11 @@ impl r#Factor {
         self
     }
 
+    pub fn with_option_embedded(mut self, r#embedded: Option<Value>) -> Self {
+        self.r#embedded = r#embedded;
+        self
+    }
+
     pub fn r#embedded(&self) -> Option<&Value> {
         self.r#embedded.as_ref().map(|x| x.borrow())
     }
@@ -86,6 +91,11 @@ impl r#Factor {
 
     pub fn with_links(mut self, r#links: Value) -> Self {
         self.r#links = Some(r#links);
+        self
+    }
+
+    pub fn with_option_links(mut self, r#links: Option<Value>) -> Self {
+        self.r#links = r#links;
         self
     }
 
@@ -106,6 +116,11 @@ impl r#Factor {
         self
     }
 
+    pub fn with_option_device(mut self, r#device: Option<String>) -> Self {
+        self.r#device = r#device;
+        self
+    }
+
     pub fn r#device(&self) -> Option<&str> {
         self.r#device.as_ref().map(|x| x.borrow())
     }
@@ -120,6 +135,11 @@ impl r#Factor {
 
     pub fn with_device_type(mut self, r#device_type: String) -> Self {
         self.r#device_type = Some(r#device_type);
+        self
+    }
+
+    pub fn with_option_device_type(mut self, r#device_type: Option<String>) -> Self {
+        self.r#device_type = r#device_type;
         self
     }
 
@@ -140,6 +160,11 @@ impl r#Factor {
         self
     }
 
+    pub fn with_option_factor_type(mut self, r#factor_type: Option<FactorType>) -> Self {
+        self.r#factor_type = r#factor_type;
+        self
+    }
+
     pub fn r#factor_type(&self) -> Option<&FactorType> {
         self.r#factor_type.as_ref().map(|x| x.borrow())
     }
@@ -154,6 +179,11 @@ impl r#Factor {
 
     pub fn with_id(mut self, r#id: String) -> Self {
         self.r#id = Some(r#id);
+        self
+    }
+
+    pub fn with_option_id(mut self, r#id: Option<String>) -> Self {
+        self.r#id = r#id;
         self
     }
 
@@ -174,6 +204,11 @@ impl r#Factor {
         self
     }
 
+    pub fn with_option_mfa_state_token_id(mut self, r#mfa_state_token_id: Option<String>) -> Self {
+        self.r#mfa_state_token_id = r#mfa_state_token_id;
+        self
+    }
+
     pub fn r#mfa_state_token_id(&self) -> Option<&str> {
         self.r#mfa_state_token_id.as_ref().map(|x| x.borrow())
     }
@@ -188,6 +223,11 @@ impl r#Factor {
 
     pub fn with_profile(mut self, r#profile: FactorProfile) -> Self {
         self.r#profile = Some(r#profile);
+        self
+    }
+
+    pub fn with_option_profile(mut self, r#profile: Option<FactorProfile>) -> Self {
+        self.r#profile = r#profile;
         self
     }
 
@@ -208,6 +248,11 @@ impl r#Factor {
         self
     }
 
+    pub fn with_option_provider(mut self, r#provider: Option<FactorProvider>) -> Self {
+        self.r#provider = r#provider;
+        self
+    }
+
     pub fn r#provider(&self) -> Option<&FactorProvider> {
         self.r#provider.as_ref().map(|x| x.borrow())
     }
@@ -222,6 +267,11 @@ impl r#Factor {
 
     pub fn with_rechallenge_existing_factor(mut self, r#rechallenge_existing_factor: bool) -> Self {
         self.r#rechallenge_existing_factor = Some(r#rechallenge_existing_factor);
+        self
+    }
+
+    pub fn with_option_rechallenge_existing_factor(mut self, r#rechallenge_existing_factor: Option<bool>) -> Self {
+        self.r#rechallenge_existing_factor = r#rechallenge_existing_factor;
         self
     }
 
@@ -242,6 +292,11 @@ impl r#Factor {
         self
     }
 
+    pub fn with_option_session_id(mut self, r#session_id: Option<String>) -> Self {
+        self.r#session_id = r#session_id;
+        self
+    }
+
     pub fn r#session_id(&self) -> Option<&str> {
         self.r#session_id.as_ref().map(|x| x.borrow())
     }
@@ -256,6 +311,11 @@ impl r#Factor {
 
     pub fn with_status(mut self, r#status: FactorStatus) -> Self {
         self.r#status = Some(r#status);
+        self
+    }
+
+    pub fn with_option_status(mut self, r#status: Option<FactorStatus>) -> Self {
+        self.r#status = r#status;
         self
     }
 
@@ -276,6 +336,11 @@ impl r#Factor {
         self
     }
 
+    pub fn with_option_token_lifetime_seconds(mut self, r#token_lifetime_seconds: Option<i32>) -> Self {
+        self.r#token_lifetime_seconds = r#token_lifetime_seconds;
+        self
+    }
+
     pub fn r#token_lifetime_seconds(&self) -> Option<&i32> {
         self.r#token_lifetime_seconds.as_ref().map(|x| x.borrow())
     }
@@ -293,6 +358,11 @@ impl r#Factor {
         self
     }
 
+    pub fn with_option_user_id(mut self, r#user_id: Option<String>) -> Self {
+        self.r#user_id = r#user_id;
+        self
+    }
+
     pub fn r#user_id(&self) -> Option<&str> {
         self.r#user_id.as_ref().map(|x| x.borrow())
     }
@@ -307,6 +377,11 @@ impl r#Factor {
 
     pub fn with_verify(mut self, r#verify: VerifyFactorRequest) -> Self {
         self.r#verify = Some(r#verify);
+        self
+    }
+
+    pub fn with_option_verify(mut self, r#verify: Option<VerifyFactorRequest>) -> Self {
+        self.r#verify = r#verify;
         self
     }
 

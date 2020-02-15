@@ -30,6 +30,11 @@ impl r#SamlApplicationSettings {
         self
     }
 
+    pub fn with_option_sign_on(mut self, r#sign_on: Option<SamlApplicationSettingsSignOn>) -> Self {
+        self.r#sign_on = r#sign_on;
+        self
+    }
+
     pub fn r#sign_on(&self) -> Option<&SamlApplicationSettingsSignOn> {
         self.r#sign_on.as_ref().map(|x| x.borrow())
     }

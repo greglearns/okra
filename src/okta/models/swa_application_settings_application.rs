@@ -42,6 +42,11 @@ impl r#SwaApplicationSettingsApplication {
         self
     }
 
+    pub fn with_option_button_field(mut self, r#button_field: Option<String>) -> Self {
+        self.r#button_field = r#button_field;
+        self
+    }
+
     pub fn r#button_field(&self) -> Option<&str> {
         self.r#button_field.as_ref().map(|x| x.borrow())
     }
@@ -56,6 +61,11 @@ impl r#SwaApplicationSettingsApplication {
 
     pub fn with_login_url_regex(mut self, r#login_url_regex: String) -> Self {
         self.r#login_url_regex = Some(r#login_url_regex);
+        self
+    }
+
+    pub fn with_option_login_url_regex(mut self, r#login_url_regex: Option<String>) -> Self {
+        self.r#login_url_regex = r#login_url_regex;
         self
     }
 
@@ -76,6 +86,11 @@ impl r#SwaApplicationSettingsApplication {
         self
     }
 
+    pub fn with_option_password_field(mut self, r#password_field: Option<String>) -> Self {
+        self.r#password_field = r#password_field;
+        self
+    }
+
     pub fn r#password_field(&self) -> Option<&str> {
         self.r#password_field.as_ref().map(|x| x.borrow())
     }
@@ -93,6 +108,11 @@ impl r#SwaApplicationSettingsApplication {
         self
     }
 
+    pub fn with_option_url(mut self, r#url: Option<String>) -> Self {
+        self.r#url = r#url;
+        self
+    }
+
     pub fn r#url(&self) -> Option<&str> {
         self.r#url.as_ref().map(|x| x.borrow())
     }
@@ -107,6 +127,11 @@ impl r#SwaApplicationSettingsApplication {
 
     pub fn with_username_field(mut self, r#username_field: String) -> Self {
         self.r#username_field = Some(r#username_field);
+        self
+    }
+
+    pub fn with_option_username_field(mut self, r#username_field: Option<String>) -> Self {
+        self.r#username_field = r#username_field;
         self
     }
 

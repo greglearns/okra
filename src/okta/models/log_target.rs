@@ -42,6 +42,11 @@ impl r#LogTarget {
         self
     }
 
+    pub fn with_option_alternate_id(mut self, r#alternate_id: Option<String>) -> Self {
+        self.r#alternate_id = r#alternate_id;
+        self
+    }
+
     pub fn r#alternate_id(&self) -> Option<&str> {
         self.r#alternate_id.as_ref().map(|x| x.borrow())
     }
@@ -56,6 +61,11 @@ impl r#LogTarget {
 
     pub fn with_detail_entry(mut self, r#detail_entry: Value) -> Self {
         self.r#detail_entry = Some(r#detail_entry);
+        self
+    }
+
+    pub fn with_option_detail_entry(mut self, r#detail_entry: Option<Value>) -> Self {
+        self.r#detail_entry = r#detail_entry;
         self
     }
 
@@ -76,6 +86,11 @@ impl r#LogTarget {
         self
     }
 
+    pub fn with_option_display_name(mut self, r#display_name: Option<String>) -> Self {
+        self.r#display_name = r#display_name;
+        self
+    }
+
     pub fn r#display_name(&self) -> Option<&str> {
         self.r#display_name.as_ref().map(|x| x.borrow())
     }
@@ -93,6 +108,11 @@ impl r#LogTarget {
         self
     }
 
+    pub fn with_option_id(mut self, r#id: Option<String>) -> Self {
+        self.r#id = r#id;
+        self
+    }
+
     pub fn r#id(&self) -> Option<&str> {
         self.r#id.as_ref().map(|x| x.borrow())
     }
@@ -107,6 +127,11 @@ impl r#LogTarget {
 
     pub fn with_type(mut self, r#type: String) -> Self {
         self.r#type = Some(r#type);
+        self
+    }
+
+    pub fn with_option_type(mut self, r#type: Option<String>) -> Self {
+        self.r#type = r#type;
         self
     }
 

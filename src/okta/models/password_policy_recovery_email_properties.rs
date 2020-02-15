@@ -30,6 +30,11 @@ impl r#PasswordPolicyRecoveryEmailProperties {
         self
     }
 
+    pub fn with_option_recovery_token(mut self, r#recovery_token: Option<PasswordPolicyRecoveryEmailRecoveryToken>) -> Self {
+        self.r#recovery_token = r#recovery_token;
+        self
+    }
+
     pub fn r#recovery_token(&self) -> Option<&PasswordPolicyRecoveryEmailRecoveryToken> {
         self.r#recovery_token.as_ref().map(|x| x.borrow())
     }

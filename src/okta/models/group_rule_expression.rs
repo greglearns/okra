@@ -33,6 +33,11 @@ impl r#GroupRuleExpression {
         self
     }
 
+    pub fn with_option_type(mut self, r#type: Option<String>) -> Self {
+        self.r#type = r#type;
+        self
+    }
+
     pub fn r#type(&self) -> Option<&str> {
         self.r#type.as_ref().map(|x| x.borrow())
     }
@@ -47,6 +52,11 @@ impl r#GroupRuleExpression {
 
     pub fn with_value(mut self, r#value: String) -> Self {
         self.r#value = Some(r#value);
+        self
+    }
+
+    pub fn with_option_value(mut self, r#value: Option<String>) -> Self {
+        self.r#value = r#value;
         self
     }
 

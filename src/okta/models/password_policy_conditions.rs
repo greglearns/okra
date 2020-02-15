@@ -33,6 +33,11 @@ impl r#PasswordPolicyConditions {
         self
     }
 
+    pub fn with_option_auth_provider(mut self, r#auth_provider: Option<PasswordPolicyAuthenticationProviderCondition>) -> Self {
+        self.r#auth_provider = r#auth_provider;
+        self
+    }
+
     pub fn r#auth_provider(&self) -> Option<&PasswordPolicyAuthenticationProviderCondition> {
         self.r#auth_provider.as_ref().map(|x| x.borrow())
     }
@@ -47,6 +52,11 @@ impl r#PasswordPolicyConditions {
 
     pub fn with_people(mut self, r#people: PolicyPeopleCondition) -> Self {
         self.r#people = Some(r#people);
+        self
+    }
+
+    pub fn with_option_people(mut self, r#people: Option<PolicyPeopleCondition>) -> Self {
+        self.r#people = r#people;
         self
     }
 

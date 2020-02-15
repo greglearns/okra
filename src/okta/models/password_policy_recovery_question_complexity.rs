@@ -30,6 +30,11 @@ impl r#PasswordPolicyRecoveryQuestionComplexity {
         self
     }
 
+    pub fn with_option_min_length(mut self, r#min_length: Option<i32>) -> Self {
+        self.r#min_length = r#min_length;
+        self
+    }
+
     pub fn r#min_length(&self) -> Option<&i32> {
         self.r#min_length.as_ref().map(|x| x.borrow())
     }

@@ -21,6 +21,8 @@ pub struct r#UserProfile {
     r#first_name: Option<String>,
     #[serde(rename = "lastName", skip_serializing_if = "Option::is_none")]
     r#last_name: Option<String>,
+    #[serde(rename = "linkid", skip_serializing_if = "Option::is_none")]
+    r#linkid: Option<String>,
     #[serde(rename = "login", skip_serializing_if = "Option::is_none")]
     r#login: Option<String>,
     #[serde(rename = "mobilePhone", skip_serializing_if = "Option::is_none")]
@@ -43,6 +45,7 @@ impl r#UserProfile {
           r#email: None,
           r#first_name: None,
           r#last_name: None,
+          r#linkid: None,
           r#login: None,
           r#mobile_phone: None,
           r#preferred_language: None,
@@ -57,6 +60,11 @@ impl r#UserProfile {
 
     pub fn with_accept_marketing(mut self, r#accept_marketing: bool) -> Self {
         self.r#accept_marketing = Some(r#accept_marketing);
+        self
+    }
+
+    pub fn with_option_accept_marketing(mut self, r#accept_marketing: Option<bool>) -> Self {
+        self.r#accept_marketing = r#accept_marketing;
         self
     }
 
@@ -77,6 +85,11 @@ impl r#UserProfile {
         self
     }
 
+    pub fn with_option_accept_privacy(mut self, r#accept_privacy: Option<bool>) -> Self {
+        self.r#accept_privacy = r#accept_privacy;
+        self
+    }
+
     pub fn r#accept_privacy(&self) -> Option<&bool> {
         self.r#accept_privacy.as_ref().map(|x| x.borrow())
     }
@@ -91,6 +104,11 @@ impl r#UserProfile {
 
     pub fn with_company(mut self, r#company: String) -> Self {
         self.r#company = Some(r#company);
+        self
+    }
+
+    pub fn with_option_company(mut self, r#company: Option<String>) -> Self {
+        self.r#company = r#company;
         self
     }
 
@@ -111,6 +129,11 @@ impl r#UserProfile {
         self
     }
 
+    pub fn with_option_email(mut self, r#email: Option<String>) -> Self {
+        self.r#email = r#email;
+        self
+    }
+
     pub fn r#email(&self) -> Option<&str> {
         self.r#email.as_ref().map(|x| x.borrow())
     }
@@ -125,6 +148,11 @@ impl r#UserProfile {
 
     pub fn with_first_name(mut self, r#first_name: String) -> Self {
         self.r#first_name = Some(r#first_name);
+        self
+    }
+
+    pub fn with_option_first_name(mut self, r#first_name: Option<String>) -> Self {
+        self.r#first_name = r#first_name;
         self
     }
 
@@ -145,6 +173,11 @@ impl r#UserProfile {
         self
     }
 
+    pub fn with_option_last_name(mut self, r#last_name: Option<String>) -> Self {
+        self.r#last_name = r#last_name;
+        self
+    }
+
     pub fn r#last_name(&self) -> Option<&str> {
         self.r#last_name.as_ref().map(|x| x.borrow())
     }
@@ -153,12 +186,39 @@ impl r#UserProfile {
         self.r#last_name = None;
     }
 
+    pub fn set_linkid(&mut self, r#linkid: String) {
+        self.r#linkid = Some(r#linkid);
+    }
+
+    pub fn with_linkid(mut self, r#linkid: String) -> Self {
+        self.r#linkid = Some(r#linkid);
+        self
+    }
+
+    pub fn with_option_linkid(mut self, r#linkid: Option<String>) -> Self {
+        self.r#linkid = r#linkid;
+        self
+    }
+
+    pub fn r#linkid(&self) -> Option<&str> {
+        self.r#linkid.as_ref().map(|x| x.borrow())
+    }
+
+    pub fn reset_linkid(&mut self) {
+        self.r#linkid = None;
+    }
+
     pub fn set_login(&mut self, r#login: String) {
         self.r#login = Some(r#login);
     }
 
     pub fn with_login(mut self, r#login: String) -> Self {
         self.r#login = Some(r#login);
+        self
+    }
+
+    pub fn with_option_login(mut self, r#login: Option<String>) -> Self {
+        self.r#login = r#login;
         self
     }
 
@@ -179,6 +239,11 @@ impl r#UserProfile {
         self
     }
 
+    pub fn with_option_mobile_phone(mut self, r#mobile_phone: Option<String>) -> Self {
+        self.r#mobile_phone = r#mobile_phone;
+        self
+    }
+
     pub fn r#mobile_phone(&self) -> Option<&str> {
         self.r#mobile_phone.as_ref().map(|x| x.borrow())
     }
@@ -193,6 +258,11 @@ impl r#UserProfile {
 
     pub fn with_preferred_language(mut self, r#preferred_language: String) -> Self {
         self.r#preferred_language = Some(r#preferred_language);
+        self
+    }
+
+    pub fn with_option_preferred_language(mut self, r#preferred_language: Option<String>) -> Self {
+        self.r#preferred_language = r#preferred_language;
         self
     }
 
@@ -213,6 +283,11 @@ impl r#UserProfile {
         self
     }
 
+    pub fn with_option_role(mut self, r#role: Option<String>) -> Self {
+        self.r#role = r#role;
+        self
+    }
+
     pub fn r#role(&self) -> Option<&str> {
         self.r#role.as_ref().map(|x| x.borrow())
     }
@@ -227,6 +302,11 @@ impl r#UserProfile {
 
     pub fn with_second_email(mut self, r#second_email: String) -> Self {
         self.r#second_email = Some(r#second_email);
+        self
+    }
+
+    pub fn with_option_second_email(mut self, r#second_email: Option<String>) -> Self {
+        self.r#second_email = r#second_email;
         self
     }
 

@@ -36,6 +36,11 @@ impl r#PasswordPolicyPasswordSettings {
         self
     }
 
+    pub fn with_option_age(mut self, r#age: Option<PasswordPolicyPasswordSettingsAge>) -> Self {
+        self.r#age = r#age;
+        self
+    }
+
     pub fn r#age(&self) -> Option<&PasswordPolicyPasswordSettingsAge> {
         self.r#age.as_ref().map(|x| x.borrow())
     }
@@ -53,6 +58,11 @@ impl r#PasswordPolicyPasswordSettings {
         self
     }
 
+    pub fn with_option_complexity(mut self, r#complexity: Option<PasswordPolicyPasswordSettingsComplexity>) -> Self {
+        self.r#complexity = r#complexity;
+        self
+    }
+
     pub fn r#complexity(&self) -> Option<&PasswordPolicyPasswordSettingsComplexity> {
         self.r#complexity.as_ref().map(|x| x.borrow())
     }
@@ -67,6 +77,11 @@ impl r#PasswordPolicyPasswordSettings {
 
     pub fn with_lockout(mut self, r#lockout: PasswordPolicyPasswordSettingsLockout) -> Self {
         self.r#lockout = Some(r#lockout);
+        self
+    }
+
+    pub fn with_option_lockout(mut self, r#lockout: Option<PasswordPolicyPasswordSettingsLockout>) -> Self {
+        self.r#lockout = r#lockout;
         self
     }
 

@@ -33,6 +33,11 @@ impl r#UserActivationToken {
         self
     }
 
+    pub fn with_option_activation_token(mut self, r#activation_token: Option<String>) -> Self {
+        self.r#activation_token = r#activation_token;
+        self
+    }
+
     pub fn r#activation_token(&self) -> Option<&str> {
         self.r#activation_token.as_ref().map(|x| x.borrow())
     }
@@ -47,6 +52,11 @@ impl r#UserActivationToken {
 
     pub fn with_activation_url(mut self, r#activation_url: String) -> Self {
         self.r#activation_url = Some(r#activation_url);
+        self
+    }
+
+    pub fn with_option_activation_url(mut self, r#activation_url: Option<String>) -> Self {
+        self.r#activation_url = r#activation_url;
         self
     }
 

@@ -42,6 +42,11 @@ impl r#AuthVerifyFactorRequest {
         self
     }
 
+    pub fn with_option_answer(mut self, r#answer: Option<String>) -> Self {
+        self.r#answer = r#answer;
+        self
+    }
+
     pub fn r#answer(&self) -> Option<&str> {
         self.r#answer.as_ref().map(|x| x.borrow())
     }
@@ -56,6 +61,11 @@ impl r#AuthVerifyFactorRequest {
 
     pub fn with_client_data(mut self, r#client_data: String) -> Self {
         self.r#client_data = Some(r#client_data);
+        self
+    }
+
+    pub fn with_option_client_data(mut self, r#client_data: Option<String>) -> Self {
+        self.r#client_data = r#client_data;
         self
     }
 
@@ -76,6 +86,11 @@ impl r#AuthVerifyFactorRequest {
         self
     }
 
+    pub fn with_option_pass_code(mut self, r#pass_code: Option<String>) -> Self {
+        self.r#pass_code = r#pass_code;
+        self
+    }
+
     pub fn r#pass_code(&self) -> Option<&str> {
         self.r#pass_code.as_ref().map(|x| x.borrow())
     }
@@ -93,6 +108,11 @@ impl r#AuthVerifyFactorRequest {
         self
     }
 
+    pub fn with_option_signature_data(mut self, r#signature_data: Option<String>) -> Self {
+        self.r#signature_data = r#signature_data;
+        self
+    }
+
     pub fn r#signature_data(&self) -> Option<&str> {
         self.r#signature_data.as_ref().map(|x| x.borrow())
     }
@@ -107,6 +127,11 @@ impl r#AuthVerifyFactorRequest {
 
     pub fn with_state_token(mut self, r#state_token: String) -> Self {
         self.r#state_token = Some(r#state_token);
+        self
+    }
+
+    pub fn with_option_state_token(mut self, r#state_token: Option<String>) -> Self {
+        self.r#state_token = r#state_token;
         self
     }
 

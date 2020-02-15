@@ -51,6 +51,11 @@ impl r#AuthenticationRequest {
         self
     }
 
+    pub fn with_option_audience(mut self, r#audience: Option<String>) -> Self {
+        self.r#audience = r#audience;
+        self
+    }
+
     pub fn r#audience(&self) -> Option<&str> {
         self.r#audience.as_ref().map(|x| x.borrow())
     }
@@ -65,6 +70,11 @@ impl r#AuthenticationRequest {
 
     pub fn with_context(mut self, r#context: Context) -> Self {
         self.r#context = Some(r#context);
+        self
+    }
+
+    pub fn with_option_context(mut self, r#context: Option<Context>) -> Self {
+        self.r#context = r#context;
         self
     }
 
@@ -85,6 +95,11 @@ impl r#AuthenticationRequest {
         self
     }
 
+    pub fn with_option_options(mut self, r#options: Option<Options>) -> Self {
+        self.r#options = r#options;
+        self
+    }
+
     pub fn r#options(&self) -> Option<&Options> {
         self.r#options.as_ref().map(|x| x.borrow())
     }
@@ -99,6 +114,11 @@ impl r#AuthenticationRequest {
 
     pub fn with_password(mut self, r#password: String) -> Self {
         self.r#password = Some(r#password);
+        self
+    }
+
+    pub fn with_option_password(mut self, r#password: Option<String>) -> Self {
+        self.r#password = r#password;
         self
     }
 
@@ -119,6 +139,11 @@ impl r#AuthenticationRequest {
         self
     }
 
+    pub fn with_option_relay_state(mut self, r#relay_state: Option<String>) -> Self {
+        self.r#relay_state = r#relay_state;
+        self
+    }
+
     pub fn r#relay_state(&self) -> Option<&str> {
         self.r#relay_state.as_ref().map(|x| x.borrow())
     }
@@ -133,6 +158,11 @@ impl r#AuthenticationRequest {
 
     pub fn with_state_token(mut self, r#state_token: String) -> Self {
         self.r#state_token = Some(r#state_token);
+        self
+    }
+
+    pub fn with_option_state_token(mut self, r#state_token: Option<String>) -> Self {
+        self.r#state_token = r#state_token;
         self
     }
 
@@ -153,6 +183,11 @@ impl r#AuthenticationRequest {
         self
     }
 
+    pub fn with_option_token(mut self, r#token: Option<String>) -> Self {
+        self.r#token = r#token;
+        self
+    }
+
     pub fn r#token(&self) -> Option<&str> {
         self.r#token.as_ref().map(|x| x.borrow())
     }
@@ -167,6 +202,11 @@ impl r#AuthenticationRequest {
 
     pub fn with_username(mut self, r#username: String) -> Self {
         self.r#username = Some(r#username);
+        self
+    }
+
+    pub fn with_option_username(mut self, r#username: Option<String>) -> Self {
+        self.r#username = r#username;
         self
     }
 

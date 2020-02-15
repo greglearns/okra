@@ -30,6 +30,11 @@ impl r#PolicyRuleAuthContextCondition {
         self
     }
 
+    pub fn with_option_auth_type(mut self, r#auth_type: Option<String>) -> Self {
+        self.r#auth_type = r#auth_type;
+        self
+    }
+
     pub fn r#auth_type(&self) -> Option<&str> {
         self.r#auth_type.as_ref().map(|x| x.borrow())
     }

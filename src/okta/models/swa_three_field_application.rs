@@ -30,6 +30,11 @@ impl r#SwaThreeFieldApplication {
         self
     }
 
+    pub fn with_option_settings(mut self, r#settings: Option<SwaThreeFieldApplicationSettings>) -> Self {
+        self.r#settings = r#settings;
+        self
+    }
+
     pub fn r#settings(&self) -> Option<&SwaThreeFieldApplicationSettings> {
         self.r#settings.as_ref().map(|x| x.borrow())
     }

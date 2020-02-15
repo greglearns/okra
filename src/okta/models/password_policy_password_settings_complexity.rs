@@ -51,6 +51,11 @@ impl r#PasswordPolicyPasswordSettingsComplexity {
         self
     }
 
+    pub fn with_option_dictionary(mut self, r#dictionary: Option<PasswordDictionary>) -> Self {
+        self.r#dictionary = r#dictionary;
+        self
+    }
+
     pub fn r#dictionary(&self) -> Option<&PasswordDictionary> {
         self.r#dictionary.as_ref().map(|x| x.borrow())
     }
@@ -65,6 +70,11 @@ impl r#PasswordPolicyPasswordSettingsComplexity {
 
     pub fn with_exclude_attributes(mut self, r#exclude_attributes: Vec<String>) -> Self {
         self.r#exclude_attributes = Some(r#exclude_attributes);
+        self
+    }
+
+    pub fn with_option_exclude_attributes(mut self, r#exclude_attributes: Option<Vec<String>>) -> Self {
+        self.r#exclude_attributes = r#exclude_attributes;
         self
     }
 
@@ -85,6 +95,11 @@ impl r#PasswordPolicyPasswordSettingsComplexity {
         self
     }
 
+    pub fn with_option_exclude_username(mut self, r#exclude_username: Option<bool>) -> Self {
+        self.r#exclude_username = r#exclude_username;
+        self
+    }
+
     pub fn r#exclude_username(&self) -> Option<&bool> {
         self.r#exclude_username.as_ref().map(|x| x.borrow())
     }
@@ -99,6 +114,11 @@ impl r#PasswordPolicyPasswordSettingsComplexity {
 
     pub fn with_min_length(mut self, r#min_length: i32) -> Self {
         self.r#min_length = Some(r#min_length);
+        self
+    }
+
+    pub fn with_option_min_length(mut self, r#min_length: Option<i32>) -> Self {
+        self.r#min_length = r#min_length;
         self
     }
 
@@ -119,6 +139,11 @@ impl r#PasswordPolicyPasswordSettingsComplexity {
         self
     }
 
+    pub fn with_option_min_lower_case(mut self, r#min_lower_case: Option<i32>) -> Self {
+        self.r#min_lower_case = r#min_lower_case;
+        self
+    }
+
     pub fn r#min_lower_case(&self) -> Option<&i32> {
         self.r#min_lower_case.as_ref().map(|x| x.borrow())
     }
@@ -133,6 +158,11 @@ impl r#PasswordPolicyPasswordSettingsComplexity {
 
     pub fn with_min_number(mut self, r#min_number: i32) -> Self {
         self.r#min_number = Some(r#min_number);
+        self
+    }
+
+    pub fn with_option_min_number(mut self, r#min_number: Option<i32>) -> Self {
+        self.r#min_number = r#min_number;
         self
     }
 
@@ -153,6 +183,11 @@ impl r#PasswordPolicyPasswordSettingsComplexity {
         self
     }
 
+    pub fn with_option_min_symbol(mut self, r#min_symbol: Option<i32>) -> Self {
+        self.r#min_symbol = r#min_symbol;
+        self
+    }
+
     pub fn r#min_symbol(&self) -> Option<&i32> {
         self.r#min_symbol.as_ref().map(|x| x.borrow())
     }
@@ -167,6 +202,11 @@ impl r#PasswordPolicyPasswordSettingsComplexity {
 
     pub fn with_min_upper_case(mut self, r#min_upper_case: i32) -> Self {
         self.r#min_upper_case = Some(r#min_upper_case);
+        self
+    }
+
+    pub fn with_option_min_upper_case(mut self, r#min_upper_case: Option<i32>) -> Self {
+        self.r#min_upper_case = r#min_upper_case;
         self
     }
 

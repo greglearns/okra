@@ -42,6 +42,11 @@ impl r#LogGeographicalContext {
         self
     }
 
+    pub fn with_option_city(mut self, r#city: Option<String>) -> Self {
+        self.r#city = r#city;
+        self
+    }
+
     pub fn r#city(&self) -> Option<&str> {
         self.r#city.as_ref().map(|x| x.borrow())
     }
@@ -56,6 +61,11 @@ impl r#LogGeographicalContext {
 
     pub fn with_country(mut self, r#country: String) -> Self {
         self.r#country = Some(r#country);
+        self
+    }
+
+    pub fn with_option_country(mut self, r#country: Option<String>) -> Self {
+        self.r#country = r#country;
         self
     }
 
@@ -76,6 +86,11 @@ impl r#LogGeographicalContext {
         self
     }
 
+    pub fn with_option_geolocation(mut self, r#geolocation: Option<LogGeolocation>) -> Self {
+        self.r#geolocation = r#geolocation;
+        self
+    }
+
     pub fn r#geolocation(&self) -> Option<&LogGeolocation> {
         self.r#geolocation.as_ref().map(|x| x.borrow())
     }
@@ -93,6 +108,11 @@ impl r#LogGeographicalContext {
         self
     }
 
+    pub fn with_option_postal_code(mut self, r#postal_code: Option<String>) -> Self {
+        self.r#postal_code = r#postal_code;
+        self
+    }
+
     pub fn r#postal_code(&self) -> Option<&str> {
         self.r#postal_code.as_ref().map(|x| x.borrow())
     }
@@ -107,6 +127,11 @@ impl r#LogGeographicalContext {
 
     pub fn with_state(mut self, r#state: String) -> Self {
         self.r#state = Some(r#state);
+        self
+    }
+
+    pub fn with_option_state(mut self, r#state: Option<String>) -> Self {
+        self.r#state = r#state;
         self
     }
 

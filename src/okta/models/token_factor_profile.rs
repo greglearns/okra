@@ -30,6 +30,11 @@ impl r#TokenFactorProfile {
         self
     }
 
+    pub fn with_option_credential_id(mut self, r#credential_id: Option<String>) -> Self {
+        self.r#credential_id = r#credential_id;
+        self
+    }
+
     pub fn r#credential_id(&self) -> Option<&str> {
         self.r#credential_id.as_ref().map(|x| x.borrow())
     }

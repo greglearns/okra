@@ -57,6 +57,11 @@ impl r#AppLink {
         self
     }
 
+    pub fn with_option_app_assignment_id(mut self, r#app_assignment_id: Option<String>) -> Self {
+        self.r#app_assignment_id = r#app_assignment_id;
+        self
+    }
+
     pub fn r#app_assignment_id(&self) -> Option<&str> {
         self.r#app_assignment_id.as_ref().map(|x| x.borrow())
     }
@@ -71,6 +76,11 @@ impl r#AppLink {
 
     pub fn with_app_instance_id(mut self, r#app_instance_id: String) -> Self {
         self.r#app_instance_id = Some(r#app_instance_id);
+        self
+    }
+
+    pub fn with_option_app_instance_id(mut self, r#app_instance_id: Option<String>) -> Self {
+        self.r#app_instance_id = r#app_instance_id;
         self
     }
 
@@ -91,6 +101,11 @@ impl r#AppLink {
         self
     }
 
+    pub fn with_option_app_name(mut self, r#app_name: Option<String>) -> Self {
+        self.r#app_name = r#app_name;
+        self
+    }
+
     pub fn r#app_name(&self) -> Option<&str> {
         self.r#app_name.as_ref().map(|x| x.borrow())
     }
@@ -105,6 +120,11 @@ impl r#AppLink {
 
     pub fn with_credentials_setup(mut self, r#credentials_setup: bool) -> Self {
         self.r#credentials_setup = Some(r#credentials_setup);
+        self
+    }
+
+    pub fn with_option_credentials_setup(mut self, r#credentials_setup: Option<bool>) -> Self {
+        self.r#credentials_setup = r#credentials_setup;
         self
     }
 
@@ -125,6 +145,11 @@ impl r#AppLink {
         self
     }
 
+    pub fn with_option_hidden(mut self, r#hidden: Option<bool>) -> Self {
+        self.r#hidden = r#hidden;
+        self
+    }
+
     pub fn r#hidden(&self) -> Option<&bool> {
         self.r#hidden.as_ref().map(|x| x.borrow())
     }
@@ -139,6 +164,11 @@ impl r#AppLink {
 
     pub fn with_id(mut self, r#id: String) -> Self {
         self.r#id = Some(r#id);
+        self
+    }
+
+    pub fn with_option_id(mut self, r#id: Option<String>) -> Self {
+        self.r#id = r#id;
         self
     }
 
@@ -159,6 +189,11 @@ impl r#AppLink {
         self
     }
 
+    pub fn with_option_label(mut self, r#label: Option<String>) -> Self {
+        self.r#label = r#label;
+        self
+    }
+
     pub fn r#label(&self) -> Option<&str> {
         self.r#label.as_ref().map(|x| x.borrow())
     }
@@ -173,6 +208,11 @@ impl r#AppLink {
 
     pub fn with_link_url(mut self, r#link_url: String) -> Self {
         self.r#link_url = Some(r#link_url);
+        self
+    }
+
+    pub fn with_option_link_url(mut self, r#link_url: Option<String>) -> Self {
+        self.r#link_url = r#link_url;
         self
     }
 
@@ -193,6 +233,11 @@ impl r#AppLink {
         self
     }
 
+    pub fn with_option_logo_url(mut self, r#logo_url: Option<String>) -> Self {
+        self.r#logo_url = r#logo_url;
+        self
+    }
+
     pub fn r#logo_url(&self) -> Option<&str> {
         self.r#logo_url.as_ref().map(|x| x.borrow())
     }
@@ -207,6 +252,11 @@ impl r#AppLink {
 
     pub fn with_sort_order(mut self, r#sort_order: i32) -> Self {
         self.r#sort_order = Some(r#sort_order);
+        self
+    }
+
+    pub fn with_option_sort_order(mut self, r#sort_order: Option<i32>) -> Self {
+        self.r#sort_order = r#sort_order;
         self
     }
 

@@ -30,6 +30,11 @@ impl r#GroupRuleAction {
         self
     }
 
+    pub fn with_option_assign_user_to_groups(mut self, r#assign_user_to_groups: Option<GroupRuleGroupAssignment>) -> Self {
+        self.r#assign_user_to_groups = r#assign_user_to_groups;
+        self
+    }
+
     pub fn r#assign_user_to_groups(&self) -> Option<&GroupRuleGroupAssignment> {
         self.r#assign_user_to_groups.as_ref().map(|x| x.borrow())
     }

@@ -54,6 +54,11 @@ impl r#OpenIdConnectApplicationSettingsClient {
         self
     }
 
+    pub fn with_option_application_type(mut self, r#application_type: Option<OpenIdConnectApplicationType>) -> Self {
+        self.r#application_type = r#application_type;
+        self
+    }
+
     pub fn r#application_type(&self) -> Option<&OpenIdConnectApplicationType> {
         self.r#application_type.as_ref().map(|x| x.borrow())
     }
@@ -68,6 +73,11 @@ impl r#OpenIdConnectApplicationSettingsClient {
 
     pub fn with_client_uri(mut self, r#client_uri: String) -> Self {
         self.r#client_uri = Some(r#client_uri);
+        self
+    }
+
+    pub fn with_option_client_uri(mut self, r#client_uri: Option<String>) -> Self {
+        self.r#client_uri = r#client_uri;
         self
     }
 
@@ -88,6 +98,11 @@ impl r#OpenIdConnectApplicationSettingsClient {
         self
     }
 
+    pub fn with_option_consent_method(mut self, r#consent_method: Option<OpenIdConnectApplicationConsentMethod>) -> Self {
+        self.r#consent_method = r#consent_method;
+        self
+    }
+
     pub fn r#consent_method(&self) -> Option<&OpenIdConnectApplicationConsentMethod> {
         self.r#consent_method.as_ref().map(|x| x.borrow())
     }
@@ -102,6 +117,11 @@ impl r#OpenIdConnectApplicationSettingsClient {
 
     pub fn with_grant_types(mut self, r#grant_types: Vec<OAuthGrantType>) -> Self {
         self.r#grant_types = Some(r#grant_types);
+        self
+    }
+
+    pub fn with_option_grant_types(mut self, r#grant_types: Option<Vec<OAuthGrantType>>) -> Self {
+        self.r#grant_types = r#grant_types;
         self
     }
 
@@ -122,6 +142,11 @@ impl r#OpenIdConnectApplicationSettingsClient {
         self
     }
 
+    pub fn with_option_logo_uri(mut self, r#logo_uri: Option<String>) -> Self {
+        self.r#logo_uri = r#logo_uri;
+        self
+    }
+
     pub fn r#logo_uri(&self) -> Option<&str> {
         self.r#logo_uri.as_ref().map(|x| x.borrow())
     }
@@ -136,6 +161,11 @@ impl r#OpenIdConnectApplicationSettingsClient {
 
     pub fn with_policy_uri(mut self, r#policy_uri: String) -> Self {
         self.r#policy_uri = Some(r#policy_uri);
+        self
+    }
+
+    pub fn with_option_policy_uri(mut self, r#policy_uri: Option<String>) -> Self {
+        self.r#policy_uri = r#policy_uri;
         self
     }
 
@@ -156,6 +186,11 @@ impl r#OpenIdConnectApplicationSettingsClient {
         self
     }
 
+    pub fn with_option_redirect_uris(mut self, r#redirect_uris: Option<Vec<String>>) -> Self {
+        self.r#redirect_uris = r#redirect_uris;
+        self
+    }
+
     pub fn r#redirect_uris(&self) -> Option<&Vec<String>> {
         self.r#redirect_uris.as_ref().map(|x| x.borrow())
     }
@@ -173,6 +208,11 @@ impl r#OpenIdConnectApplicationSettingsClient {
         self
     }
 
+    pub fn with_option_response_types(mut self, r#response_types: Option<Vec<OAuthResponseType>>) -> Self {
+        self.r#response_types = r#response_types;
+        self
+    }
+
     pub fn r#response_types(&self) -> Option<&Vec<OAuthResponseType>> {
         self.r#response_types.as_ref().map(|x| x.borrow())
     }
@@ -187,6 +227,11 @@ impl r#OpenIdConnectApplicationSettingsClient {
 
     pub fn with_tos_uri(mut self, r#tos_uri: String) -> Self {
         self.r#tos_uri = Some(r#tos_uri);
+        self
+    }
+
+    pub fn with_option_tos_uri(mut self, r#tos_uri: Option<String>) -> Self {
+        self.r#tos_uri = r#tos_uri;
         self
     }
 

@@ -30,6 +30,11 @@ impl r#GroupRuleGroupAssignment {
         self
     }
 
+    pub fn with_option_group_ids(mut self, r#group_ids: Option<Vec<String>>) -> Self {
+        self.r#group_ids = r#group_ids;
+        self
+    }
+
     pub fn r#group_ids(&self) -> Option<&Vec<String>> {
         self.r#group_ids.as_ref().map(|x| x.borrow())
     }

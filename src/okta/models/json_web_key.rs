@@ -75,6 +75,11 @@ impl r#JsonWebKey {
         self
     }
 
+    pub fn with_option_links(mut self, r#links: Option<Value>) -> Self {
+        self.r#links = r#links;
+        self
+    }
+
     pub fn r#links(&self) -> Option<&Value> {
         self.r#links.as_ref().map(|x| x.borrow())
     }
@@ -89,6 +94,11 @@ impl r#JsonWebKey {
 
     pub fn with_alg(mut self, r#alg: String) -> Self {
         self.r#alg = Some(r#alg);
+        self
+    }
+
+    pub fn with_option_alg(mut self, r#alg: Option<String>) -> Self {
+        self.r#alg = r#alg;
         self
     }
 
@@ -109,6 +119,11 @@ impl r#JsonWebKey {
         self
     }
 
+    pub fn with_option_created(mut self, r#created: Option<String>) -> Self {
+        self.r#created = r#created;
+        self
+    }
+
     pub fn r#created(&self) -> Option<&str> {
         self.r#created.as_ref().map(|x| x.borrow())
     }
@@ -123,6 +138,11 @@ impl r#JsonWebKey {
 
     pub fn with_e(mut self, r#e: String) -> Self {
         self.r#e = Some(r#e);
+        self
+    }
+
+    pub fn with_option_e(mut self, r#e: Option<String>) -> Self {
+        self.r#e = r#e;
         self
     }
 
@@ -143,6 +163,11 @@ impl r#JsonWebKey {
         self
     }
 
+    pub fn with_option_expires_at(mut self, r#expires_at: Option<String>) -> Self {
+        self.r#expires_at = r#expires_at;
+        self
+    }
+
     pub fn r#expires_at(&self) -> Option<&str> {
         self.r#expires_at.as_ref().map(|x| x.borrow())
     }
@@ -157,6 +182,11 @@ impl r#JsonWebKey {
 
     pub fn with_key_ops(mut self, r#key_ops: Vec<String>) -> Self {
         self.r#key_ops = Some(r#key_ops);
+        self
+    }
+
+    pub fn with_option_key_ops(mut self, r#key_ops: Option<Vec<String>>) -> Self {
+        self.r#key_ops = r#key_ops;
         self
     }
 
@@ -177,6 +207,11 @@ impl r#JsonWebKey {
         self
     }
 
+    pub fn with_option_kid(mut self, r#kid: Option<String>) -> Self {
+        self.r#kid = r#kid;
+        self
+    }
+
     pub fn r#kid(&self) -> Option<&str> {
         self.r#kid.as_ref().map(|x| x.borrow())
     }
@@ -191,6 +226,11 @@ impl r#JsonWebKey {
 
     pub fn with_kty(mut self, r#kty: String) -> Self {
         self.r#kty = Some(r#kty);
+        self
+    }
+
+    pub fn with_option_kty(mut self, r#kty: Option<String>) -> Self {
+        self.r#kty = r#kty;
         self
     }
 
@@ -211,6 +251,11 @@ impl r#JsonWebKey {
         self
     }
 
+    pub fn with_option_last_updated(mut self, r#last_updated: Option<String>) -> Self {
+        self.r#last_updated = r#last_updated;
+        self
+    }
+
     pub fn r#last_updated(&self) -> Option<&str> {
         self.r#last_updated.as_ref().map(|x| x.borrow())
     }
@@ -225,6 +270,11 @@ impl r#JsonWebKey {
 
     pub fn with_n(mut self, r#n: String) -> Self {
         self.r#n = Some(r#n);
+        self
+    }
+
+    pub fn with_option_n(mut self, r#n: Option<String>) -> Self {
+        self.r#n = r#n;
         self
     }
 
@@ -245,6 +295,11 @@ impl r#JsonWebKey {
         self
     }
 
+    pub fn with_option_status(mut self, r#status: Option<String>) -> Self {
+        self.r#status = r#status;
+        self
+    }
+
     pub fn r#status(&self) -> Option<&str> {
         self.r#status.as_ref().map(|x| x.borrow())
     }
@@ -259,6 +314,11 @@ impl r#JsonWebKey {
 
     pub fn with_use(mut self, r#use: String) -> Self {
         self.r#use = Some(r#use);
+        self
+    }
+
+    pub fn with_option_use(mut self, r#use: Option<String>) -> Self {
+        self.r#use = r#use;
         self
     }
 
@@ -279,6 +339,11 @@ impl r#JsonWebKey {
         self
     }
 
+    pub fn with_option_x5c(mut self, r#x5c: Option<Vec<String>>) -> Self {
+        self.r#x5c = r#x5c;
+        self
+    }
+
     pub fn r#x5c(&self) -> Option<&Vec<String>> {
         self.r#x5c.as_ref().map(|x| x.borrow())
     }
@@ -293,6 +358,11 @@ impl r#JsonWebKey {
 
     pub fn with_x5t(mut self, r#x5t: String) -> Self {
         self.r#x5t = Some(r#x5t);
+        self
+    }
+
+    pub fn with_option_x5t(mut self, r#x5t: Option<String>) -> Self {
+        self.r#x5t = r#x5t;
         self
     }
 
@@ -313,6 +383,11 @@ impl r#JsonWebKey {
         self
     }
 
+    pub fn with_option_x5t_s256(mut self, r#x5t_s256: Option<String>) -> Self {
+        self.r#x5t_s256 = r#x5t_s256;
+        self
+    }
+
     pub fn r#x5t_s256(&self) -> Option<&str> {
         self.r#x5t_s256.as_ref().map(|x| x.borrow())
     }
@@ -327,6 +402,11 @@ impl r#JsonWebKey {
 
     pub fn with_x5u(mut self, r#x5u: String) -> Self {
         self.r#x5u = Some(r#x5u);
+        self
+    }
+
+    pub fn with_option_x5u(mut self, r#x5u: Option<String>) -> Self {
+        self.r#x5u = r#x5u;
         self
     }
 

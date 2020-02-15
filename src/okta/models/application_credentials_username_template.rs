@@ -36,6 +36,11 @@ impl r#ApplicationCredentialsUsernameTemplate {
         self
     }
 
+    pub fn with_option_suffix(mut self, r#suffix: Option<String>) -> Self {
+        self.r#suffix = r#suffix;
+        self
+    }
+
     pub fn r#suffix(&self) -> Option<&str> {
         self.r#suffix.as_ref().map(|x| x.borrow())
     }
@@ -53,6 +58,11 @@ impl r#ApplicationCredentialsUsernameTemplate {
         self
     }
 
+    pub fn with_option_template(mut self, r#template: Option<String>) -> Self {
+        self.r#template = r#template;
+        self
+    }
+
     pub fn r#template(&self) -> Option<&str> {
         self.r#template.as_ref().map(|x| x.borrow())
     }
@@ -67,6 +77,11 @@ impl r#ApplicationCredentialsUsernameTemplate {
 
     pub fn with_type(mut self, r#type: String) -> Self {
         self.r#type = Some(r#type);
+        self
+    }
+
+    pub fn with_option_type(mut self, r#type: Option<String>) -> Self {
+        self.r#type = r#type;
         self
     }
 

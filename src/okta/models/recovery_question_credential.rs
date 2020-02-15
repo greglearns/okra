@@ -33,6 +33,11 @@ impl r#RecoveryQuestionCredential {
         self
     }
 
+    pub fn with_option_answer(mut self, r#answer: Option<String>) -> Self {
+        self.r#answer = r#answer;
+        self
+    }
+
     pub fn r#answer(&self) -> Option<&str> {
         self.r#answer.as_ref().map(|x| x.borrow())
     }
@@ -47,6 +52,11 @@ impl r#RecoveryQuestionCredential {
 
     pub fn with_question(mut self, r#question: String) -> Self {
         self.r#question = Some(r#question);
+        self
+    }
+
+    pub fn with_option_question(mut self, r#question: Option<String>) -> Self {
+        self.r#question = r#question;
         self
     }
 

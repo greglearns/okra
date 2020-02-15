@@ -39,6 +39,11 @@ impl r#ApplicationCredentialsOAuthClient {
         self
     }
 
+    pub fn with_option_auto_key_rotation(mut self, r#auto_key_rotation: Option<bool>) -> Self {
+        self.r#auto_key_rotation = r#auto_key_rotation;
+        self
+    }
+
     pub fn r#auto_key_rotation(&self) -> Option<&bool> {
         self.r#auto_key_rotation.as_ref().map(|x| x.borrow())
     }
@@ -53,6 +58,11 @@ impl r#ApplicationCredentialsOAuthClient {
 
     pub fn with_client_id(mut self, r#client_id: String) -> Self {
         self.r#client_id = Some(r#client_id);
+        self
+    }
+
+    pub fn with_option_client_id(mut self, r#client_id: Option<String>) -> Self {
+        self.r#client_id = r#client_id;
         self
     }
 
@@ -73,6 +83,11 @@ impl r#ApplicationCredentialsOAuthClient {
         self
     }
 
+    pub fn with_option_client_secret(mut self, r#client_secret: Option<String>) -> Self {
+        self.r#client_secret = r#client_secret;
+        self
+    }
+
     pub fn r#client_secret(&self) -> Option<&str> {
         self.r#client_secret.as_ref().map(|x| x.borrow())
     }
@@ -87,6 +102,11 @@ impl r#ApplicationCredentialsOAuthClient {
 
     pub fn with_token_endpoint_auth_method(mut self, r#token_endpoint_auth_method: OAuthEndpointAuthenticationMethod) -> Self {
         self.r#token_endpoint_auth_method = Some(r#token_endpoint_auth_method);
+        self
+    }
+
+    pub fn with_option_token_endpoint_auth_method(mut self, r#token_endpoint_auth_method: Option<OAuthEndpointAuthenticationMethod>) -> Self {
+        self.r#token_endpoint_auth_method = r#token_endpoint_auth_method;
         self
     }
 

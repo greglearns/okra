@@ -33,6 +33,11 @@ impl r#PasswordPolicyRuleConditions {
         self
     }
 
+    pub fn with_option_network(mut self, r#network: Option<PolicyNetworkCondition>) -> Self {
+        self.r#network = r#network;
+        self
+    }
+
     pub fn r#network(&self) -> Option<&PolicyNetworkCondition> {
         self.r#network.as_ref().map(|x| x.borrow())
     }
@@ -47,6 +52,11 @@ impl r#PasswordPolicyRuleConditions {
 
     pub fn with_people(mut self, r#people: PolicyPeopleCondition) -> Self {
         self.r#people = Some(r#people);
+        self
+    }
+
+    pub fn with_option_people(mut self, r#people: Option<PolicyPeopleCondition>) -> Self {
+        self.r#people = r#people;
         self
     }
 

@@ -30,6 +30,11 @@ impl r#PasswordPolicyRecoveryFactorSettings {
         self
     }
 
+    pub fn with_option_status(mut self, r#status: Option<String>) -> Self {
+        self.r#status = r#status;
+        self
+    }
+
     pub fn r#status(&self) -> Option<&str> {
         self.r#status.as_ref().map(|x| x.borrow())
     }

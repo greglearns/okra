@@ -75,6 +75,11 @@ impl r#LogEvent {
         self
     }
 
+    pub fn with_option_actor(mut self, r#actor: Option<LogActor>) -> Self {
+        self.r#actor = r#actor;
+        self
+    }
+
     pub fn r#actor(&self) -> Option<&LogActor> {
         self.r#actor.as_ref().map(|x| x.borrow())
     }
@@ -89,6 +94,11 @@ impl r#LogEvent {
 
     pub fn with_authentication_context(mut self, r#authentication_context: LogAuthenticationContext) -> Self {
         self.r#authentication_context = Some(r#authentication_context);
+        self
+    }
+
+    pub fn with_option_authentication_context(mut self, r#authentication_context: Option<LogAuthenticationContext>) -> Self {
+        self.r#authentication_context = r#authentication_context;
         self
     }
 
@@ -109,6 +119,11 @@ impl r#LogEvent {
         self
     }
 
+    pub fn with_option_client(mut self, r#client: Option<LogClient>) -> Self {
+        self.r#client = r#client;
+        self
+    }
+
     pub fn r#client(&self) -> Option<&LogClient> {
         self.r#client.as_ref().map(|x| x.borrow())
     }
@@ -123,6 +138,11 @@ impl r#LogEvent {
 
     pub fn with_debug_context(mut self, r#debug_context: LogDebugContext) -> Self {
         self.r#debug_context = Some(r#debug_context);
+        self
+    }
+
+    pub fn with_option_debug_context(mut self, r#debug_context: Option<LogDebugContext>) -> Self {
+        self.r#debug_context = r#debug_context;
         self
     }
 
@@ -143,6 +163,11 @@ impl r#LogEvent {
         self
     }
 
+    pub fn with_option_display_message(mut self, r#display_message: Option<String>) -> Self {
+        self.r#display_message = r#display_message;
+        self
+    }
+
     pub fn r#display_message(&self) -> Option<&str> {
         self.r#display_message.as_ref().map(|x| x.borrow())
     }
@@ -157,6 +182,11 @@ impl r#LogEvent {
 
     pub fn with_event_type(mut self, r#event_type: String) -> Self {
         self.r#event_type = Some(r#event_type);
+        self
+    }
+
+    pub fn with_option_event_type(mut self, r#event_type: Option<String>) -> Self {
+        self.r#event_type = r#event_type;
         self
     }
 
@@ -177,6 +207,11 @@ impl r#LogEvent {
         self
     }
 
+    pub fn with_option_legacy_event_type(mut self, r#legacy_event_type: Option<String>) -> Self {
+        self.r#legacy_event_type = r#legacy_event_type;
+        self
+    }
+
     pub fn r#legacy_event_type(&self) -> Option<&str> {
         self.r#legacy_event_type.as_ref().map(|x| x.borrow())
     }
@@ -191,6 +226,11 @@ impl r#LogEvent {
 
     pub fn with_outcome(mut self, r#outcome: LogOutcome) -> Self {
         self.r#outcome = Some(r#outcome);
+        self
+    }
+
+    pub fn with_option_outcome(mut self, r#outcome: Option<LogOutcome>) -> Self {
+        self.r#outcome = r#outcome;
         self
     }
 
@@ -211,6 +251,11 @@ impl r#LogEvent {
         self
     }
 
+    pub fn with_option_published(mut self, r#published: Option<String>) -> Self {
+        self.r#published = r#published;
+        self
+    }
+
     pub fn r#published(&self) -> Option<&str> {
         self.r#published.as_ref().map(|x| x.borrow())
     }
@@ -225,6 +270,11 @@ impl r#LogEvent {
 
     pub fn with_request(mut self, r#request: LogRequest) -> Self {
         self.r#request = Some(r#request);
+        self
+    }
+
+    pub fn with_option_request(mut self, r#request: Option<LogRequest>) -> Self {
+        self.r#request = r#request;
         self
     }
 
@@ -245,6 +295,11 @@ impl r#LogEvent {
         self
     }
 
+    pub fn with_option_security_context(mut self, r#security_context: Option<LogSecurityContext>) -> Self {
+        self.r#security_context = r#security_context;
+        self
+    }
+
     pub fn r#security_context(&self) -> Option<&LogSecurityContext> {
         self.r#security_context.as_ref().map(|x| x.borrow())
     }
@@ -259,6 +314,11 @@ impl r#LogEvent {
 
     pub fn with_severity(mut self, r#severity: LogSeverity) -> Self {
         self.r#severity = Some(r#severity);
+        self
+    }
+
+    pub fn with_option_severity(mut self, r#severity: Option<LogSeverity>) -> Self {
+        self.r#severity = r#severity;
         self
     }
 
@@ -279,6 +339,11 @@ impl r#LogEvent {
         self
     }
 
+    pub fn with_option_target(mut self, r#target: Option<Vec<LogTarget>>) -> Self {
+        self.r#target = r#target;
+        self
+    }
+
     pub fn r#target(&self) -> Option<&Vec<LogTarget>> {
         self.r#target.as_ref().map(|x| x.borrow())
     }
@@ -293,6 +358,11 @@ impl r#LogEvent {
 
     pub fn with_transaction(mut self, r#transaction: LogTransaction) -> Self {
         self.r#transaction = Some(r#transaction);
+        self
+    }
+
+    pub fn with_option_transaction(mut self, r#transaction: Option<LogTransaction>) -> Self {
+        self.r#transaction = r#transaction;
         self
     }
 
@@ -313,6 +383,11 @@ impl r#LogEvent {
         self
     }
 
+    pub fn with_option_uuid(mut self, r#uuid: Option<String>) -> Self {
+        self.r#uuid = r#uuid;
+        self
+    }
+
     pub fn r#uuid(&self) -> Option<&str> {
         self.r#uuid.as_ref().map(|x| x.borrow())
     }
@@ -327,6 +402,11 @@ impl r#LogEvent {
 
     pub fn with_version(mut self, r#version: String) -> Self {
         self.r#version = Some(r#version);
+        self
+    }
+
+    pub fn with_option_version(mut self, r#version: Option<String>) -> Self {
+        self.r#version = r#version;
         self
     }
 

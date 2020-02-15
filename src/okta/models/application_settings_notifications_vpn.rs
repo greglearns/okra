@@ -36,6 +36,11 @@ impl r#ApplicationSettingsNotificationsVpn {
         self
     }
 
+    pub fn with_option_help_url(mut self, r#help_url: Option<String>) -> Self {
+        self.r#help_url = r#help_url;
+        self
+    }
+
     pub fn r#help_url(&self) -> Option<&str> {
         self.r#help_url.as_ref().map(|x| x.borrow())
     }
@@ -53,6 +58,11 @@ impl r#ApplicationSettingsNotificationsVpn {
         self
     }
 
+    pub fn with_option_message(mut self, r#message: Option<String>) -> Self {
+        self.r#message = r#message;
+        self
+    }
+
     pub fn r#message(&self) -> Option<&str> {
         self.r#message.as_ref().map(|x| x.borrow())
     }
@@ -67,6 +77,11 @@ impl r#ApplicationSettingsNotificationsVpn {
 
     pub fn with_network(mut self, r#network: ApplicationSettingsNotificationsVpnNetwork) -> Self {
         self.r#network = Some(r#network);
+        self
+    }
+
+    pub fn with_option_network(mut self, r#network: Option<ApplicationSettingsNotificationsVpnNetwork>) -> Self {
+        self.r#network = r#network;
         self
     }
 

@@ -39,6 +39,11 @@ impl r#UserCredentials {
         self
     }
 
+    pub fn with_option_emails(mut self, r#emails: Option<Vec<EmailAddress>>) -> Self {
+        self.r#emails = r#emails;
+        self
+    }
+
     pub fn r#emails(&self) -> Option<&Vec<EmailAddress>> {
         self.r#emails.as_ref().map(|x| x.borrow())
     }
@@ -53,6 +58,11 @@ impl r#UserCredentials {
 
     pub fn with_password(mut self, r#password: PasswordCredential) -> Self {
         self.r#password = Some(r#password);
+        self
+    }
+
+    pub fn with_option_password(mut self, r#password: Option<PasswordCredential>) -> Self {
+        self.r#password = r#password;
         self
     }
 
@@ -73,6 +83,11 @@ impl r#UserCredentials {
         self
     }
 
+    pub fn with_option_provider(mut self, r#provider: Option<AuthenticationProvider>) -> Self {
+        self.r#provider = r#provider;
+        self
+    }
+
     pub fn r#provider(&self) -> Option<&AuthenticationProvider> {
         self.r#provider.as_ref().map(|x| x.borrow())
     }
@@ -87,6 +102,11 @@ impl r#UserCredentials {
 
     pub fn with_recovery_question(mut self, r#recovery_question: RecoveryQuestionCredential) -> Self {
         self.r#recovery_question = Some(r#recovery_question);
+        self
+    }
+
+    pub fn with_option_recovery_question(mut self, r#recovery_question: Option<RecoveryQuestionCredential>) -> Self {
+        self.r#recovery_question = r#recovery_question;
         self
     }
 

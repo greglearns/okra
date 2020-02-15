@@ -36,6 +36,11 @@ impl r#PasswordPolicySettings {
         self
     }
 
+    pub fn with_option_delegation(mut self, r#delegation: Option<PasswordPolicyDelegationSettings>) -> Self {
+        self.r#delegation = r#delegation;
+        self
+    }
+
     pub fn r#delegation(&self) -> Option<&PasswordPolicyDelegationSettings> {
         self.r#delegation.as_ref().map(|x| x.borrow())
     }
@@ -53,6 +58,11 @@ impl r#PasswordPolicySettings {
         self
     }
 
+    pub fn with_option_password(mut self, r#password: Option<PasswordPolicyPasswordSettings>) -> Self {
+        self.r#password = r#password;
+        self
+    }
+
     pub fn r#password(&self) -> Option<&PasswordPolicyPasswordSettings> {
         self.r#password.as_ref().map(|x| x.borrow())
     }
@@ -67,6 +77,11 @@ impl r#PasswordPolicySettings {
 
     pub fn with_recovery(mut self, r#recovery: PasswordPolicyRecoverySettings) -> Self {
         self.r#recovery = Some(r#recovery);
+        self
+    }
+
+    pub fn with_option_recovery(mut self, r#recovery: Option<PasswordPolicyRecoverySettings>) -> Self {
+        self.r#recovery = r#recovery;
         self
     }
 

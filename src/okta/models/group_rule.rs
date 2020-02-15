@@ -57,6 +57,11 @@ impl r#GroupRule {
         self
     }
 
+    pub fn with_option_embedded(mut self, r#embedded: Option<Value>) -> Self {
+        self.r#embedded = r#embedded;
+        self
+    }
+
     pub fn r#embedded(&self) -> Option<&Value> {
         self.r#embedded.as_ref().map(|x| x.borrow())
     }
@@ -71,6 +76,11 @@ impl r#GroupRule {
 
     pub fn with_actions(mut self, r#actions: GroupRuleAction) -> Self {
         self.r#actions = Some(r#actions);
+        self
+    }
+
+    pub fn with_option_actions(mut self, r#actions: Option<GroupRuleAction>) -> Self {
+        self.r#actions = r#actions;
         self
     }
 
@@ -91,6 +101,11 @@ impl r#GroupRule {
         self
     }
 
+    pub fn with_option_all_groups_valid(mut self, r#all_groups_valid: Option<bool>) -> Self {
+        self.r#all_groups_valid = r#all_groups_valid;
+        self
+    }
+
     pub fn r#all_groups_valid(&self) -> Option<&bool> {
         self.r#all_groups_valid.as_ref().map(|x| x.borrow())
     }
@@ -105,6 +120,11 @@ impl r#GroupRule {
 
     pub fn with_conditions(mut self, r#conditions: GroupRuleConditions) -> Self {
         self.r#conditions = Some(r#conditions);
+        self
+    }
+
+    pub fn with_option_conditions(mut self, r#conditions: Option<GroupRuleConditions>) -> Self {
+        self.r#conditions = r#conditions;
         self
     }
 
@@ -125,6 +145,11 @@ impl r#GroupRule {
         self
     }
 
+    pub fn with_option_created(mut self, r#created: Option<String>) -> Self {
+        self.r#created = r#created;
+        self
+    }
+
     pub fn r#created(&self) -> Option<&str> {
         self.r#created.as_ref().map(|x| x.borrow())
     }
@@ -139,6 +164,11 @@ impl r#GroupRule {
 
     pub fn with_id(mut self, r#id: String) -> Self {
         self.r#id = Some(r#id);
+        self
+    }
+
+    pub fn with_option_id(mut self, r#id: Option<String>) -> Self {
+        self.r#id = r#id;
         self
     }
 
@@ -159,6 +189,11 @@ impl r#GroupRule {
         self
     }
 
+    pub fn with_option_last_updated(mut self, r#last_updated: Option<String>) -> Self {
+        self.r#last_updated = r#last_updated;
+        self
+    }
+
     pub fn r#last_updated(&self) -> Option<&str> {
         self.r#last_updated.as_ref().map(|x| x.borrow())
     }
@@ -173,6 +208,11 @@ impl r#GroupRule {
 
     pub fn with_name(mut self, r#name: String) -> Self {
         self.r#name = Some(r#name);
+        self
+    }
+
+    pub fn with_option_name(mut self, r#name: Option<String>) -> Self {
+        self.r#name = r#name;
         self
     }
 
@@ -193,6 +233,11 @@ impl r#GroupRule {
         self
     }
 
+    pub fn with_option_status(mut self, r#status: Option<GroupRuleStatus>) -> Self {
+        self.r#status = r#status;
+        self
+    }
+
     pub fn r#status(&self) -> Option<&GroupRuleStatus> {
         self.r#status.as_ref().map(|x| x.borrow())
     }
@@ -207,6 +252,11 @@ impl r#GroupRule {
 
     pub fn with_type(mut self, r#type: String) -> Self {
         self.r#type = Some(r#type);
+        self
+    }
+
+    pub fn with_option_type(mut self, r#type: Option<String>) -> Self {
+        self.r#type = r#type;
         self
     }
 

@@ -30,6 +30,11 @@ impl r#OpenIdConnectApplicationSettings {
         self
     }
 
+    pub fn with_option_oauth_client(mut self, r#oauth_client: Option<OpenIdConnectApplicationSettingsClient>) -> Self {
+        self.r#oauth_client = r#oauth_client;
+        self
+    }
+
     pub fn r#oauth_client(&self) -> Option<&OpenIdConnectApplicationSettingsClient> {
         self.r#oauth_client.as_ref().map(|x| x.borrow())
     }

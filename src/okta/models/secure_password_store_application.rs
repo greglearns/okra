@@ -33,6 +33,11 @@ impl r#SecurePasswordStoreApplication {
         self
     }
 
+    pub fn with_option_credentials(mut self, r#credentials: Option<SchemeApplicationCredentials>) -> Self {
+        self.r#credentials = r#credentials;
+        self
+    }
+
     pub fn r#credentials(&self) -> Option<&SchemeApplicationCredentials> {
         self.r#credentials.as_ref().map(|x| x.borrow())
     }
@@ -47,6 +52,11 @@ impl r#SecurePasswordStoreApplication {
 
     pub fn with_settings(mut self, r#settings: SecurePasswordStoreApplicationSettings) -> Self {
         self.r#settings = Some(r#settings);
+        self
+    }
+
+    pub fn with_option_settings(mut self, r#settings: Option<SecurePasswordStoreApplicationSettings>) -> Self {
+        self.r#settings = r#settings;
         self
     }
 

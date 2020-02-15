@@ -33,6 +33,11 @@ impl r#LogGeolocation {
         self
     }
 
+    pub fn with_option_lat(mut self, r#lat: Option<f64>) -> Self {
+        self.r#lat = r#lat;
+        self
+    }
+
     pub fn r#lat(&self) -> Option<&f64> {
         self.r#lat.as_ref().map(|x| x.borrow())
     }
@@ -47,6 +52,11 @@ impl r#LogGeolocation {
 
     pub fn with_lon(mut self, r#lon: f64) -> Self {
         self.r#lon = Some(r#lon);
+        self
+    }
+
+    pub fn with_option_lon(mut self, r#lon: Option<f64>) -> Self {
+        self.r#lon = r#lon;
         self
     }
 

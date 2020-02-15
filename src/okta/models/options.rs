@@ -33,6 +33,11 @@ impl r#Options {
         self
     }
 
+    pub fn with_option_multi_optional_factor_enroll(mut self, r#multi_optional_factor_enroll: Option<bool>) -> Self {
+        self.r#multi_optional_factor_enroll = r#multi_optional_factor_enroll;
+        self
+    }
+
     pub fn r#multi_optional_factor_enroll(&self) -> Option<&bool> {
         self.r#multi_optional_factor_enroll.as_ref().map(|x| x.borrow())
     }
@@ -47,6 +52,11 @@ impl r#Options {
 
     pub fn with_warn_before_password_expired(mut self, r#warn_before_password_expired: bool) -> Self {
         self.r#warn_before_password_expired = Some(r#warn_before_password_expired);
+        self
+    }
+
+    pub fn with_option_warn_before_password_expired(mut self, r#warn_before_password_expired: Option<bool>) -> Self {
+        self.r#warn_before_password_expired = r#warn_before_password_expired;
         self
     }
 

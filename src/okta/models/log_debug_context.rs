@@ -30,6 +30,11 @@ impl r#LogDebugContext {
         self
     }
 
+    pub fn with_option_debug_data(mut self, r#debug_data: Option<Value>) -> Self {
+        self.r#debug_data = r#debug_data;
+        self
+    }
+
     pub fn r#debug_data(&self) -> Option<&Value> {
         self.r#debug_data.as_ref().map(|x| x.borrow())
     }

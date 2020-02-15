@@ -36,6 +36,11 @@ impl r#ApplicationAccessibility {
         self
     }
 
+    pub fn with_option_error_redirect_url(mut self, r#error_redirect_url: Option<String>) -> Self {
+        self.r#error_redirect_url = r#error_redirect_url;
+        self
+    }
+
     pub fn r#error_redirect_url(&self) -> Option<&str> {
         self.r#error_redirect_url.as_ref().map(|x| x.borrow())
     }
@@ -53,6 +58,11 @@ impl r#ApplicationAccessibility {
         self
     }
 
+    pub fn with_option_login_redirect_url(mut self, r#login_redirect_url: Option<String>) -> Self {
+        self.r#login_redirect_url = r#login_redirect_url;
+        self
+    }
+
     pub fn r#login_redirect_url(&self) -> Option<&str> {
         self.r#login_redirect_url.as_ref().map(|x| x.borrow())
     }
@@ -67,6 +77,11 @@ impl r#ApplicationAccessibility {
 
     pub fn with_self_service(mut self, r#self_service: bool) -> Self {
         self.r#self_service = Some(r#self_service);
+        self
+    }
+
+    pub fn with_option_self_service(mut self, r#self_service: Option<bool>) -> Self {
+        self.r#self_service = r#self_service;
         self
     }
 

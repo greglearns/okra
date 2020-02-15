@@ -33,6 +33,11 @@ impl r#GroupRulePeopleCondition {
         self
     }
 
+    pub fn with_option_groups(mut self, r#groups: Option<GroupRuleGroupCondition>) -> Self {
+        self.r#groups = r#groups;
+        self
+    }
+
     pub fn r#groups(&self) -> Option<&GroupRuleGroupCondition> {
         self.r#groups.as_ref().map(|x| x.borrow())
     }
@@ -47,6 +52,11 @@ impl r#GroupRulePeopleCondition {
 
     pub fn with_users(mut self, r#users: GroupRuleUserCondition) -> Self {
         self.r#users = Some(r#users);
+        self
+    }
+
+    pub fn with_option_users(mut self, r#users: Option<GroupRuleUserCondition>) -> Self {
+        self.r#users = r#users;
         self
     }
 

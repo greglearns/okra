@@ -36,6 +36,11 @@ impl r#OktaSignOnPolicyRuleConditions {
         self
     }
 
+    pub fn with_option_auth_context(mut self, r#auth_context: Option<PolicyRuleAuthContextCondition>) -> Self {
+        self.r#auth_context = r#auth_context;
+        self
+    }
+
     pub fn r#auth_context(&self) -> Option<&PolicyRuleAuthContextCondition> {
         self.r#auth_context.as_ref().map(|x| x.borrow())
     }
@@ -53,6 +58,11 @@ impl r#OktaSignOnPolicyRuleConditions {
         self
     }
 
+    pub fn with_option_network(mut self, r#network: Option<PolicyNetworkCondition>) -> Self {
+        self.r#network = r#network;
+        self
+    }
+
     pub fn r#network(&self) -> Option<&PolicyNetworkCondition> {
         self.r#network.as_ref().map(|x| x.borrow())
     }
@@ -67,6 +77,11 @@ impl r#OktaSignOnPolicyRuleConditions {
 
     pub fn with_people(mut self, r#people: PolicyPeopleCondition) -> Self {
         self.r#people = Some(r#people);
+        self
+    }
+
+    pub fn with_option_people(mut self, r#people: Option<PolicyPeopleCondition>) -> Self {
+        self.r#people = r#people;
         self
     }
 

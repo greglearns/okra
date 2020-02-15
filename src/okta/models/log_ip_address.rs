@@ -39,6 +39,11 @@ impl r#LogIpAddress {
         self
     }
 
+    pub fn with_option_geographical_context(mut self, r#geographical_context: Option<LogGeographicalContext>) -> Self {
+        self.r#geographical_context = r#geographical_context;
+        self
+    }
+
     pub fn r#geographical_context(&self) -> Option<&LogGeographicalContext> {
         self.r#geographical_context.as_ref().map(|x| x.borrow())
     }
@@ -53,6 +58,11 @@ impl r#LogIpAddress {
 
     pub fn with_ip(mut self, r#ip: String) -> Self {
         self.r#ip = Some(r#ip);
+        self
+    }
+
+    pub fn with_option_ip(mut self, r#ip: Option<String>) -> Self {
+        self.r#ip = r#ip;
         self
     }
 
@@ -73,6 +83,11 @@ impl r#LogIpAddress {
         self
     }
 
+    pub fn with_option_source(mut self, r#source: Option<String>) -> Self {
+        self.r#source = r#source;
+        self
+    }
+
     pub fn r#source(&self) -> Option<&str> {
         self.r#source.as_ref().map(|x| x.borrow())
     }
@@ -87,6 +102,11 @@ impl r#LogIpAddress {
 
     pub fn with_version(mut self, r#version: String) -> Self {
         self.r#version = Some(r#version);
+        self
+    }
+
+    pub fn with_option_version(mut self, r#version: Option<String>) -> Self {
+        self.r#version = r#version;
         self
     }
 

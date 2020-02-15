@@ -30,6 +30,11 @@ impl r#OktaSignOnPolicy {
         self
     }
 
+    pub fn with_option_conditions(mut self, r#conditions: Option<OktaSignOnPolicyConditions>) -> Self {
+        self.r#conditions = r#conditions;
+        self
+    }
+
     pub fn r#conditions(&self) -> Option<&OktaSignOnPolicyConditions> {
         self.r#conditions.as_ref().map(|x| x.borrow())
     }

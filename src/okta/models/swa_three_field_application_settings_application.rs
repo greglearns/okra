@@ -48,6 +48,11 @@ impl r#SwaThreeFieldApplicationSettingsApplication {
         self
     }
 
+    pub fn with_option_button_selector(mut self, r#button_selector: Option<String>) -> Self {
+        self.r#button_selector = r#button_selector;
+        self
+    }
+
     pub fn r#button_selector(&self) -> Option<&str> {
         self.r#button_selector.as_ref().map(|x| x.borrow())
     }
@@ -62,6 +67,11 @@ impl r#SwaThreeFieldApplicationSettingsApplication {
 
     pub fn with_extra_field_selector(mut self, r#extra_field_selector: String) -> Self {
         self.r#extra_field_selector = Some(r#extra_field_selector);
+        self
+    }
+
+    pub fn with_option_extra_field_selector(mut self, r#extra_field_selector: Option<String>) -> Self {
+        self.r#extra_field_selector = r#extra_field_selector;
         self
     }
 
@@ -82,6 +92,11 @@ impl r#SwaThreeFieldApplicationSettingsApplication {
         self
     }
 
+    pub fn with_option_extra_field_value(mut self, r#extra_field_value: Option<String>) -> Self {
+        self.r#extra_field_value = r#extra_field_value;
+        self
+    }
+
     pub fn r#extra_field_value(&self) -> Option<&str> {
         self.r#extra_field_value.as_ref().map(|x| x.borrow())
     }
@@ -96,6 +111,11 @@ impl r#SwaThreeFieldApplicationSettingsApplication {
 
     pub fn with_login_url_regex(mut self, r#login_url_regex: String) -> Self {
         self.r#login_url_regex = Some(r#login_url_regex);
+        self
+    }
+
+    pub fn with_option_login_url_regex(mut self, r#login_url_regex: Option<String>) -> Self {
+        self.r#login_url_regex = r#login_url_regex;
         self
     }
 
@@ -116,6 +136,11 @@ impl r#SwaThreeFieldApplicationSettingsApplication {
         self
     }
 
+    pub fn with_option_password_selector(mut self, r#password_selector: Option<String>) -> Self {
+        self.r#password_selector = r#password_selector;
+        self
+    }
+
     pub fn r#password_selector(&self) -> Option<&str> {
         self.r#password_selector.as_ref().map(|x| x.borrow())
     }
@@ -133,6 +158,11 @@ impl r#SwaThreeFieldApplicationSettingsApplication {
         self
     }
 
+    pub fn with_option_target_url(mut self, r#target_url: Option<String>) -> Self {
+        self.r#target_url = r#target_url;
+        self
+    }
+
     pub fn r#target_url(&self) -> Option<&str> {
         self.r#target_url.as_ref().map(|x| x.borrow())
     }
@@ -147,6 +177,11 @@ impl r#SwaThreeFieldApplicationSettingsApplication {
 
     pub fn with_user_name_selector(mut self, r#user_name_selector: String) -> Self {
         self.r#user_name_selector = Some(r#user_name_selector);
+        self
+    }
+
+    pub fn with_option_user_name_selector(mut self, r#user_name_selector: Option<String>) -> Self {
+        self.r#user_name_selector = r#user_name_selector;
         self
     }
 

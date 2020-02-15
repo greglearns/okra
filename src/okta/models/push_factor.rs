@@ -30,6 +30,11 @@ impl r#PushFactor {
         self
     }
 
+    pub fn with_option_profile(mut self, r#profile: Option<PushFactorProfile>) -> Self {
+        self.r#profile = r#profile;
+        self
+    }
+
     pub fn r#profile(&self) -> Option<&PushFactorProfile> {
         self.r#profile.as_ref().map(|x| x.borrow())
     }

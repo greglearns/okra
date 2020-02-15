@@ -45,6 +45,11 @@ impl r#LogClient {
         self
     }
 
+    pub fn with_option_device(mut self, r#device: Option<String>) -> Self {
+        self.r#device = r#device;
+        self
+    }
+
     pub fn r#device(&self) -> Option<&str> {
         self.r#device.as_ref().map(|x| x.borrow())
     }
@@ -59,6 +64,11 @@ impl r#LogClient {
 
     pub fn with_geographical_context(mut self, r#geographical_context: LogGeographicalContext) -> Self {
         self.r#geographical_context = Some(r#geographical_context);
+        self
+    }
+
+    pub fn with_option_geographical_context(mut self, r#geographical_context: Option<LogGeographicalContext>) -> Self {
+        self.r#geographical_context = r#geographical_context;
         self
     }
 
@@ -79,6 +89,11 @@ impl r#LogClient {
         self
     }
 
+    pub fn with_option_id(mut self, r#id: Option<String>) -> Self {
+        self.r#id = r#id;
+        self
+    }
+
     pub fn r#id(&self) -> Option<&str> {
         self.r#id.as_ref().map(|x| x.borrow())
     }
@@ -93,6 +108,11 @@ impl r#LogClient {
 
     pub fn with_ip_address(mut self, r#ip_address: String) -> Self {
         self.r#ip_address = Some(r#ip_address);
+        self
+    }
+
+    pub fn with_option_ip_address(mut self, r#ip_address: Option<String>) -> Self {
+        self.r#ip_address = r#ip_address;
         self
     }
 
@@ -113,6 +133,11 @@ impl r#LogClient {
         self
     }
 
+    pub fn with_option_user_agent(mut self, r#user_agent: Option<LogUserAgent>) -> Self {
+        self.r#user_agent = r#user_agent;
+        self
+    }
+
     pub fn r#user_agent(&self) -> Option<&LogUserAgent> {
         self.r#user_agent.as_ref().map(|x| x.borrow())
     }
@@ -127,6 +152,11 @@ impl r#LogClient {
 
     pub fn with_zone(mut self, r#zone: String) -> Self {
         self.r#zone = Some(r#zone);
+        self
+    }
+
+    pub fn with_option_zone(mut self, r#zone: Option<String>) -> Self {
+        self.r#zone = r#zone;
         self
     }
 

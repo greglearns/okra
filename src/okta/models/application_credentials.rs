@@ -33,6 +33,11 @@ impl r#ApplicationCredentials {
         self
     }
 
+    pub fn with_option_signing(mut self, r#signing: Option<ApplicationCredentialsSigning>) -> Self {
+        self.r#signing = r#signing;
+        self
+    }
+
     pub fn r#signing(&self) -> Option<&ApplicationCredentialsSigning> {
         self.r#signing.as_ref().map(|x| x.borrow())
     }
@@ -47,6 +52,11 @@ impl r#ApplicationCredentials {
 
     pub fn with_user_name_template(mut self, r#user_name_template: ApplicationCredentialsUsernameTemplate) -> Self {
         self.r#user_name_template = Some(r#user_name_template);
+        self
+    }
+
+    pub fn with_option_user_name_template(mut self, r#user_name_template: Option<ApplicationCredentialsUsernameTemplate>) -> Self {
+        self.r#user_name_template = r#user_name_template;
         self
     }
 

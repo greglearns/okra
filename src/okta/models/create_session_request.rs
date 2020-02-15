@@ -30,6 +30,11 @@ impl r#CreateSessionRequest {
         self
     }
 
+    pub fn with_option_session_token(mut self, r#session_token: Option<String>) -> Self {
+        self.r#session_token = r#session_token;
+        self
+    }
+
     pub fn r#session_token(&self) -> Option<&str> {
         self.r#session_token.as_ref().map(|x| x.borrow())
     }

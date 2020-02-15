@@ -36,6 +36,11 @@ impl r#OktaSignOnPolicyRuleSignonSessionActions {
         self
     }
 
+    pub fn with_option_max_session_idle_minutes(mut self, r#max_session_idle_minutes: Option<i32>) -> Self {
+        self.r#max_session_idle_minutes = r#max_session_idle_minutes;
+        self
+    }
+
     pub fn r#max_session_idle_minutes(&self) -> Option<&i32> {
         self.r#max_session_idle_minutes.as_ref().map(|x| x.borrow())
     }
@@ -53,6 +58,11 @@ impl r#OktaSignOnPolicyRuleSignonSessionActions {
         self
     }
 
+    pub fn with_option_max_session_lifetime_minutes(mut self, r#max_session_lifetime_minutes: Option<i32>) -> Self {
+        self.r#max_session_lifetime_minutes = r#max_session_lifetime_minutes;
+        self
+    }
+
     pub fn r#max_session_lifetime_minutes(&self) -> Option<&i32> {
         self.r#max_session_lifetime_minutes.as_ref().map(|x| x.borrow())
     }
@@ -67,6 +77,11 @@ impl r#OktaSignOnPolicyRuleSignonSessionActions {
 
     pub fn with_use_persistent_cookie(mut self, r#use_persistent_cookie: bool) -> Self {
         self.r#use_persistent_cookie = Some(r#use_persistent_cookie);
+        self
+    }
+
+    pub fn with_option_use_persistent_cookie(mut self, r#use_persistent_cookie: Option<bool>) -> Self {
+        self.r#use_persistent_cookie = r#use_persistent_cookie;
         self
     }
 

@@ -30,6 +30,11 @@ impl r#SecurePasswordStoreApplicationSettings {
         self
     }
 
+    pub fn with_option_app(mut self, r#app: Option<SecurePasswordStoreApplicationSettingsApplication>) -> Self {
+        self.r#app = r#app;
+        self
+    }
+
     pub fn r#app(&self) -> Option<&SecurePasswordStoreApplicationSettingsApplication> {
         self.r#app.as_ref().map(|x| x.borrow())
     }

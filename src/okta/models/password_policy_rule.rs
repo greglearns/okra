@@ -36,6 +36,11 @@ impl r#PasswordPolicyRule {
         self
     }
 
+    pub fn with_option_actions(mut self, r#actions: Option<PasswordPolicyRuleActions>) -> Self {
+        self.r#actions = r#actions;
+        self
+    }
+
     pub fn r#actions(&self) -> Option<&PasswordPolicyRuleActions> {
         self.r#actions.as_ref().map(|x| x.borrow())
     }
@@ -53,6 +58,11 @@ impl r#PasswordPolicyRule {
         self
     }
 
+    pub fn with_option_conditions(mut self, r#conditions: Option<PasswordPolicyRuleConditions>) -> Self {
+        self.r#conditions = r#conditions;
+        self
+    }
+
     pub fn r#conditions(&self) -> Option<&PasswordPolicyRuleConditions> {
         self.r#conditions.as_ref().map(|x| x.borrow())
     }
@@ -67,6 +77,11 @@ impl r#PasswordPolicyRule {
 
     pub fn with_name(mut self, r#name: String) -> Self {
         self.r#name = Some(r#name);
+        self
+    }
+
+    pub fn with_option_name(mut self, r#name: Option<String>) -> Self {
+        self.r#name = r#name;
         self
     }
 

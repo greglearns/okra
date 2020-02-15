@@ -33,6 +33,11 @@ impl r#AutoLoginApplicationSettingsSignOn {
         self
     }
 
+    pub fn with_option_login_url(mut self, r#login_url: Option<String>) -> Self {
+        self.r#login_url = r#login_url;
+        self
+    }
+
     pub fn r#login_url(&self) -> Option<&str> {
         self.r#login_url.as_ref().map(|x| x.borrow())
     }
@@ -47,6 +52,11 @@ impl r#AutoLoginApplicationSettingsSignOn {
 
     pub fn with_redirect_url(mut self, r#redirect_url: String) -> Self {
         self.r#redirect_url = Some(r#redirect_url);
+        self
+    }
+
+    pub fn with_option_redirect_url(mut self, r#redirect_url: Option<String>) -> Self {
+        self.r#redirect_url = r#redirect_url;
         self
     }
 

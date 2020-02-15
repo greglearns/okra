@@ -30,6 +30,11 @@ impl r#HardwareFactor {
         self
     }
 
+    pub fn with_option_profile(mut self, r#profile: Option<HardwareFactorProfile>) -> Self {
+        self.r#profile = r#profile;
+        self
+    }
+
     pub fn r#profile(&self) -> Option<&HardwareFactorProfile> {
         self.r#profile.as_ref().map(|x| x.borrow())
     }
