@@ -5885,13 +5885,15 @@ components:
           type: boolean
         accept_privacy:
           type: boolean
-        accessBeta:
+        betaProgramAccess:
           type: boolean
         company:
           type: string
         email:
           type: string
         firstName:
+          type: string
+        industry:
           type: string
         lastName:
           type: string
@@ -5901,12 +5903,14 @@ components:
           type: string
         mobilePhone:
           type: string
-        secondEmail:
-          type: string
         preferredLanguage:
           type: string
         role:
           type: string
+        secondEmail:
+          type: string
+        showpadAccess:
+          type: boolean
       type: object
       x-okta-extensible: true
       x-okta-tags:

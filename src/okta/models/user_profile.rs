@@ -13,14 +13,16 @@ pub struct r#UserProfile {
     r#accept_marketing: Option<bool>,
     #[serde(rename = "accept_privacy", skip_serializing_if = "Option::is_none")]
     r#accept_privacy: Option<bool>,
-    #[serde(rename = "accessBeta", skip_serializing_if = "Option::is_none")]
-    r#access_beta: Option<bool>,
+    #[serde(rename = "betaProgramAccess", skip_serializing_if = "Option::is_none")]
+    r#beta_program_access: Option<bool>,
     #[serde(rename = "company", skip_serializing_if = "Option::is_none")]
     r#company: Option<String>,
     #[serde(rename = "email", skip_serializing_if = "Option::is_none")]
     r#email: Option<String>,
     #[serde(rename = "firstName", skip_serializing_if = "Option::is_none")]
     r#first_name: Option<String>,
+    #[serde(rename = "industry", skip_serializing_if = "Option::is_none")]
+    r#industry: Option<String>,
     #[serde(rename = "lastName", skip_serializing_if = "Option::is_none")]
     r#last_name: Option<String>,
     #[serde(rename = "linkid", skip_serializing_if = "Option::is_none")]
@@ -35,6 +37,8 @@ pub struct r#UserProfile {
     r#role: Option<String>,
     #[serde(rename = "secondEmail", skip_serializing_if = "Option::is_none")]
     r#second_email: Option<String>,
+    #[serde(rename = "showpadAccess", skip_serializing_if = "Option::is_none")]
+    r#showpad_access: Option<bool>,
 }
 
 impl r#UserProfile {
@@ -43,10 +47,11 @@ impl r#UserProfile {
         Self {
           r#accept_marketing: None,
           r#accept_privacy: None,
-          r#access_beta: None,
+          r#beta_program_access: None,
           r#company: None,
           r#email: None,
           r#first_name: None,
+          r#industry: None,
           r#last_name: None,
           r#linkid: None,
           r#login: None,
@@ -54,6 +59,7 @@ impl r#UserProfile {
           r#preferred_language: None,
           r#role: None,
           r#second_email: None,
+          r#showpad_access: None,
         }
     }
 
@@ -101,26 +107,26 @@ impl r#UserProfile {
         self.r#accept_privacy = None;
     }
 
-    pub fn set_access_beta(&mut self, r#access_beta: bool) {
-        self.r#access_beta = Some(r#access_beta);
+    pub fn set_beta_program_access(&mut self, r#beta_program_access: bool) {
+        self.r#beta_program_access = Some(r#beta_program_access);
     }
 
-    pub fn with_access_beta(mut self, r#access_beta: bool) -> Self {
-        self.r#access_beta = Some(r#access_beta);
+    pub fn with_beta_program_access(mut self, r#beta_program_access: bool) -> Self {
+        self.r#beta_program_access = Some(r#beta_program_access);
         self
     }
 
-    pub fn with_option_access_beta(mut self, r#access_beta: Option<bool>) -> Self {
-        self.r#access_beta = r#access_beta;
+    pub fn with_option_beta_program_access(mut self, r#beta_program_access: Option<bool>) -> Self {
+        self.r#beta_program_access = r#beta_program_access;
         self
     }
 
-    pub fn r#access_beta(&self) -> Option<&bool> {
-        self.r#access_beta.as_ref().map(|x| x.borrow())
+    pub fn r#beta_program_access(&self) -> Option<&bool> {
+        self.r#beta_program_access.as_ref().map(|x| x.borrow())
     }
 
-    pub fn reset_access_beta(&mut self) {
-        self.r#access_beta = None;
+    pub fn reset_beta_program_access(&mut self) {
+        self.r#beta_program_access = None;
     }
 
     pub fn set_company(&mut self, r#company: String) {
@@ -187,6 +193,28 @@ impl r#UserProfile {
 
     pub fn reset_first_name(&mut self) {
         self.r#first_name = None;
+    }
+
+    pub fn set_industry(&mut self, r#industry: String) {
+        self.r#industry = Some(r#industry);
+    }
+
+    pub fn with_industry(mut self, r#industry: String) -> Self {
+        self.r#industry = Some(r#industry);
+        self
+    }
+
+    pub fn with_option_industry(mut self, r#industry: Option<String>) -> Self {
+        self.r#industry = r#industry;
+        self
+    }
+
+    pub fn r#industry(&self) -> Option<&str> {
+        self.r#industry.as_ref().map(|x| x.borrow())
+    }
+
+    pub fn reset_industry(&mut self) {
+        self.r#industry = None;
     }
 
     pub fn set_last_name(&mut self, r#last_name: String) {
@@ -341,5 +369,27 @@ impl r#UserProfile {
 
     pub fn reset_second_email(&mut self) {
         self.r#second_email = None;
+    }
+
+    pub fn set_showpad_access(&mut self, r#showpad_access: bool) {
+        self.r#showpad_access = Some(r#showpad_access);
+    }
+
+    pub fn with_showpad_access(mut self, r#showpad_access: bool) -> Self {
+        self.r#showpad_access = Some(r#showpad_access);
+        self
+    }
+
+    pub fn with_option_showpad_access(mut self, r#showpad_access: Option<bool>) -> Self {
+        self.r#showpad_access = r#showpad_access;
+        self
+    }
+
+    pub fn r#showpad_access(&self) -> Option<&bool> {
+        self.r#showpad_access.as_ref().map(|x| x.borrow())
+    }
+
+    pub fn reset_showpad_access(&mut self) {
+        self.r#showpad_access = None;
     }
 }
