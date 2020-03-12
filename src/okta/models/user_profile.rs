@@ -13,6 +13,8 @@ pub struct r#UserProfile {
     r#accept_marketing: Option<bool>,
     #[serde(rename = "accept_privacy", skip_serializing_if = "Option::is_none")]
     r#accept_privacy: Option<bool>,
+    #[serde(rename = "accessBeta", skip_serializing_if = "Option::is_none")]
+    r#access_beta: Option<bool>,
     #[serde(rename = "company", skip_serializing_if = "Option::is_none")]
     r#company: Option<String>,
     #[serde(rename = "email", skip_serializing_if = "Option::is_none")]
@@ -41,6 +43,7 @@ impl r#UserProfile {
         Self {
           r#accept_marketing: None,
           r#accept_privacy: None,
+          r#access_beta: None,
           r#company: None,
           r#email: None,
           r#first_name: None,
@@ -96,6 +99,28 @@ impl r#UserProfile {
 
     pub fn reset_accept_privacy(&mut self) {
         self.r#accept_privacy = None;
+    }
+
+    pub fn set_access_beta(&mut self, r#access_beta: bool) {
+        self.r#access_beta = Some(r#access_beta);
+    }
+
+    pub fn with_access_beta(mut self, r#access_beta: bool) -> Self {
+        self.r#access_beta = Some(r#access_beta);
+        self
+    }
+
+    pub fn with_option_access_beta(mut self, r#access_beta: Option<bool>) -> Self {
+        self.r#access_beta = r#access_beta;
+        self
+    }
+
+    pub fn r#access_beta(&self) -> Option<&bool> {
+        self.r#access_beta.as_ref().map(|x| x.borrow())
+    }
+
+    pub fn reset_access_beta(&mut self) {
+        self.r#access_beta = None;
     }
 
     pub fn set_company(&mut self, r#company: String) {

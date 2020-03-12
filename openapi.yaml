@@ -5885,6 +5885,8 @@ components:
           type: boolean
         accept_privacy:
           type: boolean
+        accessBeta:
+          type: boolean
         company:
           type: string
         email:
