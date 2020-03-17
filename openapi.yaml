@@ -5885,7 +5885,17 @@ components:
           type: boolean
         accept_privacy:
           type: boolean
-        betaProgramAccess:
+        accessBetaProgram:
+          type: boolean
+        accessCommunity:
+          type: boolean
+        accessFNO:
+          type: boolean
+        accessPartnerPortal:
+          type: boolean
+        accessShowpad:
+          type: boolean
+        accessZift:
           type: boolean
         company:
           type: string
@@ -5909,8 +5919,6 @@ components:
           type: string
         secondEmail:
           type: string
-        showpadAccess:
-          type: boolean
       type: object
       x-okta-extensible: true
       x-okta-tags:
