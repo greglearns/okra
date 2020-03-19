@@ -5881,9 +5881,9 @@ components:
         - User
     UserProfile:
       properties:
-        accept_marketing:
+        acceptMarketing:
           type: boolean
-        accept_privacy:
+        acceptPrivacy:
           type: boolean
         accessBetaProgram:
           type: boolean
