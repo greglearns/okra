@@ -5899,6 +5899,10 @@ components:
           type: boolean
         company:
           type: string
+        countryCode:
+          type: string
+        department:
+          type: string
         email:
           type: string
         firstName:
@@ -5918,6 +5922,8 @@ components:
         role:
           type: string
         secondEmail:
+          type: string
+        zipCode:
           type: string
       type: object
       x-okta-extensible: true

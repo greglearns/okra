@@ -9,14 +9,28 @@ use super::*;
 
 #[derive(Debug, Default, Serialize, Deserialize, PartialEq)]
 pub struct r#UserProfile {
-    #[serde(rename = "accept_marketing", skip_serializing_if = "Option::is_none")]
+    #[serde(rename = "acceptMarketing", skip_serializing_if = "Option::is_none")]
     r#accept_marketing: Option<bool>,
-    #[serde(rename = "accept_privacy", skip_serializing_if = "Option::is_none")]
+    #[serde(rename = "acceptPrivacy", skip_serializing_if = "Option::is_none")]
     r#accept_privacy: Option<bool>,
-    #[serde(rename = "betaProgramAccess", skip_serializing_if = "Option::is_none")]
-    r#beta_program_access: Option<bool>,
+    #[serde(rename = "accessBetaProgram", skip_serializing_if = "Option::is_none")]
+    r#access_beta_program: Option<bool>,
+    #[serde(rename = "accessCommunity", skip_serializing_if = "Option::is_none")]
+    r#access_community: Option<bool>,
+    #[serde(rename = "accessFNO", skip_serializing_if = "Option::is_none")]
+    r#access_fno: Option<bool>,
+    #[serde(rename = "accessPartnerPortal", skip_serializing_if = "Option::is_none")]
+    r#access_partner_portal: Option<bool>,
+    #[serde(rename = "accessShowpad", skip_serializing_if = "Option::is_none")]
+    r#access_showpad: Option<bool>,
+    #[serde(rename = "accessZift", skip_serializing_if = "Option::is_none")]
+    r#access_zift: Option<bool>,
     #[serde(rename = "company", skip_serializing_if = "Option::is_none")]
     r#company: Option<String>,
+    #[serde(rename = "countryCode", skip_serializing_if = "Option::is_none")]
+    r#country_code: Option<String>,
+    #[serde(rename = "department", skip_serializing_if = "Option::is_none")]
+    r#department: Option<String>,
     #[serde(rename = "email", skip_serializing_if = "Option::is_none")]
     r#email: Option<String>,
     #[serde(rename = "firstName", skip_serializing_if = "Option::is_none")]
@@ -37,8 +51,8 @@ pub struct r#UserProfile {
     r#role: Option<String>,
     #[serde(rename = "secondEmail", skip_serializing_if = "Option::is_none")]
     r#second_email: Option<String>,
-    #[serde(rename = "showpadAccess", skip_serializing_if = "Option::is_none")]
-    r#showpad_access: Option<bool>,
+    #[serde(rename = "zipCode", skip_serializing_if = "Option::is_none")]
+    r#zip_code: Option<String>,
 }
 
 impl r#UserProfile {
@@ -47,8 +61,15 @@ impl r#UserProfile {
         Self {
           r#accept_marketing: None,
           r#accept_privacy: None,
-          r#beta_program_access: None,
+          r#access_beta_program: None,
+          r#access_community: None,
+          r#access_fno: None,
+          r#access_partner_portal: None,
+          r#access_showpad: None,
+          r#access_zift: None,
           r#company: None,
+          r#country_code: None,
+          r#department: None,
           r#email: None,
           r#first_name: None,
           r#industry: None,
@@ -59,7 +80,7 @@ impl r#UserProfile {
           r#preferred_language: None,
           r#role: None,
           r#second_email: None,
-          r#showpad_access: None,
+          r#zip_code: None,
         }
     }
 
@@ -107,26 +128,136 @@ impl r#UserProfile {
         self.r#accept_privacy = None;
     }
 
-    pub fn set_beta_program_access(&mut self, r#beta_program_access: bool) {
-        self.r#beta_program_access = Some(r#beta_program_access);
+    pub fn set_access_beta_program(&mut self, r#access_beta_program: bool) {
+        self.r#access_beta_program = Some(r#access_beta_program);
     }
 
-    pub fn with_beta_program_access(mut self, r#beta_program_access: bool) -> Self {
-        self.r#beta_program_access = Some(r#beta_program_access);
+    pub fn with_access_beta_program(mut self, r#access_beta_program: bool) -> Self {
+        self.r#access_beta_program = Some(r#access_beta_program);
         self
     }
 
-    pub fn with_option_beta_program_access(mut self, r#beta_program_access: Option<bool>) -> Self {
-        self.r#beta_program_access = r#beta_program_access;
+    pub fn with_option_access_beta_program(mut self, r#access_beta_program: Option<bool>) -> Self {
+        self.r#access_beta_program = r#access_beta_program;
         self
     }
 
-    pub fn r#beta_program_access(&self) -> Option<&bool> {
-        self.r#beta_program_access.as_ref().map(|x| x.borrow())
+    pub fn r#access_beta_program(&self) -> Option<&bool> {
+        self.r#access_beta_program.as_ref().map(|x| x.borrow())
     }
 
-    pub fn reset_beta_program_access(&mut self) {
-        self.r#beta_program_access = None;
+    pub fn reset_access_beta_program(&mut self) {
+        self.r#access_beta_program = None;
+    }
+
+    pub fn set_access_community(&mut self, r#access_community: bool) {
+        self.r#access_community = Some(r#access_community);
+    }
+
+    pub fn with_access_community(mut self, r#access_community: bool) -> Self {
+        self.r#access_community = Some(r#access_community);
+        self
+    }
+
+    pub fn with_option_access_community(mut self, r#access_community: Option<bool>) -> Self {
+        self.r#access_community = r#access_community;
+        self
+    }
+
+    pub fn r#access_community(&self) -> Option<&bool> {
+        self.r#access_community.as_ref().map(|x| x.borrow())
+    }
+
+    pub fn reset_access_community(&mut self) {
+        self.r#access_community = None;
+    }
+
+    pub fn set_access_fno(&mut self, r#access_fno: bool) {
+        self.r#access_fno = Some(r#access_fno);
+    }
+
+    pub fn with_access_fno(mut self, r#access_fno: bool) -> Self {
+        self.r#access_fno = Some(r#access_fno);
+        self
+    }
+
+    pub fn with_option_access_fno(mut self, r#access_fno: Option<bool>) -> Self {
+        self.r#access_fno = r#access_fno;
+        self
+    }
+
+    pub fn r#access_fno(&self) -> Option<&bool> {
+        self.r#access_fno.as_ref().map(|x| x.borrow())
+    }
+
+    pub fn reset_access_fno(&mut self) {
+        self.r#access_fno = None;
+    }
+
+    pub fn set_access_partner_portal(&mut self, r#access_partner_portal: bool) {
+        self.r#access_partner_portal = Some(r#access_partner_portal);
+    }
+
+    pub fn with_access_partner_portal(mut self, r#access_partner_portal: bool) -> Self {
+        self.r#access_partner_portal = Some(r#access_partner_portal);
+        self
+    }
+
+    pub fn with_option_access_partner_portal(mut self, r#access_partner_portal: Option<bool>) -> Self {
+        self.r#access_partner_portal = r#access_partner_portal;
+        self
+    }
+
+    pub fn r#access_partner_portal(&self) -> Option<&bool> {
+        self.r#access_partner_portal.as_ref().map(|x| x.borrow())
+    }
+
+    pub fn reset_access_partner_portal(&mut self) {
+        self.r#access_partner_portal = None;
+    }
+
+    pub fn set_access_showpad(&mut self, r#access_showpad: bool) {
+        self.r#access_showpad = Some(r#access_showpad);
+    }
+
+    pub fn with_access_showpad(mut self, r#access_showpad: bool) -> Self {
+        self.r#access_showpad = Some(r#access_showpad);
+        self
+    }
+
+    pub fn with_option_access_showpad(mut self, r#access_showpad: Option<bool>) -> Self {
+        self.r#access_showpad = r#access_showpad;
+        self
+    }
+
+    pub fn r#access_showpad(&self) -> Option<&bool> {
+        self.r#access_showpad.as_ref().map(|x| x.borrow())
+    }
+
+    pub fn reset_access_showpad(&mut self) {
+        self.r#access_showpad = None;
+    }
+
+    pub fn set_access_zift(&mut self, r#access_zift: bool) {
+        self.r#access_zift = Some(r#access_zift);
+    }
+
+    pub fn with_access_zift(mut self, r#access_zift: bool) -> Self {
+        self.r#access_zift = Some(r#access_zift);
+        self
+    }
+
+    pub fn with_option_access_zift(mut self, r#access_zift: Option<bool>) -> Self {
+        self.r#access_zift = r#access_zift;
+        self
+    }
+
+    pub fn r#access_zift(&self) -> Option<&bool> {
+        self.r#access_zift.as_ref().map(|x| x.borrow())
+    }
+
+    pub fn reset_access_zift(&mut self) {
+        self.r#access_zift = None;
     }
 
     pub fn set_company(&mut self, r#company: String) {
@@ -149,6 +280,50 @@ impl r#UserProfile {
 
     pub fn reset_company(&mut self) {
         self.r#company = None;
+    }
+
+    pub fn set_country_code(&mut self, r#country_code: String) {
+        self.r#country_code = Some(r#country_code);
+    }
+
+    pub fn with_country_code(mut self, r#country_code: String) -> Self {
+        self.r#country_code = Some(r#country_code);
+        self
+    }
+
+    pub fn with_option_country_code(mut self, r#country_code: Option<String>) -> Self {
+        self.r#country_code = r#country_code;
+        self
+    }
+
+    pub fn r#country_code(&self) -> Option<&str> {
+        self.r#country_code.as_ref().map(|x| x.borrow())
+    }
+
+    pub fn reset_country_code(&mut self) {
+        self.r#country_code = None;
+    }
+
+    pub fn set_department(&mut self, r#department: String) {
+        self.r#department = Some(r#department);
+    }
+
+    pub fn with_department(mut self, r#department: String) -> Self {
+        self.r#department = Some(r#department);
+        self
+    }
+
+    pub fn with_option_department(mut self, r#department: Option<String>) -> Self {
+        self.r#department = r#department;
+        self
+    }
+
+    pub fn r#department(&self) -> Option<&str> {
+        self.r#department.as_ref().map(|x| x.borrow())
+    }
+
+    pub fn reset_department(&mut self) {
+        self.r#department = None;
     }
 
     pub fn set_email(&mut self, r#email: String) {
@@ -371,25 +546,25 @@ impl r#UserProfile {
         self.r#second_email = None;
     }
 
-    pub fn set_showpad_access(&mut self, r#showpad_access: bool) {
-        self.r#showpad_access = Some(r#showpad_access);
+    pub fn set_zip_code(&mut self, r#zip_code: String) {
+        self.r#zip_code = Some(r#zip_code);
     }
 
-    pub fn with_showpad_access(mut self, r#showpad_access: bool) -> Self {
-        self.r#showpad_access = Some(r#showpad_access);
+    pub fn with_zip_code(mut self, r#zip_code: String) -> Self {
+        self.r#zip_code = Some(r#zip_code);
         self
     }
 
-    pub fn with_option_showpad_access(mut self, r#showpad_access: Option<bool>) -> Self {
-        self.r#showpad_access = r#showpad_access;
+    pub fn with_option_zip_code(mut self, r#zip_code: Option<String>) -> Self {
+        self.r#zip_code = r#zip_code;
         self
     }
 
-    pub fn r#showpad_access(&self) -> Option<&bool> {
-        self.r#showpad_access.as_ref().map(|x| x.borrow())
+    pub fn r#zip_code(&self) -> Option<&str> {
+        self.r#zip_code.as_ref().map(|x| x.borrow())
     }
 
-    pub fn reset_showpad_access(&mut self) {
-        self.r#showpad_access = None;
+    pub fn reset_zip_code(&mut self) {
+        self.r#zip_code = None;
     }
 }
