@@ -5891,6 +5891,8 @@ components:
           type: boolean
         accessFNO:
           type: boolean
+        accessMyAlteryx:
+          type: boolean
         accessPartnerPortal:
           type: boolean
         accessShowpad:

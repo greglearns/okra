@@ -19,6 +19,8 @@ pub struct r#UserProfile {
     r#access_community: Option<bool>,
     #[serde(rename = "accessFNO", skip_serializing_if = "Option::is_none")]
     r#access_fno: Option<bool>,
+    #[serde(rename = "accessMyAlteryx", skip_serializing_if = "Option::is_none")]
+    r#access_my_alteryx: Option<bool>,
     #[serde(rename = "accessPartnerPortal", skip_serializing_if = "Option::is_none")]
     r#access_partner_portal: Option<bool>,
     #[serde(rename = "accessShowpad", skip_serializing_if = "Option::is_none")]
@@ -64,6 +66,7 @@ impl r#UserProfile {
           r#access_beta_program: None,
           r#access_community: None,
           r#access_fno: None,
+          r#access_my_alteryx: None,
           r#access_partner_portal: None,
           r#access_showpad: None,
           r#access_zift: None,
@@ -192,6 +195,28 @@ impl r#UserProfile {
 
     pub fn reset_access_fno(&mut self) {
         self.r#access_fno = None;
+    }
+
+    pub fn set_access_my_alteryx(&mut self, r#access_my_alteryx: bool) {
+        self.r#access_my_alteryx = Some(r#access_my_alteryx);
+    }
+
+    pub fn with_access_my_alteryx(mut self, r#access_my_alteryx: bool) -> Self {
+        self.r#access_my_alteryx = Some(r#access_my_alteryx);
+        self
+    }
+
+    pub fn with_option_access_my_alteryx(mut self, r#access_my_alteryx: Option<bool>) -> Self {
+        self.r#access_my_alteryx = r#access_my_alteryx;
+        self
+    }
+
+    pub fn r#access_my_alteryx(&self) -> Option<&bool> {
+        self.r#access_my_alteryx.as_ref().map(|x| x.borrow())
+    }
+
+    pub fn reset_access_my_alteryx(&mut self) {
+        self.r#access_my_alteryx = None;
     }
 
     pub fn set_access_partner_portal(&mut self, r#access_partner_portal: bool) {
