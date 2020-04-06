@@ -47,6 +47,8 @@ pub struct r#UserProfile {
     r#login: Option<String>,
     #[serde(rename = "mobilePhone", skip_serializing_if = "Option::is_none")]
     r#mobile_phone: Option<String>,
+    #[serde(rename = "postRegistrationRedirect", skip_serializing_if = "Option::is_none")]
+    r#post_registration_redirect: Option<String>,
     #[serde(rename = "preferredLanguage", skip_serializing_if = "Option::is_none")]
     r#preferred_language: Option<String>,
     #[serde(rename = "role", skip_serializing_if = "Option::is_none")]
@@ -80,6 +82,7 @@ impl r#UserProfile {
           r#linkid: None,
           r#login: None,
           r#mobile_phone: None,
+          r#post_registration_redirect: None,
           r#preferred_language: None,
           r#role: None,
           r#second_email: None,
@@ -503,6 +506,28 @@ impl r#UserProfile {
 
     pub fn reset_mobile_phone(&mut self) {
         self.r#mobile_phone = None;
+    }
+
+    pub fn set_post_registration_redirect(&mut self, r#post_registration_redirect: String) {
+        self.r#post_registration_redirect = Some(r#post_registration_redirect);
+    }
+
+    pub fn with_post_registration_redirect(mut self, r#post_registration_redirect: String) -> Self {
+        self.r#post_registration_redirect = Some(r#post_registration_redirect);
+        self
+    }
+
+    pub fn with_option_post_registration_redirect(mut self, r#post_registration_redirect: Option<String>) -> Self {
+        self.r#post_registration_redirect = r#post_registration_redirect;
+        self
+    }
+
+    pub fn r#post_registration_redirect(&self) -> Option<&str> {
+        self.r#post_registration_redirect.as_ref().map(|x| x.borrow())
+    }
+
+    pub fn reset_post_registration_redirect(&mut self) {
+        self.r#post_registration_redirect = None;
     }
 
     pub fn set_preferred_language(&mut self, r#preferred_language: String) {

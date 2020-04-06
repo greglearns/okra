@@ -5919,6 +5919,8 @@ components:
           type: string
         mobilePhone:
           type: string
+        postRegistrationRedirect:
+          type: string
         preferredLanguage:
           type: string
         role:
